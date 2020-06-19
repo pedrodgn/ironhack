@@ -76,6 +76,39 @@ From (SELECT authors.au_id,
 --* Your output should be ordered based on `TOTAL` from high to low.
 --* Only output the top 3 best selling authors.
 
+SELECT COUNT(title) as number_of_titles,
+	titles_per_authors.au_id,
+	titles_per_authors.au_lname,
+	titles_per_authors.au_fname	
+From (SELECT authors.au_id,
+		au_lname,
+		au_fname,
+		title
+	from titleauthor
+		inner join
+		titles
+	on titleauthor.title_id=titles.title_id
+	INNER JOIN 
+	authors
+	on authors.au_id=titleauthor.au_id) AS titles_per_authors
+	GROUP BY titles_per_authors.au_id,
+	titles_per_authors.au_lname,
+	titles_per_authors.au_fname
+	ORDER BY number_of_titles DESC
+	LIMIT 3;
+
+
 --## Challenge 4 - Best Selling Authors Ranking
 
 --Now modify your solution in Challenge 3 so that the output will display all 23 authors instead of the top 3. Note that the authors who have sold 0 titles should also appear in your output (ideally display `0` instead of `NULL` as the `TOTAL`). Also order your results based on `TOTAL` from high to low.
+
+SELECT authors.au_id,
+	au_lname,
+	au_fname,
+	COUNT(titleauthor.title_id) as number_of_titles
+from authors
+	LEFT JOIN
+	titleauthor
+	on authors.au_id=titleauthor.au_id
+	GROUP BY authors.au_id, au_lname, au_fname
+	ORDER BY number_of_titles DESC;
