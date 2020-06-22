@@ -31,3 +31,19 @@ VALUES ('0', 'Petey Cruiser', 'Madrid'),
 ('7', 'Pedro Di Gianni', 'Sao Paulo');
 
 SELECT * FROM customer
+
+DELETE FROM car WHERE car_id='4';
+
+UPDATE customer
+SET email = 'ppicasso@gmail.com'
+WHERE customer_name = 'Pablo Picasso';
+
+UPDATE customer
+SET email = 'lincoln@us.gov'
+WHERE customer_name = 'Abraham Lincoln';
+
+UPDATE customer
+SET email = 'hello@napoleon.me'
+WHERE customer_name = 'Napoleon Bonaparte';
+
+select * from customer
