@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<!--[if lt IE 10]><html class="no-js ie8 oldie" lang="en" prefix="og: http://ogp.me/ns/# og:book: http://ogp.me/ns/book# og:video: http://ogp.me/ns/video#"
+
+  
+    itemscope itemtype="http://schema.org/Book http://schema.org/ItemPage" data-offline-url="/"
+data-url="/library/view/doing-data-science/9781449363871/ch01.html"
+
+data-archive="9781449363871"
+data-publishers="O&#x27;Reilly Media, Inc."
+
+
+  data-htmlfile-name="ch01.html"
+  data-epub-title="Doing Data Science"
+  
+
+
+data-federated-auth-enabled="true"
+data-env="production"
+data-debug="0" ><![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en" prefix="og: http://ogp.me/ns/# og:book: http://ogp.me/ns/book# og:video: http://ogp.me/ns/video#"
+
+  
+    itemscope itemtype="http://schema.org/Book http://schema.org/ItemPage" data-offline-url="/"
+data-url="/library/view/doing-data-science/9781449363871/ch01.html"
+
+data-archive="9781449363871"
+data-publishers="O&#x27;Reilly Media, Inc."
+
+
+  data-htmlfile-name="ch01.html"
+  data-epub-title="Doing Data Science"
+  
+
+
+data-federated-auth-enabled="true"
+data-env="production"
+data-debug="0" ><!--<![endif]-->
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>1. Introduction: What Is Data Science? - Doing Data Science [Book]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/library/view/static/CACHE/css/output.37459299cefe.css" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="https://cdn.oreillystatic.com/assets/css/2018_font_face.css" />
+    
+
+    <meta property="og:title" content="Doing Data Science" />
+    <meta itemprop="isPartOf" content="/library/view/doing-data-science/9781449363871/" />
+    <meta itemprop="name" content="1. Introduction: What Is Data Science?" />
+    
+    <meta property="og:url" itemprop="url" content="https://www.oreilly.com/library/view/doing-data-science/9781449363871/ch01.html" />
+    <meta property="og:site_name" content="O’Reilly Online Learning" />
+    <meta property="og:image" itemprop="thumbnailUrl" content="https://www.oreilly.com/library/cover/9781449363871/" />
+    
+    <meta property="og:image:secure_url" itemprop="thumbnailUrl" content="https://learning.oreilly.com/library/cover/9781449363871/360h/">
+    <meta property="og:description" itemprop="description" name="description" content=" Chapter 1. Introduction: What Is Data Science? Over the past few years, there’s been a lot of hype in the media about “data science” and “Big Data.” A reasonable first …  - Selection from Doing Data Science [Book]">
+    
+    <meta itemprop="inLanguage" content="en" />
+    
+    <meta itemprop="publisher" content="O&#x27;Reilly Media, Inc." />
+    
+    <meta property="og:type" content="article" />
+    <meta property="og:book:isbn" itemprop="isbn" content="9781449358655" />
+    
+    <meta property="og:book:author" itemprop="author" content="Cathy O&#x27;Neil" />
+    <meta property="og:book:author" itemprop="author" content="Rachel Schutt" />
+    
+    
+    
+    
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="400">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@OReillyMedia">
+
+<!-- Start Visual Website Optimizer Asynchronous Code -->
+<script type='text/javascript'>
+var _vwo_code=(function(){
+var account_id=291788,
+settings_tolerance=2000,
+library_tolerance=2500,
+use_existing_jquery=false,
+/* DO NOT EDIT BELOW THIS LINE */
+f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+</script>
+<!-- End Visual Website Optimizer Asynchronous Code -->
+
+    <link class="t-canonical-link" rel="canonical" href="https://www.oreilly.com/library/view/doing-data-science/9781449363871/ch01.html" />
+
+    <link rel="shortcut icon" href="//www.oreilly.com/favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="apple-touch-icon" href="/library/view/static/images/apple-touch-icon.png" />
+    
+
+  
+    <style type="text/css" title="ibis-book">
+    @charset "utf-8";#sbo-rt-content html,#sbo-rt-content div,#sbo-rt-content div,#sbo-rt-content span,#sbo-rt-content applet,#sbo-rt-content object,#sbo-rt-content iframe,#sbo-rt-content h1,#sbo-rt-content h2,#sbo-rt-content h3,#sbo-rt-content h4,#sbo-rt-content h5,#sbo-rt-content h6,#sbo-rt-content p,#sbo-rt-content blockquote,#sbo-rt-content pre,#sbo-rt-content a,#sbo-rt-content abbr,#sbo-rt-content acronym,#sbo-rt-content address,#sbo-rt-content big,#sbo-rt-content cite,#sbo-rt-content code,#sbo-rt-content del,#sbo-rt-content dfn,#sbo-rt-content em,#sbo-rt-content img,#sbo-rt-content ins,#sbo-rt-content kbd,#sbo-rt-content q,#sbo-rt-content s,#sbo-rt-content samp,#sbo-rt-content small,#sbo-rt-content strike,#sbo-rt-content strong,#sbo-rt-content sub,#sbo-rt-content sup,#sbo-rt-content tt,#sbo-rt-content var,#sbo-rt-content b,#sbo-rt-content u,#sbo-rt-content i,#sbo-rt-content center,#sbo-rt-content dl,#sbo-rt-content dt,#sbo-rt-content dd,#sbo-rt-content ol,#sbo-rt-content ul,#sbo-rt-content li,#sbo-rt-content fieldset,#sbo-rt-content form,#sbo-rt-content label,#sbo-rt-content legend,#sbo-rt-content table,#sbo-rt-content caption,#sbo-rt-content tdiv,#sbo-rt-content tfoot,#sbo-rt-content thead,#sbo-rt-content tr,#sbo-rt-content th,#sbo-rt-content td,#sbo-rt-content article,#sbo-rt-content aside,#sbo-rt-content canvas,#sbo-rt-content details,#sbo-rt-content embed,#sbo-rt-content figure,#sbo-rt-content figcaption,#sbo-rt-content footer,#sbo-rt-content header,#sbo-rt-content hgroup,#sbo-rt-content menu,#sbo-rt-content nav,#sbo-rt-content output,#sbo-rt-content ruby,#sbo-rt-content section,#sbo-rt-content summary,#sbo-rt-content time,#sbo-rt-content mark,#sbo-rt-content audio,#sbo-rt-content video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}#sbo-rt-content article,#sbo-rt-content aside,#sbo-rt-content details,#sbo-rt-content figcaption,#sbo-rt-content figure,#sbo-rt-content footer,#sbo-rt-content header,#sbo-rt-content hgroup,#sbo-rt-content menu,#sbo-rt-content nav,#sbo-rt-content section{display:block}#sbo-rt-content div{line-height:1}#sbo-rt-content ol,#sbo-rt-content ul{list-style:none}#sbo-rt-content blockquote,#sbo-rt-content q{quotes:none}#sbo-rt-content blockquote:before,#sbo-rt-content blockquote:after,#sbo-rt-content q:before,#sbo-rt-content q:after{content:none}#sbo-rt-content table{border-collapse:collapse;border-spacing:0}@page{margin:5px !important}#sbo-rt-content p{margin:10px 0 0;line-height:125%;text-align:left}#sbo-rt-content p.byline{text-align:left;margin:-33px auto 35px;font-style:italic;font-weight:bold}#sbo-rt-content div.preface p+p.byline{margin:1em 0 0 !important}#sbo-rt-content div.preface p.byline+p.byline{margin:0 !important}#sbo-rt-content div.sect1>p.byline{margin:-.25em 0 1em}#sbo-rt-content div.sect1>p.byline+p.byline{margin-top:-1em}#sbo-rt-content em{font-style:italic;font-family:inherit}#sbo-rt-content em strong,#sbo-rt-content strong em{font-weight:bold;font-style:italic;font-family:inherit}#sbo-rt-content strong,#sbo-rt-content span.bold{font-weight:bold}#sbo-rt-content em.replaceable{font-style:italic}#sbo-rt-content strong.userinput{font-weight:bold;font-style:normal}#sbo-rt-content span.bolditalic{font-weight:bold;font-style:italic}#sbo-rt-content a.ulink,#sbo-rt-content a.xref,#sbo-rt-content a.email,#sbo-rt-content a.link,#sbo-rt-content a{text-decoration:none;color:#8e0012}#sbo-rt-content span.lineannotation{font-style:italic;color:#a62a2a;font-family:serif}#sbo-rt-content span.underline{text-decoration:underline}#sbo-rt-content span.strikethrough{text-decoration:line-through}#sbo-rt-content span.smallcaps{font-variant:small-caps}#sbo-rt-content span.cursor{background:#000;color:#fff}#sbo-rt-content span.smaller{font-size:75%}#sbo-rt-content .boxedtext,#sbo-rt-content .keycap{border-style:solid;border-width:1px;border-color:#000;padding:1px}#sbo-rt-content span.gray50{color:#7F7F7F;}#sbo-rt-content h1,#sbo-rt-content div.toc-title,#sbo-rt-content h2,#sbo-rt-content h3,#sbo-rt-content h4,#sbo-rt-content h5{-webkit-hyphens:none;hyphens:none;adobe-hyphenate:none;font-weight:bold;text-align:left;page-break-after:avoid !important;font-family:sans-serif,"DejaVuSans"}#sbo-rt-content div.toc-title{font-size:1.5em;margin-top:20px !important;margin-bottom:30px !important}#sbo-rt-content section[data-type="sect1"] h1{font-size:1.3em;color:#8e0012;margin:40px 0 8px 0}#sbo-rt-content section[data-type="sect2"] h2{font-size:1.1em;margin:30px 0 8px 0 !important}#sbo-rt-content section[data-type="sect3"] h3{font-size:1em;color:#555;margin:20px 0 8px 0 !important}#sbo-rt-content section[data-type="sect4"] h4{font-size:1em;font-weight:normal;font-style:italic;margin:15px 0 6px 0 !important}#sbo-rt-content section[data-type="chapter"]>div>h1,#sbo-rt-content section[data-type="preface"]>div>h1,#sbo-rt-content section[data-type="appendix"]>div>h1,#sbo-rt-content section[data-type="glossary"]>div>h1,#sbo-rt-content section[data-type="bibliography"]>div>h1,#sbo-rt-content section[data-type="index"]>div>h1{font-size:2em;line-height:1;margin-bottom:50px;color:#000;padding-bottom:10px;border-bottom:1px solid #000}#sbo-rt-content span.label,#sbo-rt-content span.keep-together{font-size:inherit;font-weight:inherit}#sbo-rt-content div[data-type="part"] h1{font-size:2em;text-align:center;margin-top:0 !important;margin-bottom:50px;padding:50px 0 10px 0;border-bottom:1px solid #000}#sbo-rt-content img.width-ninety{width:90%}#sbo-rt-content img{max-width:95%;margin:0 auto;padding:0}#sbo-rt-content div.figure{background-color:transparent;text-align:center !important;margin:15px 0 15px 0 !important;page-break-inside:avoid}#sbo-rt-content figure{margin:15px 0 15px 0 !important;page-break-inside:avoid}#sbo-rt-content div.figure h6,#sbo-rt-content figure h6,#sbo-rt-content figure figcaption{font-size:.9rem !important;text-align:center;font-weight:normal !important;font-style:italic;font-family:serif !important;text-transform:none !important;letter-spacing:normal !important;color:#000 !important;padding-top:10px !important;page-break-before:avoid}#sbo-rt-content div.informalfigure{text-align:center !important;padding:5px 0 !important}#sbo-rt-content div.sidebar{margin:15px 0 10px 0 !important;border:1px solid #DCDCDC;background-color:#F7F7F7;padding:15px !important;page-break-inside:avoid}#sbo-rt-content aside[data-type="sidebar"]{margin:15px 0 10px 0 !important;page-break-inside:avoid}#sbo-rt-content div.sidebar-title,#sbo-rt-content aside[data-type="sidebar"] h5{font-weight:bold;font-size:1em;font-family:sans-serif;text-transform:uppercase;letter-spacing:1px;text-align:center;margin:4px 0 6px 0 !important;page-break-inside:avoid}#sbo-rt-content div.sidebar ol,#sbo-rt-content div.sidebar ul,#sbo-rt-content aside[data-type="sidebar"] ol,#sbo-rt-content aside[data-type="sidebar"] ul{margin-left:1.25em !important}#sbo-rt-content div.sidebar div.figure p.title,#sbo-rt-content aside[data-type="sidebar"] figcaption,#sbo-rt-content div.sidebar div.informalfigure div.caption{font-size:90%;text-align:center;font-weight:normal;font-style:italic;font-family:serif !important;color:#000;padding:5px !important;page-break-before:avoid;page-break-after:avoid}#sbo-rt-content div.sidebar div.tip,#sbo-rt-content div.sidebar div[data-type="tip"],#sbo-rt-content div.sidebar div.note,#sbo-rt-content div.sidebar div[data-type="note"],#sbo-rt-content div.sidebar div.warning,#sbo-rt-content div.sidebar div[data-type="warning"],#sbo-rt-content div.sidebar div[data-type="caution"],#sbo-rt-content div.sidebar div[data-type="important"]{margin:20px auto 20px auto !important;font-size:90%;width:85%}#sbo-rt-content aside[data-type="sidebar"] p.byline{font-size:90%;font-weight:bold;font-style:italic;text-align:center;text-indent:0;margin:5px auto 6px;page-break-after:avoid}#sbo-rt-content pre{white-space:pre-wrap;font-family:"Ubuntu Mono",monospace;margin:25px 0 25px 20px;font-size:85%;display:block;-webkit-hyphens:none;hyphens:none;adobe-hyphenate:none;overflow-wrap:break-word}#sbo-rt-content div.note pre.programlisting,#sbo-rt-content div.tip pre.programlisting,#sbo-rt-content div.warning pre.programlisting,#sbo-rt-content div.caution pre.programlisting,#sbo-rt-content div.important pre.programlisting{margin-bottom:0}#sbo-rt-content code{font-family:"Ubuntu Mono",monospace;-webkit-hyphens:none;hyphens:none;adobe-hyphenate:none;overflow-wrap:break-word}#sbo-rt-content code strong em,#sbo-rt-content code em strong,#sbo-rt-content pre em strong,#sbo-rt-content pre strong em,#sbo-rt-content strong code em code,#sbo-rt-content em code strong code,#sbo-rt-content span.bolditalic code{font-weight:bold;font-style:italic;font-family:"Ubuntu Mono BoldItal",monospace}#sbo-rt-content code em,#sbo-rt-content em code,#sbo-rt-content pre em,#sbo-rt-content em.replaceable{font-family:"Ubuntu Mono Ital",monospace;font-style:italic}#sbo-rt-content code strong,#sbo-rt-content strong code,#sbo-rt-content pre strong,#sbo-rt-content strong.userinput{font-family:"Ubuntu Mono Bold",monospace;font-weight:bold}#sbo-rt-content div[data-type="example"]{margin:10px 0 15px 0 !important}#sbo-rt-content div[data-type="example"] h1,#sbo-rt-content div[data-type="example"] h2,#sbo-rt-content div[data-type="example"] h3,#sbo-rt-content div[data-type="example"] h4,#sbo-rt-content div[data-type="example"] h5,#sbo-rt-content div[data-type="example"] h6{font-style:italic;font-weight:normal;text-align:left !important;text-transform:none !important;font-family:serif !important;margin:10px 0 5px 0 !important;border-bottom:1px solid #000}#sbo-rt-content li pre.example{padding:10px 0 !important}#sbo-rt-content div[data-type="example"] pre[data-type="programlisting"],#sbo-rt-content div[data-type="example"] pre[data-type="screen"]{margin:0}#sbo-rt-content section[data-type="titlepage"]>div>h1{font-size:2em;margin:50px 0 10px 0 !important;line-height:1;text-align:center}#sbo-rt-content section[data-type="titlepage"] h2,#sbo-rt-content section[data-type="titlepage"] p.subtitle,#sbo-rt-content section[data-type="titlepage"] p[data-type="subtitle"]{font-size:1.3em;font-weight:normal;text-align:center;margin-top:.5em;color:#555}#sbo-rt-content section[data-type="titlepage"]>div>h2[data-type="author"],#sbo-rt-content section[data-type="titlepage"] p.author{font-size:1.3em;font-family:serif !important;font-weight:bold;margin:50px 0 !important;text-align:center}#sbo-rt-content section[data-type="titlepage"] p.edition{text-align:center;text-transform:uppercase;margin-top:2em}#sbo-rt-content section[data-type="titlepage"]{text-align:center}#sbo-rt-content section[data-type="titlepage"]:after{content:url(css_assets/titlepage_footer_ebook.png);margin:0 auto;max-width:80%}#sbo-rt-content div.book div.titlepage div.publishername{margin-top:60%;margin-bottom:20px;text-align:center;font-size:1.25em}#sbo-rt-content div.book div.titlepage div.locations p{margin:0;text-align:center}#sbo-rt-content div.book div.titlepage div.locations p.cities{font-size:80%;text-align:center;margin-top:5px}#sbo-rt-content section.preface[title="Dedication"]>div.titlepage h2.title{text-align:center;text-transform:uppercase;font-size:1.5em;margin-top:50px;margin-bottom:50px}#sbo-rt-content ul.stafflist{margin:15px 0 15px 20px !important}#sbo-rt-content ul.stafflist li{list-style-type:none;padding:5px 0}#sbo-rt-content ul.printings li{list-style-type:none}#sbo-rt-content section.preface[title="Dedication"] p{font-style:italic;text-align:center}#sbo-rt-content div.colophon h1.title{font-size:1.3em;margin:0 !important;font-family:serif !important;font-weight:normal}#sbo-rt-content div.colophon h2.subtitle{margin:0 !important;color:#000;font-family:serif !important;font-size:1em;font-weight:normal}#sbo-rt-content div.colophon div.author h3.author{font-size:1.1em;font-family:serif !important;margin:10px 0 0 !important;font-weight:normal}#sbo-rt-content div.colophon div.editor h4,#sbo-rt-content div.colophon div.editor h3.editor{color:#000;font-size:.8em;margin:15px 0 0 !important;font-family:serif !important;font-weight:normal}#sbo-rt-content div.colophon div.editor h3.editor{font-size:.8em;margin:0 !important;font-family:serif !important;font-weight:normal}#sbo-rt-content div.colophon div.publisher{margin-top:10px}#sbo-rt-content div.colophon div.publisher p,#sbo-rt-content div.colophon div.publisher span.publishername{margin:0;font-size:.8em}#sbo-rt-content div.legalnotice p,#sbo-rt-content div.timestamp p{font-size:.8em}#sbo-rt-content div.timestamp p{margin-top:10px}#sbo-rt-content div.colophon[title="About the Author"] h1.title,#sbo-rt-content div.colophon[title="Colophon"] h1.title{font-size:1.5em;margin:0 !important;font-family:sans-serif !important}#sbo-rt-content section.chapter div.titlepage div.author{margin:10px 0 10px 0}#sbo-rt-content section.chapter div.titlepage div.author div.affiliation{font-style:italic}#sbo-rt-content div.attribution{margin:5px 0 0 50px !important}#sbo-rt-content h3.author span.orgname{display:none}#sbo-rt-content div.epigraph{margin:10px 0 10px 20px !important;page-break-inside:avoid;font-size:90%}#sbo-rt-content div.epigraph p{font-style:italic}#sbo-rt-content blockquote,#sbo-rt-content div.blockquote{margin:10px !important;page-break-inside:avoid;font-size:95%}#sbo-rt-content blockquote p,#sbo-rt-content div.blockquote p{font-style:italic;margin:.75em 0 0 !important}#sbo-rt-content blockquote div.attribution,#sbo-rt-content blockquote p[data-type="attribution"]{margin:5px 0 10px 30px !important;text-align:right;width:80%}#sbo-rt-content blockquote div.attribution p,#sbo-rt-content blockquote p[data-type="attribution"]{font-style:normal;margin-top:5px}#sbo-rt-content blockquote div.attribution p:before,#sbo-rt-content blockquote p[data-type="attribution"]:before{font-style:normal;content:"—";-webkit-hyphens:none;hyphens:none;adobe-hyphenate:none}#sbo-rt-content p.right{text-align:right;margin:0}#sbo-rt-content div[data-type="footnotes"]{border-top:1px solid black;margin-top:2em}#sbo-rt-content sub,#sbo-rt-content sup{font-size:75%;line-height:0;position:relative}#sbo-rt-content sup{top:-.5em}#sbo-rt-content sub{bottom:-.25em}#sbo-rt-content p[data-type="footnote"]{font-size:90% !important;line-height:1.2em !important;margin-left:2.5em !important;text-indent:-2.3em !important}#sbo-rt-content p[data-type="footnote"] sup{display:inline-block !important;position:static !important;width:2em !important;text-align:right !important;font-size:100% !important;padding-right:.5em !important}#sbo-rt-content p[data-type="footnote"] a[href$="-marker"]{font-family:sans-serif !important;font-size:90% !important;color:#8e0012 !important}#sbo-rt-content p[data-type="footnote"] a[data-type="xref"]{margin:0 !important;padding:0 !important;text-indent:0 !important}#sbo-rt-content a[data-type="noteref"]{font-family:sans-serif !important;color:#8e0012;margin-left:0;padding-left:0}#sbo-rt-content div.refentry p.refname{font-size:1em;font-family:sans-serif,"DejaVuSans";font-weight:bold;margin-bottom:5px;overflow:auto;width:100%}#sbo-rt-content div.refentry{width:100%;display:block;margin-top:2em}#sbo-rt-content div.refsynopsisdiv{display:block;clear:both}#sbo-rt-content div.refentry header{page-break-inside:avoid !important;display:block;break-inside:avoid !important;padding-top:0;border-bottom:1px solid #000}#sbo-rt-content div.refsect1 h6{font-size:.9em;font-family:sans-serif,"DejaVuSans";font-weight:bold}#sbo-rt-content div.refsect1{margin-top:3em}#sbo-rt-content dt{padding-top:10px !important;padding-bottom:0 !important}#sbo-rt-content dd{margin-left:1.5em !important;margin-bottom:.25em}#sbo-rt-content dd ol,#sbo-rt-content dd ul{padding-left:1em}#sbo-rt-content dd li{margin-top:0;margin-bottom:0}#sbo-rt-content dd,#sbo-rt-content li{text-align:left}#sbo-rt-content ul,#sbo-rt-content ul>li,#sbo-rt-content ol ul,#sbo-rt-content ol ul>li,#sbo-rt-content ul ol ul,#sbo-rt-content ul ol ul>li{list-style-type:disc}#sbo-rt-content ul ul,#sbo-rt-content ul ul>li{list-style-type:square}#sbo-rt-content ul ul ul,#sbo-rt-content ul ul ul>li{list-style-type:circle}#sbo-rt-content ol,#sbo-rt-content ol>li,#sbo-rt-content ol ul ol,#sbo-rt-content ol ul ol>li,#sbo-rt-content ul ol,#sbo-rt-content ul ol>li{list-style-type:decimal}#sbo-rt-content ol ol,#sbo-rt-content ol ol>li{list-style-type:lower-alpha}#sbo-rt-content ol ol ol,#sbo-rt-content ol ol ol>li{list-style-type:lower-roman}#sbo-rt-content ol,#sbo-rt-content ul{list-style-position:outside;margin:15px 0 15px 1.25em;padding-left:2.25em}#sbo-rt-content ol li,#sbo-rt-content ul li{margin:.5em 0 .65em;line-height:125%}#sbo-rt-content div.orderedlistalpha{list-style-type:upper-alpha}#sbo-rt-content table.simplelist,#sbo-rt-content ul.simplelist{margin:15px 0 15px 20px !important}#sbo-rt-content ul.simplelist li{list-style-type:none;padding:5px 0}#sbo-rt-content table.simplelist td{border:none}#sbo-rt-content table.simplelist tr{border-bottom:none}#sbo-rt-content table.simplelist tr:nth-of-type(even){background-color:transparent}#sbo-rt-content dl.calloutlist p:first-child{margin-top:-25px !important}#sbo-rt-content dl.calloutlist dd{padding-left:0;margin-top:-25px}#sbo-rt-content dl.calloutlist img,#sbo-rt-content a.co img{padding:0}#sbo-rt-content div.toc ol{margin-top:8px !important;margin-bottom:8px !important;margin-left:0 !important;padding-left:0 !important}#sbo-rt-content div.toc ol ol{margin-left:30px !important;padding-left:0 !important}#sbo-rt-content div.toc ol li{list-style-type:none}#sbo-rt-content div.toc a{color:#8e0012}#sbo-rt-content div.toc ol a{font-size:1em;font-weight:bold}#sbo-rt-content div.toc ol>li>ol a{font-weight:bold;font-size:1em}#sbo-rt-content div.toc ol>li>ol>li>ol a{text-decoration:none;font-weight:normal;font-size:1em}#sbo-rt-content div.tip,#sbo-rt-content div[data-type="tip"],#sbo-rt-content div.note,#sbo-rt-content div[data-type="note"],#sbo-rt-content div.warning,#sbo-rt-content div[data-type="warning"],#sbo-rt-content div[data-type="caution"],#sbo-rt-content div[data-type="important"]{margin:30px !important;font-size:90%;padding:10px 8px 20px 8px !important;page-break-inside:avoid}#sbo-rt-content div.tip ol,#sbo-rt-content div.tip ul,#sbo-rt-content div[data-type="tip"] ol,#sbo-rt-content div[data-type="tip"] ul,#sbo-rt-content div.note ol,#sbo-rt-content div.note ul,#sbo-rt-content div[data-type="note"] ol,#sbo-rt-content div[data-type="note"] ul,#sbo-rt-content div.warning ol,#sbo-rt-content div.warning ul,#sbo-rt-content div[data-type="warning"] ol,#sbo-rt-content div[data-type="warning"] ul,#sbo-rt-content div[data-type="caution"] ol,#sbo-rt-content div[data-type="caution"] ul,#sbo-rt-content div[data-type="important"] ol,#sbo-rt-content div[data-type="important"] ul{margin-left:1.5em !important}#sbo-rt-content div.tip,#sbo-rt-content div[data-type="tip"],#sbo-rt-content div.note,#sbo-rt-content div[data-type="note"]{border:1px solid #BEBEBE;background-color:transparent}#sbo-rt-content div.warning,#sbo-rt-content div[data-type="warning"],#sbo-rt-content div[data-type="caution"],#sbo-rt-content div[data-type="important"]{border:1px solid #BC8F8F}#sbo-rt-content div.tip h3,#sbo-rt-content div[data-type="tip"] h6,#sbo-rt-content div[data-type="tip"] h1,#sbo-rt-content div.note h3,#sbo-rt-content div[data-type="note"] h6,#sbo-rt-content div[data-type="note"] h1,#sbo-rt-content div.warning h3,#sbo-rt-content div[data-type="warning"] h6,#sbo-rt-content div[data-type="warning"] h1,#sbo-rt-content div[data-type="caution"] h6,#sbo-rt-content div[data-type="caution"] h1,#sbo-rt-content div[data-type="important"] h1,#sbo-rt-content div[data-type="important"] h6{font-weight:bold;font-size:110%;font-family:sans-serif !important;text-transform:uppercase;letter-spacing:1px;text-align:center;margin:4px 0 6px !important}#sbo-rt-content div[data-type="tip"] figure h6,#sbo-rt-content div[data-type="note"] figure h6,#sbo-rt-content div[data-type="warning"] figure h6,#sbo-rt-content div[data-type="caution"] figure h6,#sbo-rt-content div[data-type="important"] figure h6{font-family:serif !important}#sbo-rt-content div.tip h3,#sbo-rt-content div[data-type="tip"] h6,#sbo-rt-content div.note h3,#sbo-rt-content div[data-type="note"] h6,#sbo-rt-content div[data-type="tip"] h1,#sbo-rt-content div[data-type="note"] h1{color:#737373}#sbo-rt-content div.warning h3,#sbo-rt-content div[data-type="warning"] h6,#sbo-rt-content div[data-type="caution"] h6,#sbo-rt-content div[data-type="important"] h6,#sbo-rt-content div[data-type="warning"] h1,#sbo-rt-content div[data-type="caution"] h1,#sbo-rt-content div[data-type="important"] h1{color:#C67171}#sbo-rt-content div.sect1[title="Safari® Books Online"] div.note,#sbo-rt-content div.safarienabled{background-color:transparent;margin:8px 0 0 !important;border:0 solid #BEBEBE;font-size:100%;padding:0 !important;page-break-inside:avoid}#sbo-rt-content div.sect1[title="Safari® Books Online"] div.note h3,#sbo-rt-content div.safarienabled h6{display:none}#sbo-rt-content div.table,#sbo-rt-content table{margin:15px 0 30px 0 !important;max-width:95%;border:none !important;background:none;display:table !important}#sbo-rt-content div.table,#sbo-rt-content div.informaltable,#sbo-rt-content table{page-break-inside:avoid}#sbo-rt-content tr,#sbo-rt-content tr td{border-bottom:1px solid #c3c3c3}#sbo-rt-content thead td,#sbo-rt-content thead th{border-bottom:#9d9d9d 1px solid !important;border-top:#9d9d9d 1px solid !important}#sbo-rt-content tr:nth-of-type(even){background-color:#f1f6fc}#sbo-rt-content thead{font-family:sans-serif;font-weight:bold}#sbo-rt-content td,#sbo-rt-content th{display:table-cell;padding:.3em;text-align:left;vertical-align:middle;font-size:80%}#sbo-rt-content div.informaltable table{margin:10px auto !important}#sbo-rt-content div.informaltable table tr{border-bottom:none}#sbo-rt-content div.informaltable table tr:nth-of-type(even){background-color:transparent}#sbo-rt-content div.informaltable td,#sbo-rt-content div.informaltable th{border:#9d9d9d 1px solid}#sbo-rt-content div.table-title,#sbo-rt-content table caption{font-weight:normal;font-style:italic;font-family:serif;font-size:1em;margin:10px 0 10px 0 !important;padding:0;page-break-after:avoid;text-align:left !important}#sbo-rt-content table code{font-size:smaller}#sbo-rt-content table.border tbody>tr:last-child>td{border-bottom:transparent}#sbo-rt-content div.equation,#sbo-rt-content div[data-type="equation"]{margin:10px 0 15px 0 !important}#sbo-rt-content div.equation-title,#sbo-rt-content div[data-type="equation"] h5{font-style:italic;font-weight:normal;font-family:serif !important;font-size:90%;margin:20px 0 10px 0 !important;page-break-after:avoid}#sbo-rt-content div.equation-contents{margin-left:20px}#sbo-rt-content div[data-type="equation"] math{font-size:calc(.35em + 1vw)}#sbo-rt-content span.inlinemediaobject{height:.85em;display:inline-block;margin-bottom:.2em}#sbo-rt-content span.inlinemediaobject img{margin:0;height:.85em}#sbo-rt-content div.informalequation{margin:20px 0 20px 20px;width:75%}#sbo-rt-content div.informalequation img{width:75%}#sbo-rt-content div.index{text-indent:0}#sbo-rt-content div.index h3{padding:.25em;margin-top:1em !important;background-color:#F0F0F0}#sbo-rt-content div.index li{line-height:130%;list-style-type:none}#sbo-rt-content div.index a.indexterm{color:#8e0012 !important}#sbo-rt-content div.index ul{margin-left:0 !important;padding-left:0 !important}#sbo-rt-content div.index ul ul{margin-left:1em !important;margin-top:0 !important}#sbo-rt-content code.boolean,#sbo-rt-content .navy{color:rgb(0,0,128);}#sbo-rt-content code.character,#sbo-rt-content .olive{color:rgb(128,128,0);}#sbo-rt-content code.comment,#sbo-rt-content .blue{color:rgb(0,0,255);}#sbo-rt-content code.conditional,#sbo-rt-content .limegreen{color:rgb(50,205,50);}#sbo-rt-content code.constant,#sbo-rt-content .darkorange{color:rgb(255,140,0);}#sbo-rt-content code.debug,#sbo-rt-content .darkred{color:rgb(139,0,0);}#sbo-rt-content code.define,#sbo-rt-content .darkgoldenrod,#sbo-rt-content .gold{color:rgb(184,134,11);}#sbo-rt-content code.delimiter,#sbo-rt-content .dimgray{color:rgb(105,105,105);}#sbo-rt-content code.error,#sbo-rt-content .red{color:rgb(255,0,0);}#sbo-rt-content code.exception,#sbo-rt-content .salmon{color:rgb(250,128,11);}#sbo-rt-content code.float,#sbo-rt-content .steelblue{color:rgb(70,130,180);}#sbo-rt-content pre code.function,#sbo-rt-content .green{color:rgb(0,128,0);}#sbo-rt-content code.identifier,#sbo-rt-content .royalblue{color:rgb(65,105,225);}#sbo-rt-content code.ignore,#sbo-rt-content .gray{color:rgb(128,128,128);}#sbo-rt-content code.include,#sbo-rt-content .purple{color:rgb(128,0,128);}#sbo-rt-content code.keyword,#sbo-rt-content .sienna{color:rgb(160,82,45);}#sbo-rt-content code.label,#sbo-rt-content .deeppink{color:rgb(255,20,147);}#sbo-rt-content code.macro,#sbo-rt-content .orangered{color:rgb(255,69,0);}#sbo-rt-content code.number,#sbo-rt-content .brown{color:rgb(165,42,42);}#sbo-rt-content code.operator,#sbo-rt-content .black{color:#000;}#sbo-rt-content code.preCondit,#sbo-rt-content .teal{color:rgb(0,128,128);}#sbo-rt-content code.preProc,#sbo-rt-content .fuschia{color:rgb(255,0,255);}#sbo-rt-content code.repeat,#sbo-rt-content .indigo{color:rgb(75,0,130);}#sbo-rt-content code.special,#sbo-rt-content .saddlebrown{color:rgb(139,69,19);}#sbo-rt-content code.specialchar,#sbo-rt-content .magenta{color:rgb(255,0,255);}#sbo-rt-content code.specialcomment,#sbo-rt-content .seagreen{color:rgb(46,139,87);}#sbo-rt-content code.statement,#sbo-rt-content .forestgreen{color:rgb(34,139,34);}#sbo-rt-content code.storageclass,#sbo-rt-content .plum{color:rgb(221,160,221);}#sbo-rt-content code.string,#sbo-rt-content .darkred{color:rgb(139,0,0);}#sbo-rt-content code.structure,#sbo-rt-content .chocolate{color:rgb(210,106,30);}#sbo-rt-content code.tag,#sbo-rt-content .darkcyan{color:rgb(0,139,139);}#sbo-rt-content code.todo,#sbo-rt-content .black{color:#000;}#sbo-rt-content code.type,#sbo-rt-content .mediumslateblue{color:rgb(123,104,238);}#sbo-rt-content code.typedef,#sbo-rt-content .darkgreen{color:rgb(0,100,0);}#sbo-rt-content code.underlined{text-decoration:underline;}#sbo-rt-content pre code.hll{background-color:#ffc}#sbo-rt-content pre code.c{color:#09F;font-style:italic}#sbo-rt-content pre code.err{color:#A00}#sbo-rt-content pre code.k{color:#069;font-weight:bold}#sbo-rt-content pre code.o{color:#555}#sbo-rt-content pre code.cm{color:#35586C;font-style:italic}#sbo-rt-content pre code.cp{color:#099}#sbo-rt-content pre code.c1{color:#35586C;font-style:italic}#sbo-rt-content pre code.cs{color:#35586C;font-weight:bold;font-style:italic}#sbo-rt-content pre code.gd{background-color:#FCC}#sbo-rt-content pre code.ge{font-style:italic}#sbo-rt-content pre code.gr{color:#F00}#sbo-rt-content pre code.gh{color:#030;font-weight:bold}#sbo-rt-content pre code.gi{background-color:#CFC}#sbo-rt-content pre code.go{color:#000}#sbo-rt-content pre code.gp{color:#009;font-weight:bold}#sbo-rt-content pre code.gs{font-weight:bold}#sbo-rt-content pre code.gu{color:#030;font-weight:bold}#sbo-rt-content pre code.gt{color:#9C6}#sbo-rt-content pre code.kc{color:#069;font-weight:bold}#sbo-rt-content pre code.kd{color:#069;font-weight:bold}#sbo-rt-content pre code.kn{color:#069;font-weight:bold}#sbo-rt-content pre code.kp{color:#069}#sbo-rt-content pre code.kr{color:#069;font-weight:bold}#sbo-rt-content pre code.kt{color:#078;font-weight:bold}#sbo-rt-content pre code.m{color:#F60}#sbo-rt-content pre code.s{color:#C30}#sbo-rt-content pre code.na{color:#309}#sbo-rt-content pre code.nb{color:#366}#sbo-rt-content pre code.nc{color:#0A8;font-weight:bold}#sbo-rt-content pre code.no{color:#360}#sbo-rt-content pre code.nd{color:#99F}#sbo-rt-content pre code.ni{color:#999;font-weight:bold}#sbo-rt-content pre code.ne{color:#C00;font-weight:bold}#sbo-rt-content pre code.nf{color:#C0F}#sbo-rt-content pre code.nl{color:#99F}#sbo-rt-content pre code.nn{color:#0CF;font-weight:bold}#sbo-rt-content pre code.nt{color:#309;font-weight:bold}#sbo-rt-content pre code.nv{color:#033}#sbo-rt-content pre code.ow{color:#000;font-weight:bold}#sbo-rt-content pre code.w{color:#bbb}#sbo-rt-content pre code.mf{color:#F60}#sbo-rt-content pre code.mh{color:#F60}#sbo-rt-content pre code.mi{color:#F60}#sbo-rt-content pre code.mo{color:#F60}#sbo-rt-content pre code.sb{color:#C30}#sbo-rt-content pre code.sc{color:#C30}#sbo-rt-content pre code.sd{color:#C30;font-style:italic}#sbo-rt-content pre code.s2{color:#C30}#sbo-rt-content pre code.se{color:#C30;font-weight:bold}#sbo-rt-content pre code.sh{color:#C30}#sbo-rt-content pre code.si{color:#A00}#sbo-rt-content pre code.sx{color:#C30}#sbo-rt-content pre code.sr{color:#3AA}#sbo-rt-content pre code.s1{color:#C30}#sbo-rt-content pre code.ss{color:#A60}#sbo-rt-content pre code.bp{color:#366}#sbo-rt-content pre code.vc{color:#033}#sbo-rt-content pre code.vg{color:#033}#sbo-rt-content pre code.vi{color:#033}#sbo-rt-content pre code.il{color:#F60}#sbo-rt-content pre code.g{color:#050}#sbo-rt-content pre code.l{color:#C60}#sbo-rt-content pre code.l{color:#F90}#sbo-rt-content pre code.n{color:#008}#sbo-rt-content pre code.nx{color:#008}#sbo-rt-content pre code.py{color:#96F}#sbo-rt-content pre code.p{color:#000}#sbo-rt-content pre code.x{color:#F06}#sbo-rt-content div.blockquote_sampler_toc{width:95%;margin:5px 5px 5px 10px !important}#sbo-rt-content div{font-family:serif;text-align:left}#sbo-rt-content .gray-background,#sbo-rt-content .reverse-video{background:#2E2E2E;color:#FFF}#sbo-rt-content .light-gray-background{background:#A0A0A0}#sbo-rt-content .preserve-whitespace{white-space:pre-wrap}#sbo-rt-content span.gray{color:#4C4C4C}#sbo-rt-content .width-10{width:10vw !important}#sbo-rt-content .width-20{width:20vw !important}#sbo-rt-content .width-30{width:30vw !important}#sbo-rt-content .width-40{width:40vw !important}#sbo-rt-content .width-50{width:50vw !important}#sbo-rt-content .width-60{width:60vw !important}#sbo-rt-content .width-70{width:70vw !important}#sbo-rt-content .width-80{width:80vw !important}#sbo-rt-content .width-90{width:90vw !important}#sbo-rt-content .width-full,#sbo-rt-content .width-100{width:100vw !important}
+    </style>
+  
+
+
+
+
+    <script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"510f1a6865",applicationID:"206970542"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+</head>
+<body class="js-preview-content  ">
+
+
+<div class="skipToMain" id="skipToMain"><a href="#maincontent"><span class="skipToMain-text">Skip to main content</span></a></div>
+<header role="banner" class="global">
+  <div class="global-nav">
+    <div class="content">
+      <nav role="navigation" aria-label="site sections">
+        <a href="https://www.oreilly.com" class="logo" title="home page" aria-current="page"><img src="https://cdn.oreillystatic.com/images/sitewide-headers/oreilly_logo_mark_red.svg" onerror="this.src='https://cdn.oreillystatic.com/images/sitewide-headers/oreilly_logo_mark_red_@2x.png'; this.onerror=null;" alt="O'Reilly home"></a>
+
+        <button id="mobileNavButton" class="mobileNavButton mobileNavButton--collapse mobileNavButton--3dx" type="button" aria-expanded="false" aria-controls="menuList">
+          <span class="mobileNavButton-box">
+            <span class="mobileNavButton-inner"></span>
+          </span>
+        </button>
+
+
+        <ul id="menuList" class="menuList mobileHidden ">
+          <li class="menuList-itemsP1">
+            <ul>
+              
+  <li class="menuList-item menuList-signIn"><a class="t-sign-in" href="https://learning.oreilly.com/accounts/login/?next=/library/view/doing-data-science/9781449363871/ch01.html">Sign In</a></li>
+
+
+              <li class="menuList-item menuList-tryNow"><a class="menuList-cta" href="https://learning.oreilly.com/register/">Try Now</a></li>
+            </ul>
+          </li>
+          <li class="menuList-itemsP2">
+            <ul>
+              <li class="menuList-item menuList-itemWithSub"><a href="/online-learning/index.html">Online Learning</a>
+                <ul class="menuList-subList">
+                  <li class="menuList-subItem"><a href="/online-learning/individuals.html">Individuals</a></li>
+                  <li class="menuList-subItem"><a href="/online-learning/teams.html">Teams</a></li>
+                  <li class="menuList-subItem"><a href="/online-learning/enterprise.html">Enterprise</a></li>
+                  <li class="menuList-subItem"><a href="/online-learning/government.html">Government</a></li>
+                  <li class="menuList-subItem"><a href="/online-learning/academic.html">Academic</a></li>
+                  <li class="menuList-subItem"><a href="/online-learning/features.html">Features</a></li>
+                  <li class="menuList-subItem"><a href="/online-learning/custom-services.html">Custom Services</a></li>
+                  <li class="menuList-subItem"><a href="/online-learning/pricing.html">Pricing</a></li>
+                </ul>
+              </li>
+
+              <li class="menuList-item"><a href="/whats-new.html">What’s New</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+
+  <div class="global-search">
+    <div class="content">
+      <form id="js-search-form" class="t-navigation-form" action="https://learning.oreilly.com/search/">
+        
+        <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "WebSite",
+          "url": "https://learning.oreilly.com",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://learning.oreilly.com/search/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+        </script>
+        <input data-search-text-focus= "See everything available through O’Reilly online learning and start a free trial. Explore now." data-search-text-idle = "See everything available through O’Reilly online learning and start a free trial. Explore now." id="search" type="search" name="query" placeholder="See everything available through O’Reilly online learning and start a free trial. Explore now." autocomplete="off" required />
+        <input type="submit" value="Search" class="search-submit" />
+      </form>
+    </div>
+  </div>
+</header>
+
+    
+    
+        <div class="sbo-menu-top">
+           
+            <section class="sbo-toc-container">
+                <a href="https://learning.oreilly.com/library/view/doing-data-science/9781449363871/" class="sbo-toc-thumb">
+                    <span class="sbo-title ss-list">
+                        
+                            <h1 class="t-title">Doing Data Science by Cathy O&#x27;Neil, Rachel Schutt</h1>
+                        
+                    </span>
+                </a>
+            </section>
+             
+        </div>
+    
+
+
+</header>
+
+
+<section id="trial-overlay">
+  <div class="trial-overlay-content">
+    <p>Get <em>Doing Data Science</em> now with O’Reilly <span class="nowrap">online learning.</span></p>
+
+    <p>O’Reilly members experience live online training, plus books, videos, and digital content from <span class="nowrap">200+ publishers.</span></p>
+
+    <div class="controls">
+      <a href="https://learning.oreilly.com/register/" class="button-primary" data-ga-label="Bottom CTA">Start your free trial</a>
+    </div>
+    <a class="modal-dismiss" aria-label="modal dismiss"></a>
+  </div>
+</section>
+
+<main role="main" id="maincontent">
+  <div role="document" class="document">
+  	
+<section id="sbo-reader">
+    
+    
+
+<div class="sbo-reader-content sbo-sample-reader ">
+    
+    <div id="sbo-rt-content" class="sbo-rt-content">
+    <div id="test-content-id"><section data-type="chapter" epub:type="chapter" class="pagenumrestart" data-pdf-bookmark="Chapter 1. Introduction: What Is Data Science?"><div class="chapter" id="chapter-what-is-data-science">
+<h1><span class="label">Chapter 1. </span>Introduction: What Is <span class="keep-together">Data Science?</span></h1>
+
+
+<p><a data-type="indexterm" data-primary="data science" id="ix_01_What_is_data_science-asciidoc0"></a>Over the past few years, there’s been a lot of hype in the media about “data science” and “Big Data.” A reasonable first reaction to all of this might be some combination of skepticism and confusion; indeed we, Cathy and Rachel, had that exact reaction.</p>
+
+<p>And we let ourselves indulge in our bewilderment for a while, first separately, and then, once we met, together over many Wednesday morning breakfasts. But we couldn’t get rid of a nagging feeling that there was something <em>real</em> there, perhaps something deep and profound representing a paradigm shift in our culture around data. Perhaps, we considered, it’s even a paradigm shift that plays to our strengths. Instead of ignoring it, we decided to explore it more.</p>
+
+<p>But before we go into that, let’s first delve into what struck us as confusing and vague—perhaps you’ve had similar inclinations. After that we’ll explain what made us get past our own concerns, to the point where Rachel created a course on data science at Columbia University, Cathy blogged the course, and you’re now reading a book based on it.</p>
+
+
+
+
+
+
+<section data-type="sect1" data-pdf-bookmark="Big Data and Data Science Hype"><div class="sect1" id="idm46107873644984">
+<h1>Big Data and Data Science Hype</h1>
+
+<p><a data-type="indexterm" data-primary="data science" data-secondary="Big Data and" id="ix_01_What_is_data_science-asciidoc1"></a>Let’s get this out of the way right off the bat, because many of you are likely skeptical of data science already for many of the reasons we were. We want to address this up front to let you know: <em>we’re right there with you</em>. If you’re a skeptic too, it probably means you have something useful to contribute to making data science into a more legitimate field that has the power to have a positive impact on society.</p>
+
+<p>So, what is eyebrow-raising about Big Data and data science? Let’s count the ways:</p>
+<ol>
+<li>
+<p>There’s a lack <a data-type="indexterm" data-primary="Big Data" id="idm46107873633944"></a><a data-type="indexterm" data-primary="Big Data" data-secondary="Facebook and" id="idm46107873633112"></a><a data-type="indexterm" data-primary="Big Data" data-secondary="Google and" id="idm46107873631784"></a><a data-type="indexterm" data-primary="Facebook" id="idm46107873629320"></a><a data-type="indexterm" data-primary="Google" id="idm46107873628408"></a>of definitions around the most basic terminology. What is “Big Data” anyway? What does “data science” mean? What is the relationship between Big Data and data science? Is data science the science of Big Data? Is data science only the stuff going on in companies like Google and Facebook and tech companies? Why do many people refer to Big Data as crossing disciplines (astronomy, finance, tech, etc.) and to data science as only taking place in tech? Just how <em>big</em> is big? Or is it just a relative term? These terms are so ambiguous, they’re well-nigh meaningless.</p>
+</li>
+<li>
+<p>There’s a distinct lack of respect for the researchers in academia and industry labs who have been working on this kind of stuff for years, and whose work is based on decades (in some cases, centuries) of work by statisticians, computer scientists, mathematicians, engineers, and scientists of all types. From the way the <span class="keep-together">media</span> describes it, machine learning algorithms were just invented last week and data was never “big” until Google came along. This is simply not the case. Many of the methods and techniques we’re using—and the challenges we’re facing now—are part of the evolution of everything that’s come before. This doesn’t mean that there’s not new and exciting stuff going on, but we think it’s important to show some basic respect for everything that came <span class="keep-together">before</span>.</p>
+</li>
+<li>
+<p>The hype is crazy—people throw around tired phrases straight out of the height of the pre-financial crisis era like “Masters of the Universe” to describe data scientists, and that doesn’t bode well. In general, hype masks reality and increases the noise-to-signal ratio. The longer the hype goes on, the more many of us will get turned off by it, and the harder it will be to see what’s good underneath it all, if anything.</p>
+</li>
+<li>
+<p>Statisticians already feel that they are studying and working on the “Science of Data.” That’s their bread and butter. Maybe you, dear reader, are not a statistician and don’t care, but imagine that for the statistician, this feels a little bit like how identity theft might feel for you. Although we will make the case that data science is <em>not</em> just a rebranding of statistics or machine learning but rather a field unto itself, the media often describes data science in a way that makes it sound like as if it’s simply statistics or machine learning in the context of the tech industry.</p>
+</li>
+<li>
+<p>People have said to us, “Anything that has to call itself a science isn’t.” Although there might be truth in there, that doesn’t mean that the term “data science” <em>itself</em> represents nothing, but of course what it represents may not be science but more of a craft.<a data-type="indexterm" data-startref="ix_01_What_is_data_science-asciidoc1" id="idm46107873602872"></a></p>
+</li>
+
+</ol>
+</div></section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section data-type="sect1" data-pdf-bookmark="Getting Past the Hype"><div class="sect1" id="idm46107873600792">
+<h1>Getting Past the Hype</h1>
+
+<p>Rachel’s experience <a data-type="indexterm" data-primary="Google" id="idm46107873595832"></a>going from getting a PhD in statistics to working at Google is a great example to illustrate why we thought, in spite of the aforementioned reasons to be dubious, there might be some meat in the data science sandwich. In her words:</p>
+<blockquote>
+<p>It was clear to me pretty quickly that the stuff I was working on at Google was different than anything I had learned at school when I got my PhD in statistics. This is not to say that my degree was useless; far from it—what I’d learned in school provided a framework and way of thinking that I relied on daily, and much of the actual content provided a solid theoretical and practical foundation necessary to do my work.</p>
+
+<p>But there were also many skills I had to acquire on the job at Google that I <em>hadn’t</em> learned in school. Of course, my experience is specific to me in the sense that I had a statistics background and picked up more computation, coding, and visualization skills, as well as domain expertise while at Google. Another person coming in as a computer scientist or a social scientist or a physicist would have different gaps and would fill them in accordingly. But what is important here is that, as individuals, we each had different strengths and gaps, yet we were able to solve problems by putting ourselves together into a data team well-suited to solve the data problems that came our way.</p></blockquote>
+
+<p>Here’s a reasonable response you might have to this story. It’s a general truism that, whenever you go from school to a real job, you realize there’s a gap between what you learned in school and what you do on the job. In other words, you were simply facing the difference between academic statistics and industry statistics.</p>
+
+<p>We have a couple replies to this:</p>
+
+<ul>
+<li>
+<p>Sure, there’s <a data-type="indexterm" data-primary="data science" data-secondary="industry vs. academia in" id="idm46107873576968"></a>is a difference between industry and academia. But does it really have to be that way? Why do many courses in school have to be so intrinsically out of touch with reality?</p>
+</li>
+<li>
+<p>Even so, the gap doesn’t represent simply a difference between industry statistics and academic statistics. The general experience of data scientists is that, at their job, they have access to a <em>larger body of knowledge and methodology</em>, as well as a process, which we now define as the <em>data science process</em> (details in <a data-type="xref" href="ch02.html#chapter-statistical-interference-EDA">Chapter 2</a>), that has foundations in both statistics and computer science.</p>
+</li>
+</ul>
+
+<p>Around all the hype, in other words, there is a ring of truth: this <em>is</em> something new. But at the same time, it’s a fragile, nascent idea at real risk of being rejected prematurely. For one thing, it’s being paraded around as a magic bullet, raising unrealistic expectations that will surely be disappointed.</p>
+
+<p>Rachel gave <a data-type="indexterm" data-primary="Google" id="idm46107873285096"></a>herself the task of understanding the cultural phenomenon of data science and how others were experiencing it. She started meeting with people at Google, at startups and tech companies, and at universities, mostly from within statistics departments.</p>
+
+<p>From those meetings she started to form a clearer picture of the new thing that’s emerging. She ultimately decided to continue the investigation by giving a course at Columbia called “Introduction to Data Science,” which Cathy covered on her blog. We figured that by the end of the semester, we, and hopefully the students, would know what all this actually meant. And now, with this book, we hope to do the same for many more people.</p>
+</div></section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section data-type="sect1" data-pdf-bookmark="Why Now?"><div class="sect1" id="idm46107873028072">
+<h1>Why Now?</h1>
+
+<p><a data-type="indexterm" data-primary="Big Data" id="ix_01_What_is_data_science-asciidoc2"></a><a data-type="indexterm" data-primary="data science" data-secondary="available data for" id="ix_01_What_is_data_science-asciidoc3"></a>We have massive amounts of data about many aspects of our lives, and, simultaneously, an abundance of inexpensive computing power. Shopping, communicating, reading news, listening to music, searching for information, expressing our opinions—all this is being tracked online, as most people know.</p>
+
+<p>What people <a data-type="indexterm" data-primary="datafication" id="idm46107873016808"></a>might not know is that the “datafication” of our offline behavior has started as well, mirroring the online data collection revolution (more on this later). Put the two together, and there’s a lot to learn about our behavior and, by extension, who we are as a species.</p>
+
+<p>It’s not just <a data-type="indexterm" data-primary="data" data-secondary="growing influence of" id="idm46107873014456"></a>Internet data, though—it’s finance, the medical industry, pharmaceuticals, bioinformatics, social welfare, government, education, retail, and the list goes on. There is a growing influence of data in most sectors and most industries. In some cases, the amount of data collected might be enough to be considered “big” (more on this in the next chapter); in other cases, it’s not.</p>
+
+<p>But<a data-type="indexterm" data-primary="Amazon" id="idm46107873008504"></a><a data-type="indexterm" data-primary="data" data-secondary="products" id="idm46107873007160"></a><a data-type="indexterm" data-primary="Khan Academy" id="idm46107872933448"></a><a data-type="indexterm" data-primary="Knewton" id="idm46107872932584"></a><a data-type="indexterm" data-primary="products" id="idm46107872931704"></a> it’s not only the massiveness that makes all this new data interesting (or poses challenges). It’s that the data itself, often in real time, becomes the building blocks of data <em>products</em>. On the Internet, this means <span class="keep-together">Amazon</span> recommendation systems, friend recommendations on Facebook, film and music recommendations, and so on. In finance, this means credit ratings, trading algorithms, and models. In education, this is starting to mean dynamic personalized learning and assessments coming out of places like Knewton and Khan Academy. In government, this means policies based on data.</p>
+
+<p>We’re witnessing the beginning of a massive, culturally saturated feedback loop where our behavior changes the product and the product changes our behavior. Technology makes this possible: infrastructure for large-scale data processing, increased memory, and bandwidth, as well as a cultural acceptance of technology in the fabric of our lives. This wasn’t true a decade ago.</p>
+
+<p>Considering the impact of this feedback loop, we should start thinking seriously about how it’s being conducted, along with the ethical and technical responsibilities for the people responsible for the process. One goal of this book is a first stab at that conversation.</p>
+
+
+
+
+
+
+
+
+<section data-type="sect2" data-pdf-bookmark="Datafication"><div class="sect2" id="idm46107872919880">
+<h2>Datafication</h2>
+
+<p><a data-type="indexterm" data-primary="data science" data-secondary="datafication" id="idm46107872915208"></a><a data-type="indexterm" data-primary="datafication" id="idm46107872911848"></a>In the<a data-type="indexterm" data-primary="Cukier, Kenneth Neil" id="idm46107872901048"></a><a data-type="indexterm" data-primary="Foreign Affairs (magazine)" id="idm46107872898936"></a><a data-type="indexterm" data-primary="Mayer-Schoenberger, Viktor" id="idm46107872897304"></a> May/June 2013 issue of <em>Foreign Affairs</em>, Kenneth Neil Cukier and Viktor Mayer-Schoenberger wrote an article called <a class="orm:hideurl" href="http://fam.ag/1c4x7KY">“The Rise of Big Data”</a>. In it they discuss the concept of datafication, and their example is how we quantify friendships with “likes”: it’s the way <span class="keep-together">everything</span> we do, online or otherwise, ends up recorded for later examination in someone’s data storage units. Or maybe multiple storage units, and maybe also for sale.</p>
+
+<p>They define<a data-type="indexterm" data-primary="Google" id="idm46107872878472"></a> datafication as a process of “taking all aspects of life and turning them into data.” As examples, they mention that “Google’s augmented-reality glasses datafy the gaze. Twitter datafies stray thoughts. LinkedIn datafies professional networks.”</p>
+
+<p>Datafication is an interesting concept and led us to consider its importance with respect to people’s intentions about sharing their own data. We are being datafied, or rather our actions are, and when we “like” someone or something online, we are intending to be datafied, or at least we should expect to be. But when we merely browse the Web, we are unintentionally, or at least passively, being datafied through cookies that we might or might not be aware of. And when we walk around in a store, or even on the street, we are being datafied in a completely unintentional way, via <a data-type="indexterm" data-primary="Google glasses" id="idm46107872874984"></a>sensors, cameras, or Google glasses.</p>
+
+<p>This spectrum of intentionality ranges from us gleefully taking part in a social media experiment we are proud of, to all-out surveillance and stalking. But it’s all datafication. Our intentions may run the gamut, but the results don’t.</p>
+
+<p>They follow up their definition in the article with a line that speaks volumes about their perspective:</p>
+<blockquote>
+<p>Once we datafy things, we can transform their purpose and turn the information into new forms of value.</p></blockquote>
+
+<p>Here’s an important question that we will come back to throughout the book: who is “we” in that case? What kinds of <em>value</em> do they refer to? Mostly, given their examples, the “we” is the modelers and entrepreneurs making money from getting people to buy stuff, and the “value” translates into something like increased efficiency through automation.</p>
+
+<p>If we want to think bigger, if we want our “we” to refer to people in general, we’ll be swimming against the tide.<a data-type="indexterm" data-startref="ix_01_What_is_data_science-asciidoc3" id="idm46107872866216"></a><a data-type="indexterm" data-startref="ix_01_What_is_data_science-asciidoc2" id="idm46107872859016"></a></p>
+</div></section>
+
+
+
+
+
+</div></section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section data-type="sect1" data-pdf-bookmark="The Current Landscape (with a Little History)"><div class="sect1" id="idm46107873026888">
+<h1>The Current Landscape (with a Little History)</h1>
+
+<p><a data-type="indexterm" data-primary="data science" data-secondary="history of" id="ix_01_What_is_data_science-asciidoc4"></a>So, what is data science? Is it new, or is it just statistics or analytics rebranded? Is it real, or is it pure hype? And if it’s new and if it’s real, what does that mean?</p>
+
+<p>This is an ongoing <a data-type="indexterm" data-primary="Driscoll, Mike" id="idm46107872647544"></a><a data-type="indexterm" data-primary="Metamarket" id="idm46107872646808"></a><a data-type="indexterm" data-primary="Quora" id="idm46107872645928"></a>discussion, but one way to understand what’s going on in this industry is to look online and see what current discussions are taking place. This doesn’t necessarily tell us what data science is, but it at least tells us what other people think it is, or how they’re perceiving it. For example, on Quora there’s a discussion from 2010 about “What is Data Science?” and here’s <a class="orm:hideurl" href="http://b.qr.ae/18OA3YW">Metamarket CEO Mike Driscoll’s answer</a>:</p>
+<blockquote>
+<p>Data science, as it’s practiced, is a blend of Red-Bull-fueled hacking and espresso-inspired statistics.</p>
+
+<p>But data science is not merely hacking—because when hackers finish debugging their Bash one-liners and Pig scripts, few of them care about non-Euclidean distance metrics.</p>
+
+<p>And data science is not merely statistics, because when statisticians finish theorizing the perfect model, few could read a tab-delimited file into R if their job depended on it.</p>
+
+<p>Data science is the civil engineering of data. Its acolytes possess a practical knowledge of tools and materials, coupled with a theoretical understanding of what’s possible.</p></blockquote>
+
+<p>Driscoll then<a data-type="indexterm" data-primary="Conway, Drew" id="idm46107872635224"></a><a data-type="indexterm" data-primary="data science" data-secondary="Venn diagram of" id="idm46107872624264"></a><a data-type="indexterm" data-primary="Venn diagram of data science" id="idm46107872620824"></a> refers to <a class="orm:hideurl" href="http://www.drewconway.com/zia/?p=2378">Drew Conway’s Venn diagram of data science</a> from 2010, shown in <a data-type="xref" href="#drew-conway-venn-diagram">Figure 1-1</a>.</p>
+
+<figure><div id="drew-conway-venn-diagram" class="figure">
+<img src="/library/view/doing-data-science/9781449363871/assets/dnds_0101.png" alt="dnds 0101" width="508" height="493">
+<h6><span class="label">Figure 1-1. </span>Drew Conway’s Venn diagram of data science</h6>
+</div></figure>
+
+<p>He also<a data-type="indexterm" data-primary="Yau, Nathan" id="idm46107872105576"></a> mentions the sexy skills of data geeks from Nathan Yau’s 2009 post, <a class="orm:hideurl" href="http://flowingdata.com/2009/06/04/rise-of-the-data-scientist/">“Rise of the Data Scientist”</a>, which include:</p>
+
+<ul>
+<li>
+<p>Statistics <a data-type="indexterm" data-primary="statistics" id="idm46107871882840"></a>(traditional analysis you’re used to thinking about)</p>
+</li>
+<li>
+<p>Data<a data-type="indexterm" data-primary="data munging" id="idm46107875901528"></a> munging (parsing, scraping, and formatting data)</p>
+</li>
+<li>
+<p>Visualization<a data-type="indexterm" data-primary="visualization" id="idm46107875885752"></a> (graphs, tools, etc.)</p>
+</li>
+</ul>
+
+<p>But wait, is data science just a bag of tricks? Or is it the logical extension of other fields like statistics and machine learning?</p>
+
+<p>For one<a data-type="indexterm" data-primary="Cosma Shalizi" id="idm46107875824680"></a> argument, see Cosma Shalizi’s posts <a href="http://goo.gl/SO7ceN">here</a> and <a href="http://goo.gl/pXg1fU">here</a>, and Cathy’s posts <a href="http://goo.gl/F4K4hE">here</a> and <a href="http://goo.gl/X9Bmxj">here</a>, which constitute an ongoing discussion of the difference between a statistician and a data scientist. Cosma basically argues that any statistics department worth its salt does all the stuff in the descriptions of data science that he sees, and therefore data science is just a rebranding and unwelcome takeover of statistics.</p>
+
+<p>For a slightly<a data-type="indexterm" data-primary="Amstat News" id="idm46107875721768"></a><a data-type="indexterm" data-primary="ASA" id="idm46107875356360"></a><a data-type="indexterm" data-primary="Geller, Nancy" id="idm46107875355464"></a><a data-type="indexterm" data-primary="statistics" id="idm46107875139912"></a> different perspective, see ASA President Nancy Geller’s 2011 Amstat News article, <a class="orm:hideurl" href="http://magazine.amstat.org/blog/2011/08/01/prescorneraug11/">“Don’t shun the ‘S’ word”</a>, in which she defends statistics:</p>
+<blockquote>
+<p>We need to tell people that Statisticians are the ones who make sense of the data deluge occurring in science, engineering, and medicine; that statistics provides methods for data analysis in all fields, from art history to zoology; that it is exciting to be a Statistician in the 21st century because of the many challenges brought about by the data explosion in all of these fields.</p></blockquote>
+
+<p>Though we get her point—the phrase “art history to zoology” is supposed to represent the concept of A to Z—she’s kind of shooting herself in the foot with these examples because they don’t correspond to the high-tech world where much of the data explosion is coming from. Much of the development of the field is happening in industry, not academia. That is, there are people with the job title data scientist in companies, but no professors of data science in academia. (Though this may be changing.)</p>
+
+<p>Not long<a data-type="indexterm" data-primary="Facebook" id="idm46107872917992"></a><a data-type="indexterm" data-primary="Hammerbacher, Jeff" id="idm46107872912872"></a><a data-type="indexterm" data-primary="LinkedIn" id="idm46107872900456"></a><a data-type="indexterm" data-primary="Patil, DJ" id="idm46107872855304"></a> ago, <a class="orm:hideurl" href="http://linkd.in/16YNRLU">DJ Patil</a> <a class="orm:hideurl" href="http://oreil.ly/1aKXJwT">described</a> how he and <a class="orm:hideurl" href="http://linkd.in/17sqKNZ">Jeff Hammerbacher</a>—then at LinkedIn and Facebook, respectively—coined the term “data scientist” in 2008. So that is when “data scientist” emerged as a job title. (Wikipedia finally gained an entry on data science in 2012.)</p>
+
+<p>It makes <a data-type="indexterm" data-primary="Google" data-secondary="skills for" id="idm46107875942968"></a>sense to us that once the skill set required to thrive at Google—working with a team on problems that required a hybrid skill set of stats and computer science paired with personal characteristics including curiosity and persistence—spread to other Silicon Valley tech companies, it required a new job title. Once it became a pattern, it deserved a name. And once it got a name, everyone and their mother wanted to be one. It got<a data-type="indexterm" data-primary="data science" data-secondary="Harvard Business Review" id="idm46107875222760"></a><a data-type="indexterm" data-primary="Harvard Business Review" data-secondary="data science in" id="idm46107875967160"></a> even worse when <em>Harvard Business Review</em> declared data scientist to be the <a class="orm:hideurl" href="http://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century">“Sexiest Job of the 21st Century”</a>.</p>
+<aside data-type="sidebar" epub:type="sidebar"><div class="sidebar" id="idm46107875312104">
+<h5>The Role of the Social Scientist in Data Science</h5>
+<p>Both LinkedIn and<a data-type="indexterm" data-primary="Conway, Drew" id="idm46107875226008"></a><a data-type="indexterm" data-primary="data science" data-secondary="Facebook and" id="idm46107874969816"></a><a data-type="indexterm" data-primary="data science" data-secondary="LinkedIn and" id="idm46107874918360"></a><a data-type="indexterm" data-primary="Facebook" data-secondary="data science in" id="idm46107874542456"></a><a data-type="indexterm" data-primary="LinkedIn" data-secondary="data science in" id="idm46107874041784"></a> Facebook are social network companies. Oftentimes a description or definition of data scientist includes hybrid statistician, software engineer, and social scientist. This made sense in the context of companies where the product was a <em>social</em> product and still makes sense when we’re dealing with human or user behavior. But if you think about Drew Conway’s Venn diagram, data science problems cross disciplines—that’s what the substantive expertise is referring to.</p>
+
+<p>In other words, it depends on the context of the problems you’re trying to solve. If they’re social science-y problems like friend recommendations or people you know or user segmentation, then by all means, bring on the social scientist! Social scientists also do tend to be good question askers and have other good investigative qualities, so a social scientist who also has the quantitative and programming chops makes a great data scientist.</p>
+
+<p>But it’s almost a “historical” (historical is in quotes because 2008 isn’t that long ago) artifact to limit your conception of a data scientist to someone who works only with online user behavior data. There’s another emerging field out there called computational social sciences, which could be thought of as a subset of data science.</p>
+</div></aside>
+
+<p>But we can go back <a data-type="indexterm" data-primary="Cleveland, William" id="idm46107875880328"></a>even further. In 2001, William Cleveland wrote a <a class="orm:hideurl" href="http://cm.bell-labs.com/cm/ms/departments/sia/doc/datascience.pdf">position paper</a> about data science called “Data Science: An action plan to expand the field of statistics.”</p>
+
+<p>So data science existed before data scientists? Is this semantics, or does it make sense?</p>
+
+<p>This all begs a few questions: can you define data science by what data scientists <em>do</em>? Who gets to define the field, anyway? There’s lots of <a class="orm:hideurl" href="http://ti.me/19Yxv8T">buzz</a> and hype—does the media get to define it, or should we rely on the practitioners, the self-appointed data scientists? Or is there some actual authority? Let’s leave these as open questions for now, though we will return to them throughout the book.</p>
+
+
+
+
+
+
+
+
+<section data-type="sect2" data-pdf-bookmark="Data Science Jobs"><div class="sect2" id="idm46107875232552">
+<h2>Data Science Jobs</h2>
+
+<p><a data-type="indexterm" data-primary="data science" data-secondary="employment opportunities in" id="idm46107874954840"></a>Columbia just decided to start an <a class="orm:hideurl" href="http://idse.columbia.edu/">Institute for Data Sciences and Engineering</a> with <a class="orm:hideurl" href="http://mikebloomberg.com/index.cfm?objectid=D867EFB0-C29C-7CA2-F4B1FEBC8B06249D">Bloomberg’s help</a>. There are 465 job openings in New York City alone for data scientists last time we checked. That’s a lot. So even if data science isn’t a real field, it has <em>real</em> jobs.</p>
+
+<p>And here’s one thing we noticed about most of the job descriptions: they ask data scientists to be experts in computer science, statistics, communication, data visualization, <em>and</em> to have extensive domain expertise. Nobody is an expert in everything, which is why it makes more sense to create teams of people who have different profiles and different expertise—together, as a team, they can specialize in all those things. We’ll talk about this more after we look at the composite set of skills in demand for today’s data scientists.<a data-type="indexterm" data-startref="ix_01_What_is_data_science-asciidoc4" id="idm46107874073208"></a></p>
+</div></section>
+
+
+
+
+
+</div></section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section data-type="sect1" data-pdf-bookmark="A Data Science Profile"><div class="sect1" id="idm46107873580888">
+<h1>A Data Science Profile</h1>
+
+<p><a data-type="indexterm" data-primary="data science" data-secondary="scientists" id="ix_01_What_is_data_science-asciidoc5"></a><a data-type="indexterm" data-primary="data scientists" id="ix_01_What_is_data_science-asciidoc6"></a>In the class, Rachel handed out index cards and asked everyone to profile themselves (on a relative rather than absolute scale) with respect to their skill levels in the following domains:</p>
+
+<ul>
+<li>
+<p>Computer science</p>
+</li>
+<li>
+<p>Math</p>
+</li>
+<li>
+<p>Statistics</p>
+</li>
+<li>
+<p>Machine learning</p>
+</li>
+<li>
+<p>Domain expertise</p>
+</li>
+<li>
+<p>Communication and presentation skills</p>
+</li>
+<li>
+<p>Data visualization</p>
+</li>
+</ul>
+
+<p>As an example, <a data-type="xref" href="#rachel-profile">Figure 1-2</a> shows Rachel’s data science profile.</p>
+
+<figure><div id="rachel-profile" class="figure">
+<img src="/library/view/doing-data-science/9781449363871/assets/dnds_0102.png" alt="dnds 0102" width="1501" height="1120">
+<h6><span class="label">Figure 1-2. </span>Rachel’s data science profile, which she created to illustrate trying to visualize oneself as a data scientist; she wanted students and guest lecturers to “riff” on this—to add buckets or remove skills, use a different scale or visualization method, and think about the drawbacks of self-reporting</h6>
+</div></figure>
+
+<p>We taped the index cards to the blackboard and got to see how everyone else thought of themselves. There was quite a bit of variation, which is cool—lots of people in the class were coming from social sciences, for example.</p>
+
+<p>Where is your data science profile at the moment, and where would you like it to be in a few months, or years?</p>
+
+<p>As we mentioned <a data-type="indexterm" data-primary="data science" data-secondary="teams" id="idm46107875274120"></a><a data-type="indexterm" data-primary="data scientists" data-secondary="defining" id="idm46107875134904"></a>earlier, a data science team works best when different skills (profiles) are represented across different people, because nobody is good at everything. It makes us wonder if it might be more worthwhile to define a “data science team”—as shown in <a data-type="xref" href="#data-science-teams">Figure 1-3</a>—than to define a data scientist.</p>
+
+<figure><div id="data-science-teams" class="figure">
+<img src="/library/view/doing-data-science/9781449363871/assets/dnds_0103.png" alt="dnds 0103" width="1563" height="1642">
+<h6><span class="label">Figure 1-3. </span>Data science team profiles can be constructed from data scientist profiles; there should be alignment between the data science team profile and the profile of the data problems they try to solve</h6>
+</div></figure>
+</div></section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section data-type="sect1" class="pagebreak-before" data-pdf-bookmark="Thought Experiment: Meta-Definition"><div class="sect1" id="idm46107873275896">
+<h1>Thought Experiment: Meta-Definition</h1>
+
+<p><a data-type="indexterm" data-startref="ix_01_What_is_data_science-asciidoc6" id="idm46107865991384"></a><a data-type="indexterm" data-startref="ix_01_What_is_data_science-asciidoc5" id="idm46107865990936"></a><a data-type="indexterm" data-primary="data science" data-secondary="meta-definition thought experiment" id="idm46107877067880"></a><a data-type="indexterm" data-primary="meta-definition thought experiment" id="idm46107871147816"></a><a data-type="indexterm" data-primary="thought experiments" data-secondary="meta-definitions" id="idm46107876262456"></a>Every class had at least one thought experiment that the students <span class="keep-together">discussed</span> in groups. Most of the thought experiments were very open-ended, and the intention was to provoke discussion about a wide variety of topics related to data science. For the first class, the initial thought experiment was: <em>can we use data science to define data science?</em></p>
+
+<p>The class broke into small groups to think about and discuss this question. Here are a few interesting things that emerged from those conversations:</p>
+<dl>
+<dt>Start with a text-mining model.</dt>
+<dd>
+<p>We could do <a data-type="indexterm" data-primary="Google" data-secondary="text-mining models and" id="idm46107865895912"></a><a data-type="indexterm" data-primary="prescriptionists" id="idm46107871125224"></a><a data-type="indexterm" data-primary="text-mining models" id="idm46107871128152"></a><a data-type="indexterm" data-primary="usagists" id="idm46107871127480"></a>a Google search for “data science” and perform a text-mining model. But that would depend on us being a <em>usagist</em> rather than a <em>prescriptionist</em> with respect to language. A usagist would let the masses define data science (where “the masses” refers to whatever Google’s search engine finds). Would it be better to be a prescriptionist and refer to an authority such as the <em>Oxford English Dictionary</em>? Unfortunately, the <em>OED</em> probably doesn’t have an entry yet, and we don’t have time to wait for it. Let’s agree that there’s a spectrum, that one authority doesn’t feel right, and that “the masses” doesn’t either.</p>
+</dd>
+<dt>So what about a clustering algorithm?</dt>
+<dd>
+<p>How about<a data-type="indexterm" data-primary="algorithms" data-secondary="clustering" id="idm46107866007272"></a><a data-type="indexterm" data-primary="clustering algorithms" id="idm46107865942808"></a> we look at practitioners of data science and see how <em>they</em> describe what they do (maybe in a word cloud for starters)? Then we can look at how people who claim to be other things like statisticians or physicists or economists describe what they do. From there, we can try to use a clustering algorithm (which we’ll use in <a data-type="xref" href="ch03.html#chapter-algorithms">Chapter 3</a>) or some other model and see if, when it gets as input “the stuff someone does,” it gives a good prediction on what field that person is in.</p>
+</dd>
+</dl>
+
+<p>Just for comparison, check out <a data-type="indexterm" data-primary="Harris, Harlan" id="idm46107871385192"></a>what Harlan Harris recently did related to the field of data science: he <a class="orm:hideurl" href="http://datacommunitydc.org/blog/2012/08/data-scientists-survey-results-teaser/">took a survey and used clustering to define subfields of data science</a>, which gave rise to <a data-type="xref" href="#harlan-harris-clustering">Figure 1-4</a>.</p>
+
+<figure><div id="harlan-harris-clustering" class="figure">
+<img src="/library/view/doing-data-science/9781449363871/assets/dnds_0104.png" alt="dnds 0104" width="1566" height="1485">
+<h6><span class="label">Figure 1-4. </span>Harlan Harris’s clustering and visualization of subfields of data science from <em class="roman"><a class="orm:hideurl" href="http://shop.oreilly.com/product/0636920029014.do">Analyzing the Analyzers</a></em> (O’Reilly) by Harlan Harris, Sean Murphy, and Marck Vaisman  based on a  survey of several hundred data science practitioners in mid-2012</h6>
+</div></figure>
+</div></section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section data-type="sect1" data-pdf-bookmark="OK, So What Is a Data Scientist, Really?"><div class="sect1" id="idm46107874463128">
+<h1>OK, So What Is a Data Scientist, Really?</h1>
+
+<p>Perhaps the most concrete approach is to define data science is by its usage—e.g., what data scientists get paid to do. With that as motivation, we’ll describe what data scientists do. And we’ll cheat a bit by talking first about data scientists in academia.</p>
+
+
+
+
+
+
+
+
+<section data-type="sect2" data-pdf-bookmark="In Academia"><div class="sect2" id="idm46107865924232">
+<h2>In Academia</h2>
+
+<p><a data-type="indexterm" data-primary="data scientists" data-secondary="in academia" id="idm46107865922792"></a>The reality is that currently, no one calls themselves a data scientist in academia, except to take on a secondary title for the sake of being a part of a “data science institute” at a university, or for applying for a grant that supplies money for data science research.</p>
+
+<p>Instead, let’s ask a related question: who in academia plans to <em>become</em> a data scientist? There were 60 students in the Intro to Data Science class at Columbia. When Rachel proposed the course, she assumed the makeup of the students would mainly be statisticians, applied mathematicians, and computer scientists. Actually, though, it ended up being those people plus sociologists, journalists, political scientists, biomedical informatics students, students from NYC government agencies and nonprofits related to social welfare, someone from the architecture school, others from environmental engineering, pure mathematicians, business marketing students, and students who already worked as data scientists. They were all interested in figuring out ways to solve important problems, often of social value, with data.</p>
+
+<p>For the term “data science” to catch on in academia at the level of the faculty, and as a primary title, the research area needs to be more formally defined. Note there is already a rich set of problems that could translate into many PhD theses.</p>
+
+<p>Here’s a stab at what this could look like: an academic data scientist is a scientist, trained in anything from social science to biology, who works with large amounts of data, and must grapple with computational problems posed by the structure, size, messiness, and the <span class="keep-together">complexity</span> and nature of the data, while simultaneously solving a real-world problem.</p>
+
+<p>The case for articulating it like this is as follows: across academic disciplines, the computational and deep data problems have major commonalities. If researchers across departments join forces, they can solve multiple real-world problems from different domains.</p>
+</div></section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section data-type="sect2" data-pdf-bookmark="In Industry"><div class="sect2" id="idm46107876248440">
+<h2>In Industry</h2>
+
+<p><a data-type="indexterm" data-primary="data scientists" data-secondary="in industry" id="idm46107871185976"></a>What do data scientists look like in industry? It depends on the level of seniority and whether you’re talking about the Internet/online industry in particular. The role of data scientist need not be exclusive to the tech world, but that’s where the term originated; so for the purposes of the conversation, let us say what it means there.</p>
+
+<p>A chief data scientist should be setting the data strategy of the company, which involves a variety of things: setting everything up from the engineering and infrastructure for collecting data and logging, to privacy concerns, to deciding what data will be user-facing, how data is going to be used to make decisions, and how it’s going to be built back into the product. She should manage a team of engineers, <span class="keep-together">scientists</span>, and analysts and should communicate with leadership across the company, including the CEO, CTO, and product leadership. She’ll also be concerned with patenting innovative solutions and setting research goals.</p>
+
+<p>More generally, a data scientist is someone who knows how to extract meaning from and interpret data, which requires both tools and methods from statistics and machine learning, as well as being human. She spends a lot of time in the process of collecting, cleaning, and munging data, because data is never clean. This process requires persistence, statistics, and software engineering skills—skills that are also  necessary for understanding biases in the data, and for debugging logging output from code.</p>
+
+<p>Once she gets the data into shape, a crucial part is exploratory data analysis, which combines visualization and data sense. She’ll find patterns, build models, and algorithms—some with the intention of understanding product usage and the overall health of the product, and others to serve as prototypes that ultimately get baked back into the product. She may design experiments, and she is a critical part of data-driven decision making. She’ll communicate with team members, engineers, and leadership in clear language and with data visualizations so that even if her colleagues are not immersed in the data themselves, they will understand the implications.</p>
+
+<p>That’s the high-level picture, and this book is about helping you understand the vast majority of it. We’re done with <em>talking</em> about data science; let’s go ahead and <em>do</em> some!<a data-type="indexterm" data-startref="ix_01_What_is_data_science-asciidoc0" id="idm46107871158392"></a></p>
+</div></section>
+
+
+
+
+
+</div></section>
+
+
+
+
+
+
+
+</div></section></div>
+    </div>
+    
+    <section class="t-bottom-cta bottom-cta bottom-cta-book free-chapter">
+  <p>Get <em>Doing Data Science</em> now with O’Reilly <span class="nowrap">online learning.</span></p>
+  <p>O’Reilly members experience live online training, plus books, videos, and digital content from <span class="nowrap">200+ publishers.</span></p>
+
+  <div class="controls">
+      <a href="https://learning.oreilly.com/register/" class="button-primary" data-ga-label="Bottom CTA">Start your free trial</a>
+  </div>
+</section>
+
+</div>
+
+
+</section>
+
+
+
+  </div>
+</main>
+
+
+  <footer id="footer" class="footer">
+  <div class="content">
+    <div class="footer-main" aria-label="company info">
+      <div class="footer-mainLeft">
+        <div class="footer-mainLeftOne">
+          <div class="footer-approach">
+            <h2 class="footer-header"><a href="/about/approach.html">The O'Reilly Approach</a></h2>
+            <ul class="footer-links">
+              <li><a href="/about/">Our Company</a></li>
+              <li><a href="/work-with-us.html">Teach/Write/Train</a></li>
+              <li><a href="/careers/">Careers</a></li>
+              <li><a href="/partner/signup.csp">Community Partners</a></li>
+              <li><a href="/diversity/">Diversity</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-mainLeftTwo">
+          <div class="footer-solutions">
+            <h2 class="footer-header">Solutions</h2>
+            <ul class="footer-links">
+              <li><a href="/online-learning/teams.html">For Teams</a></li>
+              <li><a href="/online-learning/enterprise.html">For Enterprise</a></li>
+              <li><a href="/online-learning/individuals.html">For Individuals</a></li>
+              <li><a href="/online-learning/government.html">For Government</a></li>
+              <li><a href="/online-learning/academic.html">For Education</a></li>
+              <li><a href="/content-marketing-solutions.html">Marketing Solutions</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-contact">
+            <h2 class="footer-header"><a href="/online-learning/support/">Support</a></h2>
+
+            <ul class="footer-links">
+              <li><a href="/about/contact.html">Contact Us</a></li>
+              <li><a href="/privacy.html">Privacy Policy</a></li>
+            </ul>
+          
+            <a href="https://twitter.com/oreillymedia" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 400 400" style="enable-background:new 0 0 400 400;" xml:space="preserve"><style type="text/css">.st0{fill:#ee0000;}.st1{fill:#FFFFFF;}</style><g id="Red"><circle class="st0" cx="200" cy="200" r="200"/></g><g id="Logo__x2014__FIXED"><path class="st1" d="M163.4,305.5c88.7,0,137.2-73.5,137.2-137.2c0-2.1,0-4.2-0.1-6.2c9.4-6.8,17.6-15.3,24.1-25 c-8.6,3.8-17.9,6.4-27.7,7.6c10-6,17.6-15.4,21.2-26.7c-9.3,5.5-19.6,9.5-30.6,11.7c-8.8-9.4-21.3-15.2-35.2-15.2 c-26.6,0-48.2,21.6-48.2,48.2c0,3.8,0.4,7.5,1.3,11c-40.1-2-75.6-21.2-99.4-50.4c-4.1,7.1-6.5,15.4-6.5,24.2 c0,16.7,8.5,31.5,21.5,40.1c-7.9-0.2-15.3-2.4-21.8-6c0,0.2,0,0.4,0,0.6c0,23.4,16.6,42.8,38.7,47.3c-4,1.1-8.3,1.7-12.7,1.7 c-3.1,0-6.1-0.3-9.1-0.9c6.1,19.2,23.9,33.1,45,33.5c-16.5,12.9-37.3,20.6-59.9,20.6c-3.9,0-7.7-0.2-11.5-0.7 C110.8,297.5,136.2,305.5,163.4,305.5"/></g></svg></a>
+            <a href="https://www.facebook.com/OReilly/" target="_blank"><svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.25 32.25"><defs><style>.cls-1{fill:#E00;fill-rule:evenodd;}</style></defs><title>facebook-logo</title><path class="cls-1" d="M16.13,0A16.13,16.13,0,1,0,32.25,16.12,16.13,16.13,0,0,0,16.13,0Zm5.12,9.54H19.57a1.52,1.52,0,0,0-1.51,1.51v1.14h3.19v3.42H18.06V26.12H13.57V15.61H10.69V12.19h2.88v-2a4,4,0,0,1,4-4h3.65Z"/></svg></a>
+            <a href="https://www.linkedin.com/company/oreilly-media" target="_blank"><svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.25 32.25"><defs><style>.cls-1{fill:#E00;fill-rule:evenodd;}</style></defs><title>linkedin-logo</title><path class="cls-1" d="M17.43,13.53v0l0,0ZM16.12,0A16.13,16.13,0,1,0,32.25,16.12,16.12,16.12,0,0,0,16.12,0ZM11.77,22.92H8.12v-11h3.65ZM9.94,10.44h0a1.89,1.89,0,0,1-2-1.89A1.91,1.91,0,0,1,10,6.65a1.9,1.9,0,1,1,0,3.79Zm15,12.48H21.28V17.05c0-1.48-.53-2.49-1.85-2.49a2,2,0,0,0-1.88,1.34,2.63,2.63,0,0,0-.12.89v6.13H13.79s.05-10,0-11h3.64V13.5a3.63,3.63,0,0,1,3.29-1.82c2.4,0,4.21,1.57,4.21,4.95Z"/></svg></a>
+            <a href="https://www.youtube.com/user/OreillyMedia" target="_blank"><svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.25 32.25"><defs><style>.cls-1{fill:#E00;fill-rule:evenodd;}</style></defs><title>youtube-logo</title><path class="cls-1" d="M18.35,18.68a.89.89,0,0,0-.86.63V16.94h-1v7.59h1v-.59a.92.92,0,0,0,.89.74c.52,0,.86-.36,1-1.07a8.56,8.56,0,0,0,.14-1.9,10.47,10.47,0,0,0-.12-1.93C19.21,19.05,18.87,18.68,18.35,18.68Zm.09,4.14c-.05.52-.2.77-.45.77s-.43-.21-.49-.63a7.22,7.22,0,0,1,0-1c0-.72,0-1.14,0-1.26.07-.58.23-.88.51-.88s.4.27.46.79c0,.09,0,.47,0,1.13S18.46,22.71,18.44,22.82ZM8.61,18.19H9.86v6.34H11V18.19H12.2V16.94H8.61Zm7.71-6.12c.27,0,.43-.22.49-.66,0-.09,0-.45,0-1.07V9.78c0-.58,0-.93,0-1-.07-.43-.23-.65-.48-.65s-.41.19-.48.57a8.79,8.79,0,0,0,0,1v.53c0,.71,0,1.09,0,1.16C15.88,11.82,16.05,12.07,16.32,12.07Zm-1.74,10.4a2.92,2.92,0,0,1-.06.71c-.07.25-.2.37-.4.37s-.32-.11-.38-.34a2.63,2.63,0,0,1-.05-.66V18.83h-1v4.48c0,.91.33,1.37,1,1.37A1,1,0,0,0,14.6,24v.57h1v-5.7h-1Zm7.1-3.79a1.35,1.35,0,0,0-1.22.59,2.48,2.48,0,0,0-.3,1.07c0,.23,0,.61,0,1.16s0,1.13,0,1.37a2.93,2.93,0,0,0,.35,1.27,1.25,1.25,0,0,0,1.14.54,1.36,1.36,0,0,0,1.13-.45,2.29,2.29,0,0,0,.37-1.43s0-.07,0-.11v-.12h-1c0,.75-.17,1.12-.51,1.12s-.38-.18-.45-.56a4.68,4.68,0,0,1-.06-.9c0-.18,0-.31,0-.37h2v-.43a4.86,4.86,0,0,0-.3-2.11A1.28,1.28,0,0,0,21.68,18.68ZM22.15,21h-1c0-.05,0-.11,0-.16v-.08a1.64,1.64,0,0,1,.11-.8.39.39,0,0,1,.38-.23.42.42,0,0,1,.43.33,2.32,2.32,0,0,1,.07.7Zm-6-21A16.13,16.13,0,1,0,32.25,16.12,16.12,16.12,0,0,0,16.12,0Zm2.51,7.2h1V11a2.52,2.52,0,0,0,.06.66c.06.23.18.34.38.34s.34-.12.41-.37a3.76,3.76,0,0,0,.05-.71V7.2h1v5.74h-1v-.57a1,1,0,0,1-.93.72c-.66,0-1-.46-1-1.38ZM15,8a1.29,1.29,0,0,1,1.33-.92A1.3,1.3,0,0,1,17.65,8a6.77,6.77,0,0,1,.23,2.1,6.77,6.77,0,0,1-.23,2.1,1.3,1.3,0,0,1-1.32.92A1.29,1.29,0,0,1,15,12.17a6.77,6.77,0,0,1-.23-2.1A6.86,6.86,0,0,1,15,8ZM11.45,5.3l.89,2.87.88-2.87H14.4L12.88,9.7v3.24h-1.1V9.7L10.24,5.3ZM24.93,23.91a3,3,0,0,1-3,3h-12a3,3,0,0,1-3-3V18.05a3,3,0,0,1,3-3h12a3,3,0,0,1,3,3Z"/></svg></a>
+            <a href="https://www.oreilly.com/emails/newsletters/" target="_blank"><svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.33 32.33"><defs><style>.cls-1{fill:#E00;}.cls-2{fill:#f0f1f1;}</style></defs><title>email-logo</title><circle class="cls-1" cx="16.17" cy="16.17" r="16.17"/><path class="cls-2" d="M6.66,13.32l.2.14c2.2,1.5,4.41,3,6.74,4.29.6.34,1.22.62,1.84.92a1.72,1.72,0,0,0,1.44,0,21,21,0,0,0,2.71-1.4c2-1.21,4-2.53,5.91-3.87l.18-.12v.21c0,2.77,0,5.54,0,8.31A1.51,1.51,0,0,1,24,23.33c-5.24,0-10.48,0-15.72,0a1.57,1.57,0,0,1-1.62-1.08,1.23,1.23,0,0,1,0-.19V13.47A.86.86,0,0,1,6.66,13.32Z"/><path class="cls-2" d="M16.15,9h7.9a1.5,1.5,0,0,1,1.56,1,4.81,4.81,0,0,1,.06,1.07s0,.08-.08.1a77.16,77.16,0,0,1-7.49,4.9c-.42.24-.87.43-1.31.63a1.41,1.41,0,0,1-1.28,0c-.65-.33-1.32-.64-1.95-1-2.37-1.4-4.59-3-6.81-4.55a.35.35,0,0,1-.1-.2c0-.2,0-.4,0-.6A1.45,1.45,0,0,1,8.05,9h8.1Z"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-download" id="download-info">
+        <h2 class="footer-header">Download the O&rsquo;Reilly App</h2>
+
+        <div class="footer-downloadLinks">
+          <a href="https://itunes.apple.com/us/app/safari-to-go/id881697395"><img src="https://cdn.oreillystatic.com/oreilly/images/app-store-logo.png" alt="Apple app store" /></a>
+          <a href="https://play.google.com/store/apps/details?id=com.safariflow.queue"><img src="https://cdn.oreillystatic.com/oreilly/images/google-play-logo.png"  alt="Google play store" /></a>
+        </div>
+
+        <p>Take O&rsquo;Reilly online learning with you and learn anywhere, anytime on your phone or tablet. Download the app <span class="nowrap">today and:</span></p>
+
+        <ul>
+          <li>Get unlimited access to books, videos, and <span class="nowrap">live training</span></li>
+          <li>Never lose your place&mdash;all your devices are synced</li>
+          <li>Learn during your commute with online and <span class="nowrap">offline access</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-subfooter">
+
+      <a href="https://www.oreilly.com" title="home page" aria-current="page">
+        <img 
+        class="footer-subfooterLogo" 
+        id="footer-subfooterLogo"
+        src="https://cdn.oreillystatic.com/images/sitewide-headers/oreilly_logo_mark_red.svg" 
+        onerror="this.src='https://cdn.oreillystatic.com/images/sitewide-headers/oreilly_logo_mark_red_@2x.png'; this.onerror=null;" 
+        alt="O'Reilly home">
+      </a>
+
+      <p>&copy; 2020, O&rsquo;Reilly Media, Inc.  All trademarks and registered trademarks appearing on oreilly.com are the property of their respective owners.</p>
+      <p><a href="/terms/">Terms of Service</a> • <a href="/privacy.html">Privacy Policy</a> • <a href="/about/editorial_independence.html">Editorial Independence</a></p>
+    </div>
+
+  </div>
+</footer>
+
+
+<!--
+<footer class="anybird-footer">
+    <nav class="grid">
+        <ul class="footer-nav col">
+            <li><a href="https://learning.oreilly.com/explore/"><span>Explore</span></a></li>
+            <li><a href="https://learning.oreilly.com/our-library/"><span>Tour</span></a></li>
+            <li><a href="https://learning.oreilly.com/pricing/"><span>Pricing</span></a></li>
+            <li><a href="https://learning.oreilly.com/enterprise/"><span>Enterprise</span></a></li>
+            <li><a href="https://learning.oreilly.com/government/"><span>Government</span></a></li>
+            <li><a href="https://learning.oreilly.com/academic-public-library/"><span>Education</span></a></li>
+            <li><a href="https://learning.oreilly.com/your-experience/#queue"><span>Queue App</span></a></li>
+        </ul>
+        <ul class="footer-contact col">
+            <li><a href="https://learning.oreilly.com/learn/"><span>Learn</span></a></li>
+            <li><a href="https://learning.oreilly.com/blog/"><span>Blog</span></a></li>
+            <li><a href="https://learning.oreilly.com/contact/"><span>Contact</span></a></li>
+            <li><a href="https://learning.oreilly.com/careers/"><span>Careers</span></a></li>
+            <li><a href="https://learning.oreilly.com/press-resources/"><span>Press Resources</span></a></li>
+            <li><a href="https://www.oreilly.com/online-learning/support/"><span>Support</span></a></li>
+        </ul>
+        <ul class="footer-social col">
+            <li id="footer-twitter"><a href="https://twitter.com/safari"><span>Twitter</span></a></li>
+            <li id="footer-github"><a href="https://github.com/oreillymedia"><span>GitHub</span></a></li>
+            <li id="footer-facebook"><a href="http://www.facebook.com/safaribooksonline"><span>Facebook</span></a></li>
+            <li id="footer-linkedin"><a
+                    href="https://www.linkedin.com/company/safari-books-online"><span>LinkedIn</span></a></li>
+        </ul>
+        <ul class="footer-legal col">
+            <li><a href="https://learning.oreilly.com/terms/"><span>Terms of Service</span></a></li>
+            <li><a href="https://learning.oreilly.com/membership-agreement/"><span>Membership Agreement</span></a></li>
+            <li><a href="https://learning.oreilly.com/privacy/"><span>Privacy Policy</span></a></li>
+        </ul>
+    </nav>
+    <div class="footer-copyright">
+        Copyright &copy; 2020 Safari Books Online.
+    </div>
+</footer>
+-->
+
+
+
+
+<script>
+  var g = {
+    
+    position_cache: {},
+    title: "Doing Data Science",
+    author_list: "Cathy O&#x27;Neil, Rachel Schutt",
+    format: "book",
+    source: "application/epub+zip",
+    is_system_book: true,
+    is_public: true,
+    loaded_from_server: true,
+    allow_scripts: false,
+    has_mathml: true
+    
+  };
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'product.title': "Doing Data Science",
+    'product.type': "book",
+    'product.identifier': "9781449363871",
+    'content.identifier': "9781449363871/ch01.html",
+    'content.publisher': "O'Reilly Media, Inc.",
+    'content.free': "no",
+    'content.subdirectory': "none",
+    'content.subTopic': "none",
+    'content.parentTopic': "none",
+    'content.formatType': "book-chapter",
+    'content.author': "Cathy O'Neil, Rachel Schutt",
+    'content.releaseDate': "2013-10-24",
+    'content.title': "1. Introduction: What Is Data Science?",
+  });
+</script>
+
+
+
+<script src="/library/view/static/CACHE/js/output.d1c80552da2d.js"></script>
+
+
+<noscript> 
+  <iframe src="//www.googletagmanager.com/ns.html?id=GTM-5P4V6Z"
+          height="0" width="0"
+          style="display:none;visibility:hidden">
+  </iframe>
+</noscript>
+
+
+<script async defer src="/library/view/pageview.js"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script>
+  jQuery(document).ready(function($) {
+    //Toggle isActive and mobileHidden classes for mobileNavButton
+    $('nav #mobileNavButton').on('click', function() {
+      var expanded = $(this).attr('aria-expanded') === 'true' || false;
+      $(this).attr('aria-expanded', !expanded);
+      $(this).toggleClass("isActive");
+      $(this).next().toggleClass("mobileHidden");
+    });
+
+    //Toggle isFocused class for keyboard navigation of submenus
+    $('nav #menuList .menuList-subItem a').each(function(navItem) {
+      $(this).on('focus', function() {
+        $(this).parent().parent().toggleClass('isFocused');
+      });
+      $(this).on('blur', function() {
+        $(this).parent().parent().toggleClass('isFocused');
+      });
+    });
+
+    //Toggle mobileHidden class accordian elements
+    $('.mobileAccordian').each(function() {
+      var $btn = $(this).find('button');
+      var $target =  $(this).next();
+      $btn.on('click', function() {
+        var expanded = $btn.attr('aria-expanded') === 'true' || false;
+
+        $btn.attr('aria-expanded', !expanded);
+        $target.toggleClass("mobileHidden");
+      });
+    });
+
+
+    //Hide title page's long description behind disclosure button
+    var titleDescriptionExtra = $('.title-description p:first-of-type').nextAll(':nth-child(3)').nextAll();
+    titleDescriptionExtra.wrapAll('<div id="titleDescriptionExtra" />');
+    if (titleDescriptionExtra.length > 0) {
+      $('#titleDescriptionExtra').toggle();
+      $('#showMoreDescription').removeClass('hidden');
+      $('#showMoreDescription button').on('click', function() {
+        $(this).toggleClass('more');
+        $('#titleDescriptionExtra').slideToggle();
+      });
+    }
+
+    //Hide title page's long TOC behind disclosure button
+    var titleTOCShort = $('.sbo-reader-title .detail-toc').find('li').slice(0,4);
+    var titleTOCExtra = $('.sbo-reader-title .detail-toc').find('li').not(titleTOCShort);
+    if (titleTOCExtra.length > 0) {
+      titleTOCExtra.toggle();
+      $('#showMoreTOC').removeClass('hidden');
+      $('#showMoreTOC button').on('click', function() {
+        $(this).toggleClass('more');
+        titleTOCExtra.toggle();
+      });
+    }
+
+    //Hide product information on page load
+    $('#product-information').toggle();
+    $('#title-tabs button').on('click', function() {
+      var $thisTab = $(this);
+      if (!$thisTab.hasClass('title-tab-active')) {
+        var lastTabTarget = $('#title-tabs .title-tab-active').removeClass('title-tab-active').attr('data-target');
+        $('#' + lastTabTarget).toggle();
+
+        $thisTab.addClass('title-tab-active');
+        var $tabTarget = $(this).attr('data-target');
+        $('#' + $tabTarget).toggle();
+      }
+    });
+
+  });
+
+</script>
+
+
+
+<!-- MARC Intercept Support -->
+
+<script src="https://service.seamlessaccess.org/thiss.js"></script>
+
+<script src="/library/view/static/CACHE/js/output.8bff54f150f1.js"></script>
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"510f1a6865","applicationID":"206970542","transactionName":"YgdaZ0NSW0cEB0RdWltNfkZfUEFdCgofVVtMAFFBVR1DXQATQw5GVA9IX1RsQ10AEw==","queueTime":7,"applicationTime":223,"agent":""}</script>
+</body>
+</html>

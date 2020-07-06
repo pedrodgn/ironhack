@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.19" />
+
+  <title>The key word in &#34;Data Science&#34; is not Data, it is Science &middot; Simply Statistics</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdn.bootcss.com/pure/0.6.2/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/pure/0.6.2/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/pure/0.6.2/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <script async src="https://use.fontawesome.com/32c3d13def.js"></script>
+
+  
+  
+
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css">
+  <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+  <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+  <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://simplystatistics.org/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="/"><img src="/img/sslogo.png" alt="Simply Statistics Logo" /></a>
+
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/post/"><i class='fa fa-list fa-fw'></i>Archive</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/conferences/"><i class='fa fa-comments fa-fw'></i>Conferences</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/courses/"><i class='fa fa-book fa-fw'></i>Courses</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/interviews/"><i class='fa fa-microphone fa-fw'></i>Interviews</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/newposts/"><i class='fa fa-code-fork fa-fw'></i>Contributing</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/simplystats" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/rbind/simplystats" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2011 - 2020. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with <a href="https://github.com/rstudio/blogdown" target="_blank">blogdown</a> and <a href="https://gohugo.io/" target="_blank">Hugo</a>. Theme <a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a>.</small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>The key word in &#34;Data Science&#34; is not Data, it is Science</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    
+    <i class="fa fa-user fa-fw"></i>
+    <span>Jeff Leek</span>
+    
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>2013/12/12</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+
+  <p>One of my colleagues was just at a conference where they saw a presentation about using data to solve a problem where data had previously not been abundant. The speaker claimed the data were &ldquo;big data&rdquo; and a question from the audience was: &ldquo;Well, that isn&rsquo;t really big data is it, it is only X Gigabytes&rdquo;.</p>
+
+<p>While that exact question would elicit groans from most people who work with data, I think it highlights one of the key problems with the thinking around data science. Most people hyping data  science have focused on the first word: data. They care about volume and velocity and whatever other buzzwords describe data that is too big for you to analyze in Excel. This hype about the size (relative or absolute) of the data being collected fed into the second category of hype - hype about tools. People threw around EC2, Hadoop, Pig, and had huge debates about Python versus R.</p>
+
+<p>But the key word in data science is not &ldquo;data&rdquo;; it is &ldquo;science&rdquo;. Data science is only useful when the data are used to answer a question. That is the science part of the equation. The problem with this view of data science is that it is much harder than the view that focuses on data size or tools. It is much, much easier to calculate the size of a data set and say &ldquo;My data are bigger than yours&rdquo; or to say, &ldquo;I can code in Hadoop, can you?&rdquo; than to say, &ldquo;I have this really hard question, can I answer it with my data?&rdquo;.</p>
+
+<p>A few reasons it is harder to focus on the science than the data/tools are:</p>
+
+<ol>
+<li><span style="line-height: 16px;">John Tukey&rsquo;s quote: &ldquo;The combination of some data and an aching desire for an answer does not ensure that a reasonable answer can be extracted from a given body of data.&rdquo;. You may have 100 Gb and <a href="http://simplystatistics.org/2013/09/23/the-limiting-reagent-for-big-data-is-often-small-well-curated-data/">only 3 Kb are useful</a> for answering the real question you care about. </span></li>
+<li>When you start with the question you often discover that you need to collect new data or design an experiment to confirm you are getting the right answer.</li>
+<li>It is easy to discover &ldquo;structure&rdquo; or &ldquo;networks&rdquo; in a data set. There will always be correlations for a thousand reasons if you collect enough data. Understanding whether these correlations matter for specific, interesting questions is much harder.</li>
+<li>Often the structure you found on the first pass is due to a phenomena (measurement error, artifacts, data processing) that doesn&rsquo;t answer an interesting question.</li>
+</ol>
+
+<p>The issue is that the hype around big data/data science will flame out (it already is) if data science is only about &ldquo;data&rdquo; and not about &ldquo;science&rdquo;. The long term impact of data science will be measured by the scientific questions we can answer with the data.</p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="/2013/12/12/simply-statistics-interview-with-michael-eisen-co-founder-of-the-public-library-of-science/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="/2013/12/12/simply-statistics-interview-with-michael-eisen-co-founder-of-the-public-library-of-science/">Simply Statistics Interview with Michael Eisen, Co-Founder of the Public Library of Science (Part 1/2)</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="/2013/12/13/simply-statistics-interview-with-michael-eisen-co-founder-of-the-public-library-of-science-part-22/">Simply Statistics Interview with Michael Eisen, Co-Founder of the Public Library of Science (Part 2/2)</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="/2013/12/13/simply-statistics-interview-with-michael-eisen-co-founder-of-the-public-library-of-science-part-22/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_config = function () {
+  this.page.url = "http://simplystatistics.org" + location.pathname;
+};
+
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  var disqus_shortname = 'simplystatsgithub';
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+</div>
+
+</div>
+</div>
+<script src="https://simplystatistics.org/js/ui.js"></script>
+<script src="//yihui.name/js/math-code.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+</script>
+<script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73968959-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>
+

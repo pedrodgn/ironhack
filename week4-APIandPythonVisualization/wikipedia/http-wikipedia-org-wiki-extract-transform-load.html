@@ -1,0 +1,604 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Extract, transform, load - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"2507c18c-5d34-4ed4-a47b-a1bca399a5a8","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Extract,_transform,_load","wgTitle":"Extract, transform, load","wgCurRevisionId":964605513,"wgRevisionId":964605513,"wgArticleId":239516,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles lacking in-text citations from November 2011","All articles lacking in-text citations","Articles that may contain original research from December 2011","All articles that may contain original research","Articles with multiple maintenance issues",
+"Articles needing additional references from May 2019","All articles needing additional references","Articles containing potentially dated statements from 2009","All articles containing potentially dated statements","Articles containing potentially dated statements from 2010","All articles with unsourced statements","Articles with unsourced statements from December 2011","Extract, transform, load tools","Data warehousing"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Extract,_transform,_load","wgRelevantArticleId":239516,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,
+"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1276130","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage"};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","skins.vector.styles.legacy":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons",
+"ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.38"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/f/fa/Conventional_ETL_Diagram.jpg"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Extract,_transform,_load&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Extract,_transform,_load&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Extract,_transform,_load"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Extract_transform_load rootpage-Extract_transform_load skin-vector action-view skin-vector-legacy minerva--history-page-action-enabled">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+		<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Extract, transform, load</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="box-Multiple_issues plainlinks metadata ambox ambox-content ambox-multiple_issues compact-ambox" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/60px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/80px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></div></td><td class="mbox-text"><div class="mbox-text-span"><div class="mw-collapsible" style="width:95%; margin: 0.2em 0;"><b>This article has multiple issues.</b> Please help <b><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Extract,_transform,_load&amp;action=edit">improve it</a></b> or discuss these issues on the <b><a href="/wiki/Talk:Extract,_transform,_load" title="Talk:Extract, transform, load">talk page</a></b>. <small><i>(<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove these template messages</a>)</i></small>
+<div class="mw-collapsible-content" style="margin-top: 0.3em;">
+      <table class="box-More_footnotes plainlinks metadata ambox ambox-style ambox-More_footnotes" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/40px-Text_document_with_red_question_mark.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/60px-Text_document_with_red_question_mark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/80px-Text_document_with_red_question_mark.svg.png 2x" data-file-width="48" data-file-height="48" /></div></td><td class="mbox-text"><div class="mbox-text-span">This article includes a <a href="/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">list of references</a>, but <b>its sources remain unclear because it has insufficient <a href="/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a></b>.<span class="hide-when-compact"> Please help to <a href="/wiki/Wikipedia:WikiProject_Fact_and_Reference_Check" class="mw-redirect" title="Wikipedia:WikiProject Fact and Reference Check">improve</a> this article by <a href="/wiki/Wikipedia:When_to_cite" title="Wikipedia:When to cite">introducing</a> more precise citations.</span>  <small class="date-container"><i>(<span class="date">November 2011</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<table class="box-Original_research plainlinks metadata ambox ambox-content ambox-Original_research" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/60px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/80px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></div></td><td class="mbox-text"><div class="mbox-text-span">This article <b>possibly contains <a href="/wiki/Wikipedia:No_original_research" title="Wikipedia:No original research">original research</a></b>.<span class="hide-when-compact"> Please <a class="external text" href="https://en.wikipedia.org/w/index.php?title=Extract,_transform,_load&amp;action=edit">improve it</a> by <a href="/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verifying</a> the claims made and adding <a href="/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a>. Statements consisting only of original research should be removed.</span>  <small class="date-container"><i>(<span class="date">December 2011</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+    </div>
+</div><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<p>In <a href="/wiki/Computing" title="Computing">computing</a>, <b>extract, transform, load</b> (<b>ETL</b>) is the general procedure of copying data from one or more sources into a destination system which represents the data differently from the source(s) or in a different context than the source(s). The ETL process became a popular concept in the 1970s and is often used in <a href="/wiki/Data_warehouse" title="Data warehouse">data warehousing</a>.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup>
+</p><p><a href="/wiki/Data_extraction" title="Data extraction">Data extraction</a> involves extracting data from homogeneous or heterogeneous sources; <a href="/wiki/Data_transformation" title="Data transformation">data transformation</a> processes data by <a href="/wiki/Data_cleansing" title="Data cleansing">data cleansing</a> and transforming them into a proper storage format/structure for the purposes of querying and analysis; finally, data loading describes the insertion of data into the final target database such as an <a href="/wiki/Operational_data_store" title="Operational data store">operational data store</a>, a <a href="/wiki/Data_mart" title="Data mart">data mart</a>, <a href="/wiki/Data_lake" title="Data lake">data lake</a> or a data warehouse.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup><sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup>
+</p><p>A properly designed ETL system extracts data from the source systems, enforces data quality and consistency standards, conforms data so that separate sources can be used together, and finally delivers data in a presentation-ready format so that application developers can build applications and end users can make decisions.<sup id="cite_ref-Kimball_2004_4-0" class="reference"><a href="#cite_note-Kimball_2004-4">&#91;4&#93;</a></sup>
+</p><p>Since the data extraction takes time, it is common to execute the three phases in parallel. While the data is being extracted, another transformation process executes while processing the data already received and prepares it for loading while the data loading begins without waiting for the completion of the previous phases.
+</p><p>ETL systems commonly integrate data from multiple applications (systems), typically developed and supported by different vendors or hosted on separate computer hardware. The separate systems containing the original data are frequently managed and operated by different employees. For example, a cost accounting system may combine data from payroll, sales, and purchasing.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Conventional_ETL_Diagram.jpg" class="image"><img alt="Conventional ETL Diagram" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Conventional_ETL_Diagram.jpg/220px-Conventional_ETL_Diagram.jpg" decoding="async" width="220" height="136" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Conventional_ETL_Diagram.jpg/330px-Conventional_ETL_Diagram.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Conventional_ETL_Diagram.jpg/440px-Conventional_ETL_Diagram.jpg 2x" data-file-width="1021" data-file-height="631" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Conventional_ETL_Diagram.jpg" class="internal" title="Enlarge"></a></div>Conventional ETL Diagram<sup id="cite_ref-Kimball_2004_4-1" class="reference"><a href="#cite_note-Kimball_2004-4">&#91;4&#93;</a></sup></div></div></div>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Extract"><span class="tocnumber">1</span> <span class="toctext">Extract</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Transform"><span class="tocnumber">2</span> <span class="toctext">Transform</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Load"><span class="tocnumber">3</span> <span class="toctext">Load</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Real-life_ETL_cycle"><span class="tocnumber">4</span> <span class="toctext">Real-life ETL cycle</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Challenges"><span class="tocnumber">5</span> <span class="toctext">Challenges</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Performance"><span class="tocnumber">6</span> <span class="toctext">Performance</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Parallel_processing"><span class="tocnumber">7</span> <span class="toctext">Parallel processing</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Rerunnability,_recoverability"><span class="tocnumber">8</span> <span class="toctext">Rerunnability, recoverability</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Virtual_ETL"><span class="tocnumber">9</span> <span class="toctext">Virtual ETL</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Dealing_with_keys"><span class="tocnumber">10</span> <span class="toctext">Dealing with keys</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Tools"><span class="tocnumber">11</span> <span class="toctext">Tools</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Vs._ELT"><span class="tocnumber">12</span> <span class="toctext">Vs. ELT</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#See_also"><span class="tocnumber">13</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#References"><span class="tocnumber">14</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Extract">Extract</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Extract,_transform,_load&amp;action=edit&amp;section=1" title="Edit section: Extract">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The first part of an ETL process involves extracting the data from the source system(s). In many cases, this represents the most important aspect of ETL, since extracting data correctly sets the stage for the success of subsequent processes. Most data-warehousing projects combine data from different source systems. Each separate system may also use a different data organization and/or <a href="/wiki/File_format" title="File format">format</a>. Common data-source formats include <a href="/wiki/Relational_database" title="Relational database">relational databases</a>, <a href="/wiki/XML" title="XML">XML</a>, <a href="/wiki/JSON" title="JSON">JSON</a> and <a href="/wiki/Flat_file_database" class="mw-redirect" title="Flat file database">flat files</a>, but may also include non-relational database structures such as <a href="/wiki/Information_Management_System" class="mw-redirect" title="Information Management System">Information Management System (IMS)</a> or other data structures such as <a href="/wiki/Virtual_Storage_Access_Method" title="Virtual Storage Access Method">Virtual Storage Access Method (VSAM)</a> or <a href="/wiki/ISAM" title="ISAM">Indexed Sequential Access Method (ISAM)</a>, or even formats fetched from outside sources by means such as <a href="/wiki/Web_spider" class="mw-redirect" title="Web spider">web spidering</a> or <a href="/wiki/Screen-scraping" class="mw-redirect" title="Screen-scraping">screen-scraping</a>. The streaming of the extracted data source and loading on-the-fly to the destination database is another way of performing ETL when no intermediate data storage is required. In general, the extraction phase aims to convert the data into a single format appropriate for transformation processing.
+</p><p>An intrinsic part of the extraction involves data validation to confirm whether the data pulled from the sources has the correct/expected values in a given domain (such as a pattern/default or list of values). If the data fails the validation rules, it is rejected entirely or in part. The rejected data is ideally reported back to the source system for further analysis to identify and to rectify the incorrect records.
+</p>
+<h2><span class="mw-headline" id="Transform">Transform</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Extract,_transform,_load&amp;action=edit&amp;section=2" title="Edit section: Transform">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In the <a href="/wiki/Data_transformation" title="Data transformation">data transformation</a> stage, a series of rules or functions are applied to the extracted data in order to prepare it for loading into the end target.
+</p><p>An important function of transformation is <a href="/wiki/Data_cleansing" title="Data cleansing">data cleansing</a>, which aims to pass only "proper" data to the target. The challenge when different systems interact is in the relevant systems' interfacing and communicating. Character sets that may be available in one system may not be so in others.
+</p><p>In other cases, one or more of the following transformation types may be required to meet the business and technical needs of the server or data warehouse:
+</p>
+<table class="box-More_citations_needed plainlinks metadata ambox ambox-content ambox-Refimprove" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a href="/wiki/File:Question_book-new.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" decoding="async" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div></td><td class="mbox-text"><div class="mbox-text-span">This article <b>needs additional citations for <a href="/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>.<span class="hide-when-compact"> Please help <a class="external text" href="https://en.wikipedia.org/w/index.php?title=Extract,_transform,_load&amp;action=edit">improve this article</a> by <a href="/wiki/Help:Referencing_for_beginners" title="Help:Referencing for beginners">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.<br /><small><span class="plainlinks"><i>Find sources:</i>&#160;<a rel="nofollow" class="external text" href="//www.google.com/search?as_eq=wikipedia&amp;q=%22Extract%2C+transform%2C+load%22">"Extract, transform, load"</a>&#160;–&#160;<a rel="nofollow" class="external text" href="//www.google.com/search?tbm=nws&amp;q=%22Extract%2C+transform%2C+load%22+-wikipedia">news</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//www.google.com/search?&amp;q=%22Extract%2C+transform%2C+load%22+site:news.google.com/newspapers&amp;source=newspapers">newspapers</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//www.google.com/search?tbs=bks:1&amp;q=%22Extract%2C+transform%2C+load%22+-wikipedia">books</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//scholar.google.com/scholar?q=%22Extract%2C+transform%2C+load%22">scholar</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="https://www.jstor.org/action/doBasicSearch?Query=%22Extract%2C+transform%2C+load%22&amp;acc=on&amp;wc=on">JSTOR</a></span></small></span>  <small class="date-container"><i>(<span class="date">May 2019</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<ul><li>Selecting only certain columns to load: (or selecting <a href="/wiki/Null_(SQL)" title="Null (SQL)">null</a> columns not to load). For example, if the source data has three columns (aka "attributes"), roll_no, age, and salary, then the selection may take only roll_no and salary. Or, the selection mechanism may ignore all those records where salary is not present (salary = null).</li>
+<li>Translating coded values: (<i>e.g.</i>, if the source system codes male as "1" and female as "2", but the warehouse codes male as "M" and female as "F")</li>
+<li>Encoding free-form values: (<i>e.g.</i>, mapping "Male" to "M")</li>
+<li>Deriving a new calculated value: (<i>e.g.</i>, sale_amount = qty * unit_price)</li>
+<li>Sorting or ordering the data based on a list of columns to improve search performance</li>
+<li><a href="/wiki/Join_(relational_algebra)#Joins_and_join-like_operators" class="mw-redirect" title="Join (relational algebra)">Joining</a> data from multiple sources (<i>e.g.</i>, lookup, merge) and <a href="/wiki/Record_linkage" title="Record linkage">deduplicating</a> the data</li>
+<li>Aggregating (for example, rollup — summarizing multiple rows of data — total sales for each store, and for each region, etc.)</li>
+<li>Generating <a href="/wiki/Surrogate_key" title="Surrogate key">surrogate-key</a> values</li>
+<li><a href="/wiki/Transpose" title="Transpose">Transposing</a> or <a href="/wiki/Pivot_table" title="Pivot table">pivoting</a> (turning multiple columns into multiple rows or vice versa)</li>
+<li>Splitting a column into multiple columns (<i>e.g.</i>, converting a <a href="/wiki/Comma_separated_values" class="mw-redirect" title="Comma separated values">comma-separated list</a>, specified as a string in one column, into individual values in different columns)</li>
+<li>Disaggregating repeating columns</li>
+<li>Looking up and validating the relevant data from tables or referential files</li>
+<li>Applying any form of data validation; failed validation may result in a full rejection of the data, partial rejection, or no rejection at all, and thus none, some, or all of the data is handed over to the next step depending on the rule design and exception handling; many of the above transformations may result in exceptions, e.g., when a code translation parses an unknown code in the extracted data</li></ul>
+<h2><span class="mw-headline" id="Load">Load</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Extract,_transform,_load&amp;action=edit&amp;section=3" title="Edit section: Load">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The load phase loads the data into the end target, which can be any data store including a simple delimited flat file or a <a href="/wiki/Data_warehouse" title="Data warehouse">data warehouse</a>.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup> Depending on the requirements of the organization, this process varies widely. Some data warehouses may overwrite existing information with cumulative information; updating extracted data is frequently done on a daily, weekly, or monthly basis. Other data warehouses (or even other parts of the same data warehouse) may add new data in a historical form at regular intervals — for example, hourly. To understand this, consider a data warehouse that is required to maintain sales records of the last year. This data warehouse overwrites any data older than a year with newer data. However, the entry of data for any one year window is made in a historical manner. The timing and scope to replace or append are strategic design choices dependent on the time available and the <a href="/wiki/Business" title="Business">business</a> needs. More complex systems can maintain a history and <a href="/wiki/Audit_trail" title="Audit trail">audit trail</a> of all changes to the data loaded in the data warehouse.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup>
+</p><p>As the load phase interacts with a database, the constraints defined in the database schema — as well as in triggers activated upon data load — apply (for example, uniqueness, <a href="/wiki/Referential_integrity" title="Referential integrity">referential integrity</a>, mandatory fields), which also contribute to the overall data quality performance of the ETL process.
+</p>
+<ul><li>For example, a financial institution might have information on a customer in several departments and each department might have that customer's information listed in a different way. The membership department might list the customer by name, whereas the accounting department might list the customer by number. ETL can bundle all of these data elements and consolidate them into a uniform presentation, such as for storing in a database or data warehouse.</li>
+<li>Another way that companies use ETL is to move information to another application permanently. For instance, the new application might use another database vendor and most likely a very different database schema. ETL can be used to transform the data into a format suitable for the new application to use.</li>
+<li>An example would be an <a href="/wiki/Expense_and_Cost_Recovery_System_(ECRS)" class="mw-redirect" title="Expense and Cost Recovery System (ECRS)">Expense and Cost Recovery System (ECRS)</a> such as used by <a href="/wiki/Accountancy" class="mw-redirect" title="Accountancy">accountancies</a>, <a href="/wiki/Consultancy" class="mw-redirect" title="Consultancy">consultancies</a>, and <a href="/wiki/Law_firm" title="Law firm">legal firms</a>. The data usually ends up in the <a href="/wiki/Law_practice_management_software" title="Law practice management software">time and billing system</a>, although some businesses may also utilize the raw data for employee productivity reports to Human Resources (personnel dept.) or equipment usage reports to Facilities Management.</li></ul>
+<h2><span class="mw-headline" id="Real-life_ETL_cycle">Real-life ETL cycle</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Extract,_transform,_load&amp;action=edit&amp;section=4" title="Edit section: Real-life ETL cycle">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The typical real-life ETL cycle consists of the following execution steps:
+</p>
+<ol><li>Cycle initiation</li>
+<li>Build <a href="/wiki/Reference_data" title="Reference data">reference data</a></li>
+<li>Extract (from sources)</li>
+<li><a href="/wiki/Data_validation" title="Data validation">Validate</a></li>
+<li>Transform (<a href="/wiki/Data_cleaning" class="mw-redirect" title="Data cleaning">clean</a>, apply <a href="/wiki/Business_rule" title="Business rule">business rules</a>, check for <a href="/wiki/Data_integrity" title="Data integrity">data integrity</a>, create <a href="/wiki/Aggregate_(data_warehouse)" title="Aggregate (data warehouse)">aggregates</a> or disaggregates)</li>
+<li>Stage (load into <a href="/wiki/Staging_(data)" title="Staging (data)">staging</a> tables, if used)</li>
+<li><a href="/wiki/Audit_report" class="mw-redirect" title="Audit report">Audit reports</a> (for example, on compliance with business rules. Also, in case of failure, helps to diagnose/repair)</li>
+<li>Publish (to target tables)</li>
+<li><a href="/wiki/Archiving" class="mw-redirect" title="Archiving">Archive</a></li></ol>
+<h2><span class="mw-headline" id="Challenges">Challenges</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Extract,_transform,_load&amp;action=edit&amp;section=5" title="Edit section: Challenges">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ETL processes can involve considerable complexity, and significant operational problems can occur with improperly designed ETL systems.
+</p><p>The range of data values or data quality in an operational system may exceed the expectations of designers at the time validation and transformation rules are specified. <a href="/wiki/Data_profiling" title="Data profiling">Data profiling</a> of a source during data analysis can identify the data conditions that must be managed by transform rules specifications, leading to an amendment of validation rules explicitly and implicitly implemented in the ETL process.
+</p><p>Data warehouses are typically assembled from a variety of data sources with different formats and purposes. As such, ETL is a key process to bring all the data together in a standard, homogeneous environment.
+</p><p>Design analysis<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> should establish the <a href="/wiki/Scalability" title="Scalability">scalability</a> of an ETL system across the lifetime of its usage — including understanding the volumes of data that must be processed within <a href="/wiki/Service_level_agreement" class="mw-redirect" title="Service level agreement">service level agreements</a>. The time available to extract from source systems may change, which may mean the same amount of data may have to be processed in less time. Some ETL systems have to scale to process terabytes of data to update data warehouses with tens of terabytes of data. Increasing volumes of data may require designs that can scale from daily <a href="/wiki/Batch_processing" title="Batch processing">batch</a> to multiple-day micro batch to integration with <a href="/wiki/Message_queue" title="Message queue">message queues</a> or real-time change-data-capture for continuous transformation and update.
+</p>
+<h2><span class="mw-headline" id="Performance">Performance</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Extract,_transform,_load&amp;action=edit&amp;section=6" title="Edit section: Performance">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ETL vendors benchmark their record-systems at multiple TB (terabytes) per hour (or ~1 GB per second) using powerful servers with multiple CPUs, multiple hard drives, multiple gigabit-network connections, and lots of memory.
+</p><p>In real life, the slowest part of an ETL process usually occurs in the database load phase. Databases may perform slowly because they have to take care of concurrency, integrity maintenance, and indices. Thus, for better performance, it may make sense to employ:
+</p>
+<ul><li><i>Direct path extract</i> method or bulk unload whenever is possible (instead of querying the database) to reduce the load on source system while getting high-speed extract</li>
+<li>Most of the transformation processing outside of the database</li>
+<li>Bulk load operations whenever possible</li></ul>
+<p>Still, even using bulk operations, database access is usually the bottleneck in the ETL process. Some common methods used to increase performance are:
+</p>
+<ul><li><a href="/wiki/Partition_(database)" title="Partition (database)">Partition</a> tables (and indices): try to keep partitions similar in size (watch for <tt>null</tt> values that can skew the partitioning)</li>
+<li>Do all validation in the ETL layer before the load: disable <a href="/wiki/Data_integrity" title="Data integrity">integrity</a> checking (<tt>disable constraint</tt> ...) in the target database tables during the load</li>
+<li>Disable <a href="/wiki/Database_trigger" title="Database trigger">triggers</a> (<tt>disable trigger</tt> ...) in the target database tables during the load: simulate their effect as a separate step</li>
+<li>Generate IDs in the ETL layer (not in the database)</li>
+<li>Drop the <a href="/wiki/Database_index" title="Database index">indices</a> (on a table or partition) before the load - and recreate them after the load (SQL: <tt>drop index</tt> ...<tt>; create index</tt> ...)</li>
+<li>Use parallel bulk load when possible — works well when the table is partitioned or there are no indices (Note: attempting to do parallel loads into the same table (partition) usually causes locks — if not on the data rows, then on indices)</li>
+<li>If a requirement exists to do insertions, updates, or deletions, find out which rows should be processed in which way in the ETL layer, and then process these three operations in the database separately; you often can do bulk load for inserts, but updates and deletes commonly go through an <a href="/wiki/API" class="mw-redirect" title="API">API</a> (using <a href="/wiki/SQL" title="SQL">SQL</a>)</li></ul>
+<p>Whether to do certain operations in the database or outside may involve a trade-off. For example, removing duplicates using <tt>distinct</tt> may be slow in the database; thus, it makes sense to do it outside. On the other side, if using <tt>distinct</tt> significantly (x100) decreases the number of rows to be extracted, then it makes sense to remove duplications as early as possible in the database before unloading data.
+</p><p>A common source of problems in ETL is a big number of dependencies among ETL jobs. For example, job "B" cannot start while job "A" is not finished. One can usually achieve better performance by visualizing all processes on a graph, and trying to reduce the graph making maximum use of <a href="/wiki/Parallel_computing" title="Parallel computing">parallelism</a>, and making "chains" of consecutive processing as short as possible. Again, partitioning of big tables and their indices can really help.
+</p><p>Another common issue occurs when the data are spread among several databases, and processing is done in those databases sequentially. Sometimes database replication may be involved as a method of copying data between databases — it can significantly slow down the whole process. The common solution is to reduce the processing graph to only three layers:
+</p>
+<ul><li>Sources</li>
+<li>Central ETL layer</li>
+<li>Targets</li></ul>
+<p>This approach allows processing to take maximum advantage of parallelism. For example, if you need to load data into two databases, you can run the loads in parallel (instead of loading into the first — and then replicating into the second).
+</p><p>Sometimes processing must take place sequentially. For example, dimensional (reference) data are needed before one can get and validate the rows for main <a href="/wiki/Fact_table" title="Fact table">"fact" tables</a>.
+</p>
+<h2><span class="mw-headline" id="Parallel_processing">Parallel processing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Extract,_transform,_load&amp;action=edit&amp;section=7" title="Edit section: Parallel processing">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A recent<sup class="plainlinks noexcerpt noprint asof-tag update" style="display:none;"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Extract,_transform,_load&amp;action=edit">&#91;update&#93;</a></sup> development in ETL software is the implementation of <a href="/wiki/Parallel_computing" title="Parallel computing">parallel processing</a>. It has enabled a number of methods to improve overall performance of ETL when dealing with large volumes of data.
+</p><p>ETL applications implement three main types of parallelism:
+</p>
+<ul><li>Data: By splitting a single sequential file into smaller data files to provide <a href="/wiki/Parallel_Random_Access_Machine" class="mw-redirect" title="Parallel Random Access Machine">parallel access</a></li>
+<li><a href="/wiki/Pipeline_(computing)" title="Pipeline (computing)">Pipeline</a>: allowing the simultaneous running of several components on the same <a href="/wiki/Data_stream" title="Data stream">data stream</a>, e.g. looking up a value on record 1 at the same time as adding two fields on record 2</li>
+<li>Component: The simultaneous running of multiple <a href="/wiki/Process_(computing)" title="Process (computing)">processes</a> on different data streams in the same job, e.g. sorting one input file while removing duplicates on another file</li></ul>
+<p>All three types of parallelism usually operate combined in a single job or task.
+</p><p>An additional difficulty comes with making sure that the data being uploaded is relatively consistent. Because multiple source databases may have different update cycles (some may be updated every few minutes, while others may take days or weeks), an ETL system may be required to hold back certain data until all sources are synchronized. Likewise, where a warehouse may have to be reconciled to the contents in a source system or with the general ledger, establishing synchronization and reconciliation points becomes necessary.
+</p>
+<h2><span id="Rerunnability.2C_recoverability"></span><span class="mw-headline" id="Rerunnability,_recoverability">Rerunnability, recoverability</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Extract,_transform,_load&amp;action=edit&amp;section=8" title="Edit section: Rerunnability, recoverability">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Data warehousing procedures usually subdivide a big ETL process into smaller pieces running sequentially or in parallel. To keep track of data flows, it makes sense to tag each data row with "row_id", and tag each piece of the process with "run_id". In case of a failure, having these IDs help to roll back and rerun the failed piece.
+</p><p>Best practice also calls for <i>checkpoints</i>, which are states when certain phases of the process are completed. Once at a checkpoint, it is a good idea to write everything to disk, clean out some temporary files, log the state, etc.
+</p>
+<h2><span class="mw-headline" id="Virtual_ETL">Virtual ETL</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Extract,_transform,_load&amp;action=edit&amp;section=9" title="Edit section: Virtual ETL">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>As of 2010<sup class="plainlinks noexcerpt noprint asof-tag update" style="display:none;"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Extract,_transform,_load&amp;action=edit">&#91;update&#93;</a></sup>, <a href="/wiki/Data_virtualization" title="Data virtualization">data virtualization</a> had begun to advance ETL processing. The application of data virtualization to ETL allowed solving the most common ETL tasks of <a href="/wiki/Data_migration" title="Data migration">data migration</a> and application integration for multiple dispersed data sources. Virtual ETL operates with the abstracted representation of the objects or entities gathered from the variety of relational, semi-structured, and <a href="/wiki/Unstructured_data" title="Unstructured data">unstructured data</a> sources. ETL tools can leverage object-oriented modeling and work with entities' representations persistently stored in a centrally located <a href="/wiki/Hub-and-spoke" class="mw-redirect" title="Hub-and-spoke">hub-and-spoke</a> architecture. Such a collection that contains representations of the entities or objects gathered from the data sources for ETL processing is called a metadata repository and it can reside in memory<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup> or be made persistent. By using a persistent metadata repository, ETL tools can transition from one-time projects to persistent middleware, performing data harmonization and <a href="/wiki/Data_profiling" title="Data profiling">data profiling</a> consistently and in near-real time.
+</p>
+<h2><span class="mw-headline" id="Dealing_with_keys">Dealing with keys</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Extract,_transform,_load&amp;action=edit&amp;section=10" title="Edit section: Dealing with keys">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/Unique_key" title="Unique key">Unique keys</a> play an important part in all relational databases, as they tie everything together. A unique key is a column that identifies a given entity, whereas a <a href="/wiki/Foreign_key" title="Foreign key">foreign key</a> is a column in another table that refers to a primary key. Keys can comprise several columns, in which case they are composite keys. In many cases, the primary key is an auto-generated integer that has no meaning for the <a href="/wiki/Business_entity_(computer_science)" class="mw-redirect" title="Business entity (computer science)">business entity</a> being represented, but solely exists for the purpose of the relational database - commonly referred to as a <a href="/wiki/Surrogate_key" title="Surrogate key">surrogate key</a>.
+</p><p>As there is usually more than one data source getting loaded into the warehouse, the keys are an important concern to be addressed. For example: customers might be represented in several data sources, with their <a href="/wiki/Social_Security_Number" class="mw-redirect" title="Social Security Number">Social Security Number</a> as the primary key in one source, their phone number in another, and a surrogate in the third. Yet a data warehouse may require the consolidation of all the customer information into one <a href="/wiki/Dimension_(data_warehouse)" title="Dimension (data warehouse)">dimension</a>.
+</p><p>A recommended way to deal with the concern involves adding a warehouse surrogate key, which is used as a foreign key from the fact table.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup>
+</p><p>Usually, updates occur to a dimension's source data, which obviously must be reflected in the data warehouse.
+</p><p>If the primary key of the source data is required for reporting, the dimension already contains that piece of information for each row. If the source data uses a surrogate key, the warehouse must keep track of it even though it is never used in queries or reports; it is done by creating a <a href="/wiki/Lookup_table" title="Lookup table">lookup table</a> that contains the warehouse surrogate key and the originating key.<sup id="cite_ref-Rizzi,_Data_Warehouse_Design_p_291_10-0" class="reference"><a href="#cite_note-Rizzi,_Data_Warehouse_Design_p_291-10">&#91;10&#93;</a></sup> This way, the dimension is not polluted with surrogates from various source systems, while the ability to update is preserved.
+</p><p>The lookup table is used in different ways depending on the nature of the source data.
+There are 5 types to consider;<sup id="cite_ref-Rizzi,_Data_Warehouse_Design_p_291_10-1" class="reference"><a href="#cite_note-Rizzi,_Data_Warehouse_Design_p_291-10">&#91;10&#93;</a></sup> three are included here:
+</p>
+<dl><dt>Type 1</dt>
+<dd>The dimension row is simply updated to match the current state of the source system; the warehouse does not capture history; the lookup table is used to identify the dimension row to update or overwrite</dd>
+<dt>Type 2</dt>
+<dd>A new dimension row is added with the new state of the source system; a new surrogate key is assigned; source key is no longer unique in the lookup table</dd>
+<dt>Fully logged</dt>
+<dd>A new dimension row is added with the new state of the source system, while the previous dimension row is updated to reflect it is no longer active and time of deactivation.</dd></dl>
+<h2><span class="mw-headline" id="Tools">Tools</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Extract,_transform,_load&amp;action=edit&amp;section=11" title="Edit section: Tools">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>By using an established ETL framework, one may increase one's chances of ending up with better connectivity and <a href="/wiki/Scalability" title="Scalability">scalability</a>.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (December 2011)">citation needed</span></a></i>&#93;</sup> A good ETL tool must be able to communicate with the many different <a href="/wiki/Relational_database" title="Relational database">relational databases</a> and read the various file formats used throughout an organization. ETL tools have started to migrate into <a href="/wiki/Enterprise_Application_Integration" class="mw-redirect" title="Enterprise Application Integration">Enterprise Application Integration</a>, or even <a href="/wiki/Enterprise_Service_Bus" class="mw-redirect" title="Enterprise Service Bus">Enterprise Service Bus</a>, systems that now cover much more than just the extraction, transformation, and loading of data. Many ETL vendors now have <a href="/wiki/Data_profiling" title="Data profiling">data profiling</a>, <a href="/wiki/Data_quality" title="Data quality">data quality</a>, and <a href="/wiki/Metadata_(computing)" class="mw-redirect" title="Metadata (computing)">metadata</a> capabilities. A common use case for ETL tools include converting CSV files to formats readable by relational databases. A typical translation of millions of records is facilitated by ETL tools that enable users to input csv-like data feeds/files and import it into a database with as little code as possible.
+</p><p>ETL tools are typically used by a broad range of professionals — from students in computer science looking to quickly import large data sets to database architects in charge of company account management, ETL tools have become a convenient tool that can be relied on to get maximum performance. ETL tools in most cases contain a GUI that helps users conveniently transform data, using a visual data mapper, as opposed to writing large programs to parse files and modify data types.
+</p><p>While ETL tools have traditionally been for developers and IT staff, the new trend is to provide these capabilities to business users so they can themselves create connections and data integrations when needed, rather than going to the IT staff.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup> Gartner refers to these non-technical users as Citizen Integrators.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Vs._ELT">Vs. ELT</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Extract,_transform,_load&amp;action=edit&amp;section=12" title="Edit section: Vs. ELT">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/Extract,_load,_transform" title="Extract, load, transform">Extract, load, transform</a> (ELT) is a variant of ETL where the extracted data is loaded into the target system first.<sup id="cite_ref-AWS_Data_Warehousing_9_13-0" class="reference"><a href="#cite_note-AWS_Data_Warehousing_9-13">&#91;13&#93;</a></sup>
+The architecture for the analytics pipeline shall also consider where to cleanse and enrich data<sup id="cite_ref-AWS_Data_Warehousing_9_13-1" class="reference"><a href="#cite_note-AWS_Data_Warehousing_9-13">&#91;13&#93;</a></sup> as well as how to conform dimensions.<sup id="cite_ref-Kimball_2004_4-2" class="reference"><a href="#cite_note-Kimball_2004-4">&#91;4&#93;</a></sup>
+</p><p>Cloud-based data warehouses like <a href="/wiki/Amazon_Redshift" title="Amazon Redshift">Amazon Redshift</a>, <a href="/wiki/Google_BigQuery" class="mw-redirect" title="Google BigQuery">Google BigQuery</a>, and <a href="/wiki/Snowflake_Computing" class="mw-redirect" title="Snowflake Computing">Snowflake Computing</a> have been able to provide highly scalable computing power. This lets businesses forgo preload transformations and replicate raw data into their data warehouses, where it can transform them as needed using <a href="/wiki/SQL" title="SQL">SQL</a>.
+</p><p>After having used ELT, data may be processed further and stored in a data mart.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;14&#93;</a></sup>
+</p><p>There are pros and cons to each approach.<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;15&#93;</a></sup> Most data integration tools skew towards ETL, while ELT is popular in database and data warehouse appliances.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Extract,_transform,_load&amp;action=edit&amp;section=13" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Architectural_pattern_(computer_science)#Examples" class="mw-redirect" title="Architectural pattern (computer science)">Architecture patterns (EA reference architecture)</a></li>
+<li><a href="/wiki/Create,_read,_update_and_delete" title="Create, read, update and delete">Create, read, update and delete</a> (CRUD)</li>
+<li><a href="/wiki/Data_cleansing" title="Data cleansing">Data cleansing</a></li>
+<li><a href="/wiki/Data_integration" title="Data integration">Data integration</a></li>
+<li><a href="/wiki/Data_mart" title="Data mart">Data mart</a></li>
+<li><a href="/wiki/Data_mediation" class="mw-redirect" title="Data mediation">Data mediation</a></li>
+<li><a href="/wiki/Data_migration" title="Data migration">Data migration</a></li>
+<li><a href="/wiki/Electronic_data_interchange" title="Electronic data interchange">Electronic data interchange (EDI)</a></li>
+<li><a href="/wiki/Enterprise_architecture" title="Enterprise architecture">Enterprise architecture</a></li>
+<li><a href="/wiki/Expense_and_cost_recovery_system_(ECRS)" class="mw-redirect" title="Expense and cost recovery system (ECRS)">Expense and cost recovery system (ECRS)</a></li>
+<li><a href="/wiki/Hartmann_pipeline" class="mw-redirect" title="Hartmann pipeline">Hartmann pipeline</a></li>
+<li><a href="/wiki/Legal_Electronic_Data_Exchange_Standard" title="Legal Electronic Data Exchange Standard">Legal Electronic Data Exchange Standard (LEDES)</a></li>
+<li><a href="/wiki/Metadata_discovery" title="Metadata discovery">Metadata discovery</a></li>
+<li><a href="/wiki/Online_analytical_processing" title="Online analytical processing">Online analytical processing</a></li>
+<li><a href="/wiki/Online_transaction_processing" title="Online transaction processing">Online transaction processing</a> (OLTP)</li>
+<li><a href="/wiki/Spatial_ETL" title="Spatial ETL">Spatial ETL</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Extract,_transform,_load&amp;action=edit&amp;section=14" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite id="CITEREFDenney2016" class="citation journal">Denney, MJ (2016). <a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC5556907">"Validating the extract, transform, load process used to populate a large clinical research database"</a>. <i>International Journal of Medical Informatics</i>. <b>94</b>: 271–4. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1016%2Fj.ijmedinf.2016.07.009">10.1016/j.ijmedinf.2016.07.009</a>. <a href="/wiki/PMC_(identifier)" class="mw-redirect" title="PMC (identifier)">PMC</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC5556907">5556907</a></span>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/27506144">27506144</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=International+Journal+of+Medical+Informatics&amp;rft.atitle=Validating+the+extract%2C+transform%2C+load+process+used+to+populate+a+large+clinical+research+database&amp;rft.volume=94&amp;rft.pages=271-4&amp;rft.date=2016&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC5556907&amp;rft_id=info%3Apmid%2F27506144&amp;rft_id=info%3Adoi%2F10.1016%2Fj.ijmedinf.2016.07.009&amp;rft.aulast=Denney&amp;rft.aufirst=MJ&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC5556907&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AExtract%2C+transform%2C+load" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r951705291">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg");background-repeat:no-repeat;background-size:9px;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg");background-repeat:no-repeat;background-size:9px;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg");background-repeat:no-repeat;background-size:9px;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg");background-repeat:no-repeat;background-size:12px;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite id="CITEREFZhao2017" class="citation web">Zhao, Shirley (2017-10-20). <a rel="nofollow" class="external text" href="https://www.edq.com/blog/what-is-etl-extract-transform-load/">"What is ETL? (Extract, Transform, Load) | Experian"</a>. <i>Experian Data Quality</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2018-12-12</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Experian+Data+Quality&amp;rft.atitle=What+is+ETL%3F+%28Extract%2C+Transform%2C+Load%29+%7C+Experian&amp;rft.date=2017-10-20&amp;rft.aulast=Zhao&amp;rft.aufirst=Shirley&amp;rft_id=https%3A%2F%2Fwww.edq.com%2Fblog%2Fwhat-is-etl-extract-transform-load%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AExtract%2C+transform%2C+load" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite id="CITEREFtweet_btn()" class="citation web">tweet_btn(), Trevor Pott 4 Jun 2018 at 09:02. <a rel="nofollow" class="external text" href="https://www.theregister.co.uk/2018/06/04/data_integration_is_hard/">"Extract, transform, load? More like extremely tough to load, amirite?"</a>. <i>www.theregister.co.uk</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2018-12-12</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www.theregister.co.uk&amp;rft.atitle=Extract%2C+transform%2C+load%3F+More+like+extremely+tough+to+load%2C+amirite%3F&amp;rft.aulast=tweet_btn%28%29&amp;rft.aufirst=Trevor+Pott+4+Jun+2018+at+09%3A02&amp;rft_id=https%3A%2F%2Fwww.theregister.co.uk%2F2018%2F06%2F04%2Fdata_integration_is_hard%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AExtract%2C+transform%2C+load" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-Kimball_2004-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-Kimball_2004_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Kimball_2004_4-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Kimball_2004_4-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFRalph.2004" class="citation book">Ralph., Kimball (2004). <i>The data warehouse ETL toolkit&#160;: practical techniques for extracting, cleaning, conforming, and delivering data</i>. Caserta, Joe, 1965-. Indianapolis, IN: Wiley. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0764579233" title="Special:BookSources/978-0764579233"><bdi>978-0764579233</bdi></a>. <a href="/wiki/OCLC_(identifier)" class="mw-redirect" title="OCLC (identifier)">OCLC</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/oclc/57301227">57301227</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+data+warehouse+ETL+toolkit+%3A+practical+techniques+for+extracting%2C+cleaning%2C+conforming%2C+and+delivering+data&amp;rft.place=Indianapolis%2C+IN&amp;rft.pub=Wiley&amp;rft.date=2004&amp;rft_id=info%3Aoclcnum%2F57301227&amp;rft.isbn=978-0764579233&amp;rft.aulast=Ralph.&amp;rft.aufirst=Kimball&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AExtract%2C+transform%2C+load" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.dataintegration.info/etl">"Data Integration Info"</a>. <i>Data Integration Info</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Data+Integration+Info&amp;rft.atitle=Data+Integration+Info&amp;rft_id=https%3A%2F%2Fwww.dataintegration.info%2Fetl&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AExtract%2C+transform%2C+load" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.guru99.com/etl-extract-load-process.html">"ETL-Extract-Load-Process"</a>. <i>www.Guru99.com</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www.Guru99.com&amp;rft.atitle=ETL-Extract-Load-Process&amp;rft_id=https%3A%2F%2Fwww.guru99.com%2Fetl-extract-load-process.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AExtract%2C+transform%2C+load" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite id="CITEREFTheodorou2017" class="citation journal">Theodorou, Vasileios (2017). "Frequent patterns in ETL workflows: An empirical approach". <i>Data &amp; Knowledge Engineering</i>. <b>112</b>: 1–16. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1016%2Fj.datak.2017.08.004">10.1016/j.datak.2017.08.004</a>. <a href="/wiki/Hdl_(identifier)" class="mw-redirect" title="Hdl (identifier)">hdl</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//hdl.handle.net/2117%2F110172">2117/110172</a></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Data+%26+Knowledge+Engineering&amp;rft.atitle=Frequent+patterns+in+ETL+workflows%3A+An+empirical+approach&amp;rft.volume=112&amp;rft.pages=1-16&amp;rft.date=2017&amp;rft_id=info%3Ahdl%2F2117%2F110172&amp;rft_id=info%3Adoi%2F10.1016%2Fj.datak.2017.08.004&amp;rft.aulast=Theodorou&amp;rft.aufirst=Vasileios&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AExtract%2C+transform%2C+load" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://itnewscast.com/etl-architecture-and-business-models">Virtual ETL</a></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text">Kimball, The Data Warehouse Lifecycle Toolkit, p 332</span>
+</li>
+<li id="cite_note-Rizzi,_Data_Warehouse_Design_p_291-10"><span class="mw-cite-backlink">^ <a href="#cite_ref-Rizzi,_Data_Warehouse_Design_p_291_10-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Rizzi,_Data_Warehouse_Design_p_291_10-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">Golfarelli/Rizzi, Data Warehouse Design, p 291</span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://blogs.gartner.com/andrew_white/2015/05/22/the-inexorable-rise-of-self-service-data-integration/">"The Inexorable Rise of Self Service Data Integration"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">31 January</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+Inexorable+Rise+of+Self+Service+Data+Integration&amp;rft_id=http%3A%2F%2Fblogs.gartner.com%2Fandrew_white%2F2015%2F05%2F22%2Fthe-inexorable-rise-of-self-service-data-integration%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AExtract%2C+transform%2C+load" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.gartner.com/doc/2891817/embrace-citizen-integrator-approach-improve">"Embrace the Citizen Integrator"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Embrace+the+Citizen+Integrator&amp;rft_id=https%3A%2F%2Fwww.gartner.com%2Fdoc%2F2891817%2Fembrace-citizen-integrator-approach-improve&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AExtract%2C+transform%2C+load" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-AWS_Data_Warehousing_9-13"><span class="mw-cite-backlink">^ <a href="#cite_ref-AWS_Data_Warehousing_9_13-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-AWS_Data_Warehousing_9_13-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">Amazon Web Services, Data Warehousing on AWS, p 9</span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text">Amazon Web Services, Data Warehousing on AWS, 2016, p 10</span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.iri.com/blog/data-transformation2/etl-vs-elt-we-posit-you-judge/">"ETL vs ELT: We Posit, You Judge"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=ETL+vs+ELT%3A+We+Posit%2C+You+Judge&amp;rft_id=https%3A%2F%2Fwww.iri.com%2Fblog%2Fdata-transformation2%2Fetl-vs-elt-we-posit-you-judge%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AExtract%2C+transform%2C+load" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+</ol></div></div>
+<div role="navigation" class="navbox" aria-labelledby="Data" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Data" title="Template:Data"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Data" title="Template talk:Data"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Data&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Data" style="font-size:114%;margin:0 4em"><a href="/wiki/Data_(computing)" title="Data (computing)">Data</a></div></th></tr><tr><td colspan="2" class="navbox-list navbox-odd hlist" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Data_analysis" title="Data analysis">Analysis</a></li>
+<li><a href="/wiki/Data_archaeology" title="Data archaeology">Archaeology</a></li>
+<li><a href="/wiki/Data_cleansing" title="Data cleansing">Cleansing</a></li>
+<li><a href="/wiki/Data_collection" title="Data collection">Collection</a></li>
+<li><a href="/wiki/Data_compression" title="Data compression">Compression</a></li>
+<li><a href="/wiki/Data_corruption" title="Data corruption">Corruption</a></li>
+<li><a href="/wiki/Data_curation" title="Data curation">Curation</a></li>
+<li><a href="/wiki/Data_degradation" title="Data degradation">Degradation</a></li>
+<li><a href="/wiki/Data_editing" title="Data editing">Editing</a></li>
+<li><a class="mw-selflink selflink">ETL</a></li>
+<li><a href="/wiki/Data_farming" title="Data farming">Farming</a></li>
+<li><a href="/wiki/Data_format_management" title="Data format management">Format management</a></li>
+<li><a href="/wiki/Data_fusion" title="Data fusion">Fusion</a></li>
+<li><a href="/wiki/Data_integration" title="Data integration">Integration</a></li>
+<li><a href="/wiki/Data_integrity" title="Data integrity">Integrity</a></li>
+<li><a href="/wiki/Data_library" title="Data library">Library</a></li>
+<li><a href="/wiki/Data_loss" title="Data loss">Loss</a></li>
+<li><a href="/wiki/Data_management" title="Data management">Management</a></li>
+<li><a href="/wiki/Data_migration" title="Data migration">Migration</a></li>
+<li><a href="/wiki/Data_mining" title="Data mining">Mining</a></li>
+<li><a href="/wiki/Data_pre-processing" title="Data pre-processing">Pre-processing</a></li>
+<li><a href="/wiki/Data_preservation" title="Data preservation">Preservation</a></li>
+<li><a href="/wiki/Information_privacy" title="Information privacy">Protection (privacy)</a></li>
+<li><a href="/wiki/Data_recovery" title="Data recovery">Recovery</a></li>
+<li><a href="/wiki/Data_reduction" title="Data reduction">Reduction</a></li>
+<li><a href="/wiki/Data_retention" title="Data retention">Retention</a></li>
+<li><a href="/wiki/Data_quality" title="Data quality">Quality</a></li>
+<li><a href="/wiki/Data_science" title="Data science">Science</a></li>
+<li><a href="/wiki/Data_scraping" title="Data scraping">Scraping</a></li>
+<li><a href="/wiki/Data_scrubbing" title="Data scrubbing">Scrubbing</a></li>
+<li><a href="/wiki/Data_security" title="Data security">Security</a></li>
+<li><a href="/wiki/Data_steward" title="Data steward">Stewardship</a></li>
+<li><a href="/wiki/Data_storage" title="Data storage">Storage</a></li>
+<li><a href="/wiki/Data_validation" title="Data validation">Validation</a></li>
+<li><a href="/wiki/Data_warehouse" title="Data warehouse">Warehouse</a></li>
+<li><a href="/wiki/Data_wrangling" title="Data wrangling">Wrangling/munging</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Data_warehouses" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Data_warehouses" title="Template:Data warehouses"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Data_warehouses" title="Template talk:Data warehouses"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Data_warehouses&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Data_warehouses" style="font-size:114%;margin:0 4em"><a href="/wiki/Data_warehouse" title="Data warehouse">Data warehouses</a></div></th></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks mw-collapsible mw-collapsed navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div id="Creating_a_data_warehouse" style="font-size:114%;margin:0 4em">Creating a data warehouse</div></th></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">Concepts</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Database" title="Database">Database</a></li>
+<li><a href="/wiki/Dimension_(data_warehouse)" title="Dimension (data warehouse)">Dimension</a></li>
+<li><a href="/wiki/Dimensional_modeling" title="Dimensional modeling">Dimensional modeling</a></li>
+<li><a href="/wiki/Fact_(data_warehouse)" class="mw-redirect" title="Fact (data warehouse)">Fact</a></li>
+<li><a href="/wiki/Online_analytical_processing" title="Online analytical processing">OLAP</a></li>
+<li><a href="/wiki/Star_schema" title="Star schema">Star schema</a></li>
+<li><a href="/wiki/Snowflake_schema" title="Snowflake schema">Snowflake schema</a></li>
+<li><a href="/wiki/Reverse_star_schema" title="Reverse star schema">Reverse star schema</a></li>
+<li><a href="/wiki/Aggregate_(Data_Warehouse)" class="mw-redirect" title="Aggregate (Data Warehouse)">Aggregate</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Variants</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Anchor_modeling" title="Anchor modeling">Anchor modeling</a></li>
+<li><a href="/wiki/Column-oriented_DBMS" title="Column-oriented DBMS">Column-oriented DBMS</a></li>
+<li><a href="/wiki/Data_vault_modeling" title="Data vault modeling">Data vault modeling</a></li>
+<li><a href="/wiki/HOLAP" class="mw-redirect" title="HOLAP">HOLAP</a></li>
+<li><a href="/wiki/MOLAP" class="mw-redirect" title="MOLAP">MOLAP</a></li>
+<li><a href="/wiki/ROLAP" class="mw-redirect" title="ROLAP">ROLAP</a></li>
+<li><a href="/wiki/Operational_data_store" title="Operational data store">Operational data store</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Elements</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Data_dictionary" title="Data dictionary">Data dictionary</a>/<a href="/wiki/Metadata" title="Metadata">Metadata</a></li>
+<li><a href="/wiki/Data_mart" title="Data mart">Data mart</a></li>
+<li><a href="/wiki/Sixth_normal_form" title="Sixth normal form">Sixth normal form</a></li>
+<li><a href="/wiki/Surrogate_key" title="Surrogate key">Surrogate key</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Fact</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Fact_table" title="Fact table">Fact table</a></li>
+<li><a href="/wiki/Early-arriving_fact" title="Early-arriving fact">Early-arriving fact</a></li>
+<li><a href="/wiki/Measure_(data_warehouse)" title="Measure (data warehouse)">Measure</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Dimension</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Dimension_table" class="mw-redirect" title="Dimension table">Dimension table</a></li>
+<li><a href="/wiki/Degenerate_dimension" title="Degenerate dimension">Degenerate</a></li>
+<li><a href="/wiki/Slowly_changing_dimension" title="Slowly changing dimension">Slowly changing</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Filling</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-selflink selflink">Extract-Transform-Load (ETL)</a></li>
+<li><a href="/wiki/Data_extraction" title="Data extraction">Extract</a></li>
+<li><a href="/wiki/Data_transformation" title="Data transformation">Transform</a></li>
+<li><a href="/wiki/Data_loading" class="mw-redirect" title="Data loading">Load</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks mw-collapsible mw-collapsed navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div id="Using_a_data_warehouse" style="font-size:114%;margin:0 4em">Using a data warehouse</div></th></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">Concepts</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Business_intelligence" title="Business intelligence">Business intelligence</a></li>
+<li><a href="/wiki/Dashboard_(business)" title="Dashboard (business)">Dashboard</a></li>
+<li><a href="/wiki/Data_mining" title="Data mining">Data mining</a></li>
+<li><a href="/wiki/Decision_support_system" title="Decision support system">Decision support system (DSS)</a></li>
+<li><a href="/wiki/OLAP_cube" title="OLAP cube">OLAP cube</a></li>
+<li><a href="/wiki/Data_warehouse_automation" title="Data warehouse automation">Data warehouse automation</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Languages</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Data_Mining_Extensions" title="Data Mining Extensions">Data Mining Extensions (DMX)</a></li>
+<li><a href="/wiki/MultiDimensional_eXpressions" title="MultiDimensional eXpressions">MultiDimensional eXpressions (MDX)</a></li>
+<li><a href="/wiki/XML_for_Analysis" title="XML for Analysis">XML for Analysis (XMLA)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Tools</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Business_intelligence_software" title="Business intelligence software">Business intelligence software</a></li>
+<li><a href="/wiki/List_of_reporting_software" title="List of reporting software">Reporting software</a></li>
+<li><a href="/wiki/Spreadsheets" class="mw-redirect" title="Spreadsheets">Spreadsheet</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks mw-collapsible mw-collapsed navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div id="Related" style="font-size:114%;margin:0 4em">Related</div></th></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">People</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Bill_Inmon" title="Bill Inmon">Bill Inmon</a></li>
+<li><a href="/wiki/Ralph_Kimball" title="Ralph Kimball">Ralph Kimball</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Products</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Comparison_of_OLAP_servers" title="Comparison of OLAP servers">Comparison of OLAP servers</a></li>
+<li><a href="/wiki/Category:Data_warehousing_products" title="Category:Data warehousing products">Data warehousing products and their producers</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1290
+Cached time: 20200626134959
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.392 seconds
+Real time usage: 0.536 seconds
+Preprocessor visited node count: 1628/1000000
+Post‐expand include size: 93098/2097152 bytes
+Template argument size: 8099/2097152 bytes
+Highest expansion depth: 19/40
+Expensive parser function count: 6/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 41457/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+Lua time usage: 0.168/10.000 seconds
+Lua memory usage: 4.64 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  435.588      1 -total
+ 36.93%  160.880      4 Template:Ambox
+ 36.88%  160.634      1 Template:Reflist
+ 25.54%  111.229      1 Template:Multiple_issues
+ 21.68%   94.422      2 Template:Cite_journal
+ 11.54%   50.269      1 Template:More_citations_needed
+ 10.46%   45.564      1 Template:More_footnotes
+  9.20%   40.085      1 Template:Find_sources_mainspace
+  8.42%   36.679      7 Template:Cite_web
+  7.20%   31.341      2 Template:As_of
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:239516-0!canonical and timestamp 20200626134959 and revision id 964605513
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Extract,_transform,_load&amp;oldid=964605513">https://en.wikipedia.org/w/index.php?title=Extract,_transform,_load&amp;oldid=964605513</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Extract,_transform,_load_tools" title="Category:Extract, transform, load tools">Extract, transform, load tools</a></li><li><a href="/wiki/Category:Data_warehousing" title="Category:Data warehousing">Data warehousing</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_lacking_in-text_citations_from_November_2011" title="Category:Articles lacking in-text citations from November 2011">Articles lacking in-text citations from November 2011</a></li><li><a href="/wiki/Category:All_articles_lacking_in-text_citations" title="Category:All articles lacking in-text citations">All articles lacking in-text citations</a></li><li><a href="/wiki/Category:Articles_that_may_contain_original_research_from_December_2011" title="Category:Articles that may contain original research from December 2011">Articles that may contain original research from December 2011</a></li><li><a href="/wiki/Category:All_articles_that_may_contain_original_research" title="Category:All articles that may contain original research">All articles that may contain original research</a></li><li><a href="/wiki/Category:Articles_with_multiple_maintenance_issues" title="Category:Articles with multiple maintenance issues">Articles with multiple maintenance issues</a></li><li><a href="/wiki/Category:Articles_needing_additional_references_from_May_2019" title="Category:Articles needing additional references from May 2019">Articles needing additional references from May 2019</a></li><li><a href="/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="/wiki/Category:Articles_containing_potentially_dated_statements_from_2009" title="Category:Articles containing potentially dated statements from 2009">Articles containing potentially dated statements from 2009</a></li><li><a href="/wiki/Category:All_articles_containing_potentially_dated_statements" title="Category:All articles containing potentially dated statements">All articles containing potentially dated statements</a></li><li><a href="/wiki/Category:Articles_containing_potentially_dated_statements_from_2010" title="Category:Articles containing potentially dated statements from 2010">Articles containing potentially dated statements from 2010</a></li><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_December_2011" title="Category:Articles with unsourced statements from December 2011">Articles with unsourced statements from December 2011</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Extract%2C+transform%2C+load" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Extract%2C+transform%2C+load" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/wiki/Extract,_transform,_load" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Extract,_transform,_load" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li></ul>
+		
+	</div>
+</nav>
+
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-view" class="collapsible selected"><a href="/wiki/Extract,_transform,_load">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Extract,_transform,_load&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Extract,_transform,_load&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch">
+			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+		
+	</div>
+</nav>
+
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-interaction" class="vector-menu vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation" 
+	 >
+	<h3 id="p-interaction-label">
+		<span>Contribute</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Extract,_transform,_load" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Extract,_transform,_load" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Extract,_transform,_load&amp;oldid=964605513" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Extract,_transform,_load&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1276130" title="Structured data on this page hosted by Wikidata [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Extract%2C_transform%2C_load&amp;id=964605513&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-coll-print_export" class="vector-menu vector-menu-portal portal" aria-labelledby="p-coll-print_export-label" role="navigation" 
+	 >
+	<h3 id="p-coll-print_export-label">
+		<span>Print/export</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Extract%2C+transform%2C+load&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Extract,_transform,_load&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+		
+	</div>
+</nav>
+
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label">
+		<span>Languages</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%A7%D8%B3%D8%AA%D8%AE%D8%B1%D8%A7%D8%AC%D8%8C_%D8%AA%D8%AD%D9%88%D9%8A%D9%84%D8%8C_%D8%AA%D8%AD%D9%85%D9%8A%D9%84" title="استخراج، تحويل، تحميل – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Extract,_transform,_load" title="Extract, transform, load – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/ETL-Prozess" title="ETL-Prozess – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Extract,_transform_and_load" title="Extract, transform and load – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Extract-transform-load" title="Extract-transform-load – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EC%B6%94%EC%B6%9C,_%EB%B3%80%ED%99%98,_%EC%A0%81%EC%9E%AC" title="추출, 변환, 적재 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Extract,_transform,_load" title="Extract, transform, load – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/ETL" title="ETL – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-lv"><a href="https://lv.wikipedia.org/wiki/Datu_izvilk%C5%A1ana,_transform%C4%93%C5%A1ana_un_iel%C4%81de" title="Datu izvilkšana, transformēšana un ielāde – Latvian" lang="lv" hreflang="lv" class="interlanguage-link-target">Latviešu</a></li><li class="interlanguage-link interwiki-lmo"><a href="https://lmo.wikipedia.org/wiki/ETL" title="ETL – Lombard" lang="lmo" hreflang="lmo" class="interlanguage-link-target">Lumbaart</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Extraction,_Transformation_and_Load" title="Extraction, Transformation and Load – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Extract/Transform/Load" title="Extract/Transform/Load – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/ETL" title="ETL – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/ETL" title="ETL – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Extract,_transform,_load" title="Extract, transform, load – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/ETL" title="ETL – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/ETL" title="ETL – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/ETL" title="ETL – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1276130#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+	</div>
+</nav>
+
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+		<li id="footer-info-lastmod"> This page was last edited on 26 June 2020, at 13:49<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" >
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Extract,_transform,_load&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</footer>
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.392","walltime":"0.536","ppvisitednodes":{"value":1628,"limit":1000000},"postexpandincludesize":{"value":93098,"limit":2097152},"templateargumentsize":{"value":8099,"limit":2097152},"expansiondepth":{"value":19,"limit":40},"expensivefunctioncount":{"value":6,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":41457,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  435.588      1 -total"," 36.93%  160.880      4 Template:Ambox"," 36.88%  160.634      1 Template:Reflist"," 25.54%  111.229      1 Template:Multiple_issues"," 21.68%   94.422      2 Template:Cite_journal"," 11.54%   50.269      1 Template:More_citations_needed"," 10.46%   45.564      1 Template:More_footnotes","  9.20%   40.085      1 Template:Find_sources_mainspace","  8.42%   36.679      7 Template:Cite_web","  7.20%   31.341      2 Template:As_of"]},"scribunto":{"limitreport-timeusage":{"value":"0.168","limit":"10.000"},"limitreport-memusage":{"value":4862702,"limit":52428800}},"cachereport":{"origin":"mw1290","timestamp":"20200626134959","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Extract, transform, load","url":"https:\/\/en.wikipedia.org\/wiki\/Extract,_transform,_load","sameAs":"http:\/\/www.wikidata.org\/entity\/Q1276130","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q1276130","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2003-06-03T17:53:52Z","dateModified":"2020-06-26T13:49:57Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/f\/fa\/Conventional_ETL_Diagram.jpg","headline":"extract source code"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":107,"wgHostname":"mw1411"});});</script></body></html>

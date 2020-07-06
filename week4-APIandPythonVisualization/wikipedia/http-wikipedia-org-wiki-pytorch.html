@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>PyTorch - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"3a4f83d2-52cb-4141-a0b8-8940840ce003","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"PyTorch","wgTitle":"PyTorch","wgCurRevisionId":964922585,"wgRevisionId":964922585,"wgArticleId":54022970,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Official website different in Wikidata and Wikipedia","All stub articles","Applied machine learning","Data mining and machine learning software","Deep learning","Free science software","Free software programmed in C","Free software programmed in Python","Open-source artificial intelligence",
+"Python scientific libraries","Software using the BSD license","Software stubs"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"PyTorch","wgRelevantArticleId":54022970,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Pytorch","wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgInternalRedirectTargetUrl":"/wiki/PyTorch","wgWikibaseItemId":"Q47509047","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage"};RLSTATE={
+"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","skins.vector.styles.legacy":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.cite.ux-enhancements","site","mediawiki.page.startup","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents",
+"ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.39"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=PyTorch&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=PyTorch&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/PyTorch"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-PyTorch rootpage-PyTorch skin-vector action-view skin-vector-legacy minerva--history-page-action-enabled">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+		<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">PyTorch</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"><span class="mw-redirectedfrom">&#160;&#160;(Redirected from <a href="/w/index.php?title=Pytorch&amp;redirect=no" class="mw-redirect" title="Pytorch">Pytorch</a>)</span></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="infobox vevent" style="width:22em"><caption class="summary">PyTorch</caption><tbody><tr><td colspan="2" style="text-align:center"><a href="/wiki/File:PyTorch_logo_black.svg" class="image"><img alt="PyTorch logo black.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c6/PyTorch_logo_black.svg/220px-PyTorch_logo_black.svg.png" decoding="async" width="220" height="55" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c6/PyTorch_logo_black.svg/330px-PyTorch_logo_black.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c6/PyTorch_logo_black.svg/440px-PyTorch_logo_black.svg.png 2x" data-file-width="488" data-file-height="121" /></a></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_developer" class="mw-redirect" title="Software developer">Original author(s)</a></th><td>Adam Paszke, Sam Gross, <a rel="nofollow" class="external text" href="https://soumith.ch">Soumith Chintala</a>, Gregory Chanan</td></tr><tr><th scope="row" style="white-space: nowrap;">Initial release</th><td>October&#160;2016<span class="noprint">&#59;&#32;3&#160;years ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2016-10</span>)</span></td></tr><tr style="display: none;"><td colspan="2" style="text-align:center"></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th><td><div style="margin:0px;">1.5.1
+   / 11&#160;June 2020<span class="noprint">&#59;&#32;24&#160;days ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2020-06-11</span>)</span></div></td></tr><tr style="display:none"><td colspan="2">
+</td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Repository_(version_control)" title="Repository (version control)">Repository</a></th><td><span class="url"><a rel="nofollow" class="external text" href="https://github.com/pytorch/pytorch">github<wbr />.com<wbr />/pytorch<wbr />/pytorch</a></span></td></tr><tr><th scope="row" style="white-space: nowrap;">Written in</th><td><a href="/wiki/Python_(programming_language)" title="Python (programming language)">Python</a>, <a href="/wiki/C%2B%2B" title="C++">C++</a>, <a href="/wiki/CUDA" title="CUDA">CUDA</a></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Operating_system" title="Operating system">Operating system</a></th><td><a href="/wiki/Linux" title="Linux">Linux</a>, <a href="/wiki/MacOS" title="MacOS">macOS</a>, <a href="/wiki/Windows" class="mw-redirect" title="Windows">Windows</a></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Computing_platform" title="Computing platform">Platform</a></th><td><a href="/wiki/IA-32" title="IA-32">IA-32</a>, <a href="/wiki/X86-64" title="X86-64">x86-64</a></td></tr><tr><th scope="row" style="white-space: nowrap;">Available in</th><td>English</td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_categories#Categorization_approaches" title="Software categories">Type</a></th><td><a href="/wiki/Library_(computing)" title="Library (computing)">Library</a> for <a href="/wiki/Machine_learning" title="Machine learning">machine learning</a> and <a href="/wiki/Deep_learning" title="Deep learning">deep learning</a></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_license" title="Software license">License</a></th><td><a href="/wiki/BSD_licenses" title="BSD licenses">BSD</a></td></tr><tr><th scope="row" style="white-space: nowrap;">Website</th><td><span class="url"><a rel="nofollow" class="external text" href="https://pytorch.org/">pytorch<wbr />.org</a></span></td></tr></tbody></table>
+<p><b>PyTorch</b> is an <a href="/wiki/Open_source" title="Open source">open source</a> <a href="/wiki/Machine_learning" title="Machine learning">machine learning</a> <a href="/wiki/Library_(computing)" title="Library (computing)">library</a> based on the <a href="/wiki/Torch_(machine_learning)" title="Torch (machine learning)">Torch</a> library,<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup><sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup> used for applications such as <a href="/wiki/Computer_vision" title="Computer vision">computer vision</a> and <a href="/wiki/Natural_language_processing" title="Natural language processing">natural language processing</a>,<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> primarily developed by <a href="/wiki/Facebook" title="Facebook">Facebook</a>'s AI Research lab (FAIR).<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup><sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup><sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> It is <a href="/wiki/Free_and_open-source_software" title="Free and open-source software">free and open-source software</a> released under the <a href="/wiki/Modified_BSD_License" class="mw-redirect" title="Modified BSD License">Modified BSD license</a>. Although the <a href="/wiki/Python_(programming_language)" title="Python (programming language)">Python</a> interface is more polished and the primary focus of development, PyTorch also has a <a href="/wiki/C%2B%2B" title="C++">C++</a> interface.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup> 
+</p><p>A number of pieces of <a href="/wiki/Deep_learning" title="Deep learning">Deep Learning</a> software are built on top of PyTorch, including <a href="/wiki/Tesla,_Inc." title="Tesla, Inc.">Tesla</a><sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup>, <a href="/wiki/Uber" title="Uber">Uber</a>'s Pyro,<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup> HuggingFace's Transformers,<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup> <a href="/wiki/PyTorch_Lightning" title="PyTorch Lightning">PyTorch Lightning</a><sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup><sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup>, and Catalyst.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;14&#93;</a></sup><sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;15&#93;</a></sup>
+</p><p>PyTorch provides two high-level features:<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;16&#93;</a></sup>
+</p>
+<ul><li>Tensor computing (like <a href="/wiki/NumPy" title="NumPy">NumPy</a>) with strong acceleration via <a href="/wiki/Graphics_processing_unit" title="Graphics processing unit">graphics processing units</a> (GPU)</li>
+<li><a href="/wiki/Deep_neural_networks" class="mw-redirect" title="Deep neural networks">Deep neural networks</a> built on a tape-based <a href="/wiki/Automatic_differentiation" title="Automatic differentiation">automatic differentiation</a> system</li></ul>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#PyTorch_tensors"><span class="tocnumber">2</span> <span class="toctext">PyTorch tensors</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Modules"><span class="tocnumber">3</span> <span class="toctext">Modules</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Autograd_module"><span class="tocnumber">3.1</span> <span class="toctext">Autograd module</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Optim_module"><span class="tocnumber">3.2</span> <span class="toctext">Optim module</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#nn_module"><span class="tocnumber">3.3</span> <span class="toctext">nn module</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PyTorch&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Facebook operates both <i>PyTorch</i> and <i>Convolutional Architecture for Fast Feature Embedding</i> (<a href="/wiki/Caffe_(software)" title="Caffe (software)">Caffe2</a>), but models defined by the two frameworks were mutually incompatible. The Open Neural Network Exchange (<a href="/wiki/Open_Neural_Network_Exchange" title="Open Neural Network Exchange">ONNX</a>) project was created by Facebook and <a href="/wiki/Microsoft" title="Microsoft">Microsoft</a> in September 2017 for converting models between frameworks. Caffe2 was merged into PyTorch at the end of March 2018.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">&#91;17&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="PyTorch_tensors">PyTorch tensors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PyTorch&amp;action=edit&amp;section=2" title="Edit section: PyTorch tensors">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>PyTorch defines a class called Tensor (<code>torch.Tensor</code>) to store and operate on homogeneous multidimensional rectangular arrays of numbers. PyTorch Tensors are similar to <a href="/wiki/NumPy" title="NumPy">NumPy</a> Arrays, but can also be operated on a <a href="/wiki/CUDA" title="CUDA">CUDA</a>-capable <a href="/wiki/Nvidia" title="Nvidia">Nvidia</a> GPU. PyTorch supports various sub-types of Tensors.<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;18&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Modules">Modules</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PyTorch&amp;action=edit&amp;section=3" title="Edit section: Modules">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Autograd_module">Autograd module</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PyTorch&amp;action=edit&amp;section=4" title="Edit section: Autograd module">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>PyTorch uses a method called <a href="/wiki/Automatic_differentiation" title="Automatic differentiation">automatic differentiation</a>. A recorder records what operations have performed, and then it replays it backward to compute the gradients. This method is especially powerful when building neural networks to save time on one epoch by calculating differentiation of the parameters at the forward pass.
+</p>
+<h3><span class="mw-headline" id="Optim_module"><code>Optim</code> module</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PyTorch&amp;action=edit&amp;section=5" title="Edit section: Optim module">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><code>torch.optim</code> is a module that implements various optimization algorithms used for building neural networks. Most of the commonly used methods are already supported, so there is no need to build them from scratch.
+</p>
+<h3><span class="mw-headline" id="nn_module"><code>nn</code> module</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PyTorch&amp;action=edit&amp;section=6" title="Edit section: nn module">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>PyTorch autograd makes it easy to define computational graphs and take gradients, but raw autograd can be a bit too low-level for defining complex neural networks. This is where the <code>nn</code> module can help.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PyTorch&amp;action=edit&amp;section=7" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r936637989">.mw-parser-output .portal{border:solid #aaa 1px;padding:0}.mw-parser-output .portal.tleft{margin:0.5em 1em 0.5em 0}.mw-parser-output .portal.tright{margin:0.5em 0 0.5em 1em}.mw-parser-output .portal>ul{display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold}.mw-parser-output .portal>ul>li{display:table-row}.mw-parser-output .portal>ul>li>span:first-child{display:table-cell;padding:0.2em;vertical-align:middle;text-align:center}.mw-parser-output .portal>ul>li>span:last-child{display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle}</style><div role="navigation" aria-label="Portals" class="noprint portal plainlist tright">
+<ul>
+<li><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/28px-Free_and_open-source_software_logo_%282009%29.svg.png" decoding="async" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512" /></span><span><a href="/wiki/Portal:Free_and_open-source_software" title="Portal:Free and open-source software">Free and open-source software portal</a></span></li></ul></div>
+<ul><li><a href="/wiki/Comparison_of_deep_learning_software" class="mw-redirect" title="Comparison of deep learning software">Comparison of deep learning software</a></li>
+<li><a href="/wiki/Differentiable_programming" title="Differentiable programming">Differentiable programming</a></li>
+<li><a href="/wiki/DeepSpeed" title="DeepSpeed">DeepSpeed</a></li>
+<li><a href="/wiki/Torch_(machine_learning)" title="Torch (machine learning)">Torch (machine learning)</a></li>
+<li><a href="/wiki/Tensor" title="Tensor">Tensor</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PyTorch&amp;action=edit&amp;section=8" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite id="CITEREFYegulalp2017" class="citation news">Yegulalp, Serdar (19 January 2017). <a rel="nofollow" class="external text" href="https://www.infoworld.com/article/3159120/artificial-intelligence/facebook-brings-gpu-powered-machine-learning-to-python.html">"Facebook brings GPU-powered machine learning to Python"</a>. <i>InfoWorld</i><span class="reference-accessdate">. Retrieved <span class="nowrap">11 December</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=InfoWorld&amp;rft.atitle=Facebook+brings+GPU-powered+machine+learning+to+Python&amp;rft.date=2017-01-19&amp;rft.aulast=Yegulalp&amp;rft.aufirst=Serdar&amp;rft_id=https%3A%2F%2Fwww.infoworld.com%2Farticle%2F3159120%2Fartificial-intelligence%2Ffacebook-brings-gpu-powered-machine-learning-to-python.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APyTorch" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r951705291">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg");background-repeat:no-repeat;background-size:9px;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg");background-repeat:no-repeat;background-size:9px;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg");background-repeat:no-repeat;background-size:9px;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg");background-repeat:no-repeat;background-size:12px;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite id="CITEREFLorica2017" class="citation web">Lorica, Ben (3 August 2017). <a rel="nofollow" class="external text" href="https://www.oreilly.com/ideas/why-ai-and-machine-learning-researchers-are-beginning-to-embrace-pytorch">"Why AI and machine learning researchers are beginning to embrace PyTorch"</a>. O'Reilly Media<span class="reference-accessdate">. Retrieved <span class="nowrap">11 December</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Why+AI+and+machine+learning+researchers+are+beginning+to+embrace+PyTorch&amp;rft.pub=O%27Reilly+Media&amp;rft.date=2017-08-03&amp;rft.aulast=Lorica&amp;rft.aufirst=Ben&amp;rft_id=https%3A%2F%2Fwww.oreilly.com%2Fideas%2Fwhy-ai-and-machine-learning-researchers-are-beginning-to-embrace-pytorch&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APyTorch" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite id="CITEREFKetkar2017" class="citation book">Ketkar, Nikhil (2017). "Introduction to PyTorch". <i>Deep Learning with Python</i>. Apress, Berkeley, CA. pp.&#160;195–208. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1007%2F978-1-4842-2766-4_12">10.1007/978-1-4842-2766-4_12</a>. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9781484227657" title="Special:BookSources/9781484227657"><bdi>9781484227657</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Introduction+to+PyTorch&amp;rft.btitle=Deep+Learning+with+Python&amp;rft.pages=195-208&amp;rft.pub=Apress%2C+Berkeley%2C+CA&amp;rft.date=2017&amp;rft_id=info%3Adoi%2F10.1007%2F978-1-4842-2766-4_12&amp;rft.isbn=9781484227657&amp;rft.aulast=Ketkar&amp;rft.aufirst=Nikhil&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APyTorch" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://dl4nlp.info/en/latest/">"Natural Language Processing (NLP) with PyTorch – NLP with PyTorch documentation"</a>. <i>dl4nlp.info</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2017-12-18</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=dl4nlp.info&amp;rft.atitle=Natural+Language+Processing+%28NLP%29+with+PyTorch+%E2%80%93+NLP+with+PyTorch+documentation&amp;rft_id=http%3A%2F%2Fdl4nlp.info%2Fen%2Flatest%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APyTorch" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite id="CITEREFPatel2017" class="citation news">Patel, Mo (2017-12-07). <a rel="nofollow" class="external text" href="https://www.oreilly.com/ideas/when-two-trends-fuse-pytorch-and-recommender-systems">"When two trends fuse: PyTorch and recommender systems"</a>. <i>O'Reilly Media</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2017-12-18</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=O%27Reilly+Media&amp;rft.atitle=When+two+trends+fuse%3A+PyTorch+and+recommender+systems&amp;rft.date=2017-12-07&amp;rft.aulast=Patel&amp;rft.aufirst=Mo&amp;rft_id=https%3A%2F%2Fwww.oreilly.com%2Fideas%2Fwhen-two-trends-fuse-pytorch-and-recommender-systems&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APyTorch" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite id="CITEREFMannes" class="citation news">Mannes, John. <a rel="nofollow" class="external text" href="https://techcrunch.com/2017/09/07/facebook-and-microsoft-collaborate-to-simplify-conversions-from-pytorch-to-caffe2/">"Facebook and Microsoft collaborate to simplify conversions from PyTorch to Caffe2"</a>. <i><a href="/wiki/TechCrunch" title="TechCrunch">TechCrunch</a></i><span class="reference-accessdate">. Retrieved <span class="nowrap">2017-12-18</span></span>. <q>FAIR is accustomed to working with PyTorch – a deep learning framework optimized for achieving state of the art results in research, regardless of resource constraints. Unfortunately in the real world, most of us are limited by the computational capabilities of our smartphones and computers.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=TechCrunch&amp;rft.atitle=Facebook+and+Microsoft+collaborate+to+simplify+conversions+from+PyTorch+to+Caffe2&amp;rft.aulast=Mannes&amp;rft.aufirst=John&amp;rft_id=https%3A%2F%2Ftechcrunch.com%2F2017%2F09%2F07%2Ffacebook-and-microsoft-collaborate-to-simplify-conversions-from-pytorch-to-caffe2%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APyTorch" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite id="CITEREFArakelyan2017" class="citation web">Arakelyan, Sophia (2017-11-29). <a rel="nofollow" class="external text" href="https://venturebeat.com/2017/11/29/tech-giants-are-using-open-source-frameworks-to-dominate-the-ai-community/">"Tech giants are using open source frameworks to dominate the AI community"</a>. <i><a href="/wiki/VentureBeat" title="VentureBeat">VentureBeat</a></i><span class="reference-accessdate">. Retrieved <span class="nowrap">2017-12-18</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=VentureBeat&amp;rft.atitle=Tech+giants+are+using+open+source+frameworks+to+dominate+the+AI+community&amp;rft.date=2017-11-29&amp;rft.aulast=Arakelyan&amp;rft.aufirst=Sophia&amp;rft_id=https%3A%2F%2Fventurebeat.com%2F2017%2F11%2F29%2Ftech-giants-are-using-open-source-frameworks-to-dominate-the-ai-community%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APyTorch" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://pytorch.org/cppdocs/frontend.html">"The C++ Frontend"</a>. <i>PyTorch Master Documentation</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2019-07-29</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=PyTorch+Master+Documentation&amp;rft.atitle=The+C%2B%2B+Frontend&amp;rft_id=https%3A%2F%2Fpytorch.org%2Fcppdocs%2Ffrontend.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APyTorch" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite id="CITEREFKarpathy" class="citation web">Karpathy, Andrej. <a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=oBklltKXtDE">"PyTorch at Tesla - Andrej Karpathy, Tesla"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=PyTorch+at+Tesla+-+Andrej+Karpathy%2C+Tesla&amp;rft.aulast=Karpathy&amp;rft.aufirst=Andrej&amp;rft_id=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DoBklltKXtDE&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APyTorch" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation news"><a rel="nofollow" class="external text" href="https://eng.uber.com/pyro/">"Uber AI Labs Open Sources Pyro, a Deep Probabilistic Programming Language"</a>. <i>Uber Engineering Blog</i>. 2017-11-03<span class="reference-accessdate">. Retrieved <span class="nowrap">2017-12-18</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Uber+Engineering+Blog&amp;rft.atitle=Uber+AI+Labs+Open+Sources+Pyro%2C+a+Deep+Probabilistic+Programming+Language&amp;rft.date=2017-11-03&amp;rft_id=https%3A%2F%2Feng.uber.com%2Fpyro%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APyTorch" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation"><a rel="nofollow" class="external text" href="https://pytorch.org/hub/huggingface_pytorch-transformers/"><i>PYTORCH-TRANSFORMERS: PyTorch implementations of popular NLP Transformers</i></a>, PyTorch Hub, 2019-12-01<span class="reference-accessdate">, retrieved <span class="nowrap">2019-12-01</span></span></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=PYTORCH-TRANSFORMERS%3A+PyTorch+implementations+of+popular+NLP+Transformers&amp;rft.pub=PyTorch+Hub&amp;rft.date=2019-12-01&amp;rft_id=https%3A%2F%2Fpytorch.org%2Fhub%2Fhuggingface_pytorch-transformers%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APyTorch" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation"><a rel="nofollow" class="external text" href="https://github.com/PyTorchLightning/pytorch-lightning/"><i>PYTORCH-Lightning: The lightweight PyTorch wrapper for ML researchers. Scale your models. Write less boilerplate</i></a>, Lightning-Team, 2020-06-18<span class="reference-accessdate">, retrieved <span class="nowrap">2020-06-18</span></span></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=PYTORCH-Lightning%3A+The+lightweight+PyTorch+wrapper+for+ML+researchers.+Scale+your+models.+Write+less+boilerplate&amp;rft.pub=Lightning-Team&amp;rft.date=2020-06-18&amp;rft_id=https%3A%2F%2Fgithub.com%2FPyTorchLightning%2Fpytorch-lightning%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APyTorch" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://pytorch.org/ecosystem/">"Ecosystem Tools"</a>. <i>pytorch.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2020-06-18</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=pytorch.org&amp;rft.atitle=Ecosystem+Tools&amp;rft_id=https%3A%2F%2Fpytorch.org%2Fecosystem%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APyTorch" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><cite class="citation"><a rel="nofollow" class="external text" href="https://github.com/catalyst-team/catalyst"><i>GitHub - catalyst-team/catalyst: Accelerated DL &amp; RL</i></a>, Catalyst-Team, 2019-12-05<span class="reference-accessdate">, retrieved <span class="nowrap">2019-12-05</span></span></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=GitHub+-+catalyst-team%2Fcatalyst%3A+Accelerated+DL+%26+RL&amp;rft.pub=Catalyst-Team&amp;rft.date=2019-12-05&amp;rft_id=https%3A%2F%2Fgithub.com%2Fcatalyst-team%2Fcatalyst&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APyTorch" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://pytorch.org/ecosystem/">"Ecosystem Tools"</a>. <i>pytorch.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2020-04-04</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=pytorch.org&amp;rft.atitle=Ecosystem+Tools&amp;rft_id=https%3A%2F%2Fpytorch.org%2Fecosystem%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APyTorch" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20180615190804/https://pytorch.org/about/">"PyTorch – About"</a>. <i>pytorch.org</i>. Archived from <a rel="nofollow" class="external text" href="https://pytorch.org/about/">the original</a> on 2018-06-15<span class="reference-accessdate">. Retrieved <span class="nowrap">2018-06-11</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=pytorch.org&amp;rft.atitle=PyTorch+%E2%80%93+About&amp;rft_id=https%3A%2F%2Fpytorch.org%2Fabout%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APyTorch" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://medium.com/@Synced/caffe2-merges-with-pytorch-a89c70ad9eb7">"Caffe2 Merges With PyTorch"</a>. 2018-04-02.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Caffe2+Merges+With+PyTorch&amp;rft.date=2018-04-02&amp;rft_id=https%3A%2F%2Fmedium.com%2F%40Synced%2Fcaffe2-merges-with-pytorch-a89c70ad9eb7&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APyTorch" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.analyticsvidhya.com/blog/2018/02/pytorch-tutorial/">"An Introduction to PyTorch – A Simple yet Powerful Deep Learning Library"</a>. <i>analyticsvidhya.com</i>. 2018-02-22<span class="reference-accessdate">. Retrieved <span class="nowrap">2018-06-11</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=analyticsvidhya.com&amp;rft.atitle=An+Introduction+to+PyTorch+%E2%80%93+A+Simple+yet+Powerful+Deep+Learning+Library&amp;rft.date=2018-02-22&amp;rft_id=https%3A%2F%2Fwww.analyticsvidhya.com%2Fblog%2F2018%2F02%2Fpytorch-tutorial%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APyTorch" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r951705291"/></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PyTorch&amp;action=edit&amp;section=9" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><span class="official-website"><span class="url"><a rel="nofollow" class="external text" href="http://pytorch.org">Official website</a></span></span></li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Deep_learning_software" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Deep_Learning_Software" title="Template:Deep Learning Software"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Deep_Learning_Software" title="Template talk:Deep Learning Software"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Deep_Learning_Software&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Deep_learning_software" style="font-size:114%;margin:0 4em"><a href="/wiki/Comparison_of_deep_learning_software" class="mw-redirect" title="Comparison of deep learning software">Deep learning software</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Open-source_software" title="Open-source software">Open-source</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Apache_SINGA" title="Apache SINGA">Apache SINGA</a></li>
+<li><a href="/wiki/Caffe_(software)" title="Caffe (software)">Caffe</a></li>
+<li><a href="/wiki/Deeplearning4j" title="Deeplearning4j">Deeplearning4j</a></li>
+<li><a href="/wiki/DeepSpeed" title="DeepSpeed">DeepSpeed</a></li>
+<li><a href="/wiki/Dlib" title="Dlib">Dlib</a></li>
+<li><a href="/wiki/Keras" title="Keras">Keras</a></li>
+<li><a href="/wiki/Microsoft_Cognitive_Toolkit" title="Microsoft Cognitive Toolkit">Microsoft Cognitive Toolkit</a></li>
+<li><a href="/wiki/ML.NET" title="ML.NET">ML.NET</a></li>
+<li><a href="/wiki/MXNet" class="mw-redirect" title="MXNet">MXNet</a></li>
+<li><a href="/wiki/OpenNN" title="OpenNN">OpenNN</a></li>
+<li><a class="mw-selflink selflink">PyTorch</a></li>
+<li><a href="/wiki/TensorFlow" title="TensorFlow">TensorFlow</a></li>
+<li><a href="/wiki/Theano_(software)" title="Theano (software)">Theano</a></li>
+<li><a href="/wiki/Torch_(machine_learning)" title="Torch (machine learning)">Torch</a></li>
+<li><a href="/wiki/Open_Neural_Network_Exchange" title="Open Neural Network Exchange">ONNX</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Proprietary_software" title="Proprietary software">Proprietary</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Maple_(software)" title="Maple (software)">Maple</a></li>
+<li><a href="/wiki/Neural_Designer" title="Neural Designer">Neural Designer</a></li>
+<li><a href="/wiki/Wolfram_Mathematica" title="Wolfram Mathematica">Wolfram Mathematica</a></li>
+<li><a href="/wiki/Apple_Inc." title="Apple Inc.">Apple</a> Core ML</li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><b><a href="/wiki/Category:Deep_learning" title="Category:Deep learning">Category</a></b></li>
+<li><b><a href="/wiki/Comparison_of_deep_learning_software" class="mw-redirect" title="Comparison of deep learning software">Comparison</a></b></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Differentiable_computing" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Differentiable_computing" title="Template:Differentiable computing"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/w/index.php?title=Template_talk:Differentiable_computing&amp;action=edit&amp;redlink=1" class="new" title="Template talk:Differentiable computing (page does not exist)"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Differentiable_computing&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Differentiable_computing" style="font-size:114%;margin:0 4em">Differentiable computing</div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">General</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Differentiable_programming" title="Differentiable programming">Differentiable programming</a></li>
+<li><a href="/wiki/Neural_Turing_machine" title="Neural Turing machine">Neural Turing machine</a></li>
+<li><a href="/wiki/Differentiable_neural_computer" title="Differentiable neural computer">Differentiable neural computer</a></li>
+<li><a href="/wiki/Automatic_differentiation" title="Automatic differentiation">Automatic differentiation</a></li>
+<li><a href="/wiki/Neuromorphic_engineering" title="Neuromorphic engineering">Neuromorphic engineering</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Concepts</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Gradient_descent" title="Gradient descent">Gradient descent</a></li>
+<li><a href="/wiki/Cable_theory" title="Cable theory">Cable theory</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Programming languages</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Python_(programming_language)" title="Python (programming language)">Python</a></li>
+<li><a href="/wiki/Julia_(programming_language)" title="Julia (programming language)">Julia</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Application</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Machine_learning" title="Machine learning">Machine learning</a></li>
+<li><a href="/wiki/Artificial_neural_network" title="Artificial neural network">Artificial neural network</a></li>
+<li><a href="/wiki/Scientific_computing" class="mw-redirect" title="Scientific computing">Scientific computing</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Hardware</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Tensor_processing_unit" title="Tensor processing unit">TPU</a></li>
+<li><a href="/wiki/Vision_processing_unit" title="Vision processing unit">VPU</a></li>
+<li><a href="/wiki/Memristor" title="Memristor">Memristor</a></li>
+<li><a href="/wiki/SpiNNaker" title="SpiNNaker">SpiNNaker</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Software library</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/TensorFlow" title="TensorFlow">TensorFlow</a></li>
+<li><a class="mw-selflink selflink">PyTorch</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">People</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Alex_Graves_(computer_scientist)" title="Alex Graves (computer scientist)">Alex Graves</a></li>
+<li><a href="/wiki/Ian_Goodfellow" title="Ian Goodfellow">Ian Goodfellow</a></li>
+<li><a href="/wiki/Yoshua_Bengio" title="Yoshua Bengio">Yoshua Bengio</a></li>
+<li><a href="/wiki/Geoffrey_Hinton" title="Geoffrey Hinton">Geoffrey Hinton</a></li>
+<li><a href="/wiki/Yann_LeCun" title="Yann LeCun">Yann LeCun</a></li>
+<li><a href="/wiki/Andrew_Ng" title="Andrew Ng">Andrew Ng</a></li>
+<li><a href="/wiki/Demis_Hassabis" title="Demis Hassabis">Demis Hassabis</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><img alt="Portal" src="//upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/16px-Portal-puzzle.svg.png" decoding="async" title="Portal" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/24px-Portal-puzzle.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/32px-Portal-puzzle.svg.png 2x" data-file-width="32" data-file-height="28" /> Portals
+<ul><li><a href="/wiki/Portal:Computer_programming" title="Portal:Computer programming">Computer programming</a></li>
+<li><a href="/wiki/Portal:Technology" title="Portal:Technology">Technology</a></li></ul></li>
+<li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" decoding="async" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> Category
+<ul><li><a href="/wiki/Category:Artificial_neural_networks" title="Category:Artificial neural networks">Artificial neural networks</a></li>
+<li><a href="/wiki/Category:Machine_learning" title="Category:Machine learning">Machine learning</a></li></ul></li></ul>
+</div></td></tr></tbody></table></div>
+<p><br />
+</p>
+<table class="metadata plainlinks stub" role="presentation" style="background:transparent"><tbody><tr><td><a href="/wiki/File:System-installer.svg" class="image"><img alt="Stub icon" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/db/System-installer.svg/30px-System-installer.svg.png" decoding="async" width="30" height="30" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/db/System-installer.svg/45px-System-installer.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/db/System-installer.svg/60px-System-installer.svg.png 2x" data-file-width="48" data-file-height="48" /></a></td><td><i>This <a href="/wiki/Software" title="Software">software</a> article is a <a href="/wiki/Wikipedia:Stub" title="Wikipedia:Stub">stub</a>. You can help Wikipedia by <a class="external text" href="https://en.wikipedia.org/w/index.php?title=PyTorch&amp;action=edit">expanding it</a>.</i><div class="plainlinks hlist navbar mini" style="position: absolute; right: 15px; display: none;"><ul><li class="nv-view"><a href="/wiki/Template:Software-stub" title="Template:Software-stub"><abbr title="View this template">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Software-stub" title="Template talk:Software-stub"><abbr title="Discuss this template">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Software-stub&amp;action=edit"><abbr title="Edit this template">e</abbr></a></li></ul></div></td></tr></tbody></table>
+<!-- 
+NewPP limit report
+Parsed by mw1306
+Cached time: 20200705095145
+Cache expiry: 86400
+Dynamic content: true
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.468 seconds
+Real time usage: 0.582 seconds
+Preprocessor visited node count: 1965/1000000
+Post‐expand include size: 60235/2097152 bytes
+Template argument size: 2117/2097152 bytes
+Highest expansion depth: 27/40
+Expensive parser function count: 3/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 69454/5000000 bytes
+Lua time usage: 0.228/10.000 seconds
+Lua memory usage: 4.37 MB/50 MB
+Number of Wikibase entities loaded: 1/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  504.738      1 -total
+ 41.03%  207.110      1 Template:Reflist
+ 39.09%  197.315      2 Template:Infobox
+ 35.49%  179.132      1 Template:Infobox_software
+ 19.68%   99.315      4 Template:Cite_news
+ 10.56%   53.312     10 Template:Cite_web
+  9.28%   46.825      1 Template:Infobox_software/simple
+  8.23%   41.554      2 Template:Start_date_and_age
+  6.07%   30.662      1 Template:Portal
+  5.16%   26.026      2 Template:Navbox
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:54022970-0!canonical and timestamp 20200705095145 and revision id 964922585
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=PyTorch&amp;oldid=964922585">https://en.wikipedia.org/w/index.php?title=PyTorch&amp;oldid=964922585</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Applied_machine_learning" title="Category:Applied machine learning">Applied machine learning</a></li><li><a href="/wiki/Category:Data_mining_and_machine_learning_software" title="Category:Data mining and machine learning software">Data mining and machine learning software</a></li><li><a href="/wiki/Category:Deep_learning" title="Category:Deep learning">Deep learning</a></li><li><a href="/wiki/Category:Free_science_software" title="Category:Free science software">Free science software</a></li><li><a href="/wiki/Category:Free_software_programmed_in_C" title="Category:Free software programmed in C">Free software programmed in C</a></li><li><a href="/wiki/Category:Free_software_programmed_in_Python" title="Category:Free software programmed in Python">Free software programmed in Python</a></li><li><a href="/wiki/Category:Open-source_artificial_intelligence" title="Category:Open-source artificial intelligence">Open-source artificial intelligence</a></li><li><a href="/wiki/Category:Python_scientific_libraries" title="Category:Python scientific libraries">Python scientific libraries</a></li><li><a href="/wiki/Category:Software_using_the_BSD_license" title="Category:Software using the BSD license">Software using the BSD license</a></li><li><a href="/wiki/Category:Software_stubs" title="Category:Software stubs">Software stubs</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Official_website_different_in_Wikidata_and_Wikipedia" title="Category:Official website different in Wikidata and Wikipedia">Official website different in Wikidata and Wikipedia</a></li><li><a href="/wiki/Category:All_stub_articles" title="Category:All stub articles">All stub articles</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=PyTorch" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=PyTorch" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/wiki/PyTorch" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:PyTorch" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li></ul>
+		
+	</div>
+</nav>
+
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="ca-view" class="collapsible selected"><a href="/wiki/PyTorch">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=PyTorch&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=PyTorch&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="menu vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch">
+			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+		
+	</div>
+</nav>
+
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-interaction" class="vector-menu vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation" 
+	 >
+	<h3 id="p-interaction-label">
+		<span>Contribute</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/PyTorch" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/PyTorch" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=PyTorch&amp;oldid=964922585" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=PyTorch&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q47509047" title="Structured data on this page hosted by Wikidata [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=PyTorch&amp;id=964922585&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+		
+	</div>
+</nav>
+
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-coll-print_export" class="vector-menu vector-menu-portal portal" aria-labelledby="p-coll-print_export-label" role="navigation" 
+	 >
+	<h3 id="p-coll-print_export-label">
+		<span>Print/export</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=PyTorch&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=PyTorch&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+		
+	</div>
+</nav>
+
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label">
+		<span>Languages</span>
+	</h3>
+	<!-- Please do not use the .body class, it is deprecated. -->
+	<div class="body vector-menu-content">
+		<!-- Please do not use the .menu class, it is deprecated. -->
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/PyTorch" title="PyTorch – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/PyTorch" title="PyTorch – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/PyTorch" title="PyTorch – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D9%BE%D8%A7%DB%8C%E2%80%8C%D8%AA%D9%88%D8%B1%DA%86" title="پای‌تورچ – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/PyTorch" title="PyTorch – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/PyTorch" title="PyTorch – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/PyTorch" title="PyTorch – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/PyTorch" title="PyTorch – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/PyTorch" title="PyTorch – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-th"><a href="https://th.wikipedia.org/wiki/PyTorch" title="PyTorch – Thai" lang="th" hreflang="th" class="interlanguage-link-target">ไทย</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/PyTorch" title="PyTorch – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/PyTorch" title="PyTorch – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/PyTorch" title="PyTorch – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q47509047#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+	</div>
+</nav>
+
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+		<li id="footer-info-lastmod"> This page was last edited on 28 June 2020, at 11:22<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" >
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=PyTorch&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</footer>
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.468","walltime":"0.582","ppvisitednodes":{"value":1965,"limit":1000000},"postexpandincludesize":{"value":60235,"limit":2097152},"templateargumentsize":{"value":2117,"limit":2097152},"expansiondepth":{"value":27,"limit":40},"expensivefunctioncount":{"value":3,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":69454,"limit":5000000},"entityaccesscount":{"value":1,"limit":400},"timingprofile":["100.00%  504.738      1 -total"," 41.03%  207.110      1 Template:Reflist"," 39.09%  197.315      2 Template:Infobox"," 35.49%  179.132      1 Template:Infobox_software"," 19.68%   99.315      4 Template:Cite_news"," 10.56%   53.312     10 Template:Cite_web","  9.28%   46.825      1 Template:Infobox_software/simple","  8.23%   41.554      2 Template:Start_date_and_age","  6.07%   30.662      1 Template:Portal","  5.16%   26.026      2 Template:Navbox"]},"scribunto":{"limitreport-timeusage":{"value":"0.228","limit":"10.000"},"limitreport-memusage":{"value":4587493,"limit":52428800}},"cachereport":{"origin":"mw1306","timestamp":"20200705095145","ttl":86400,"transientcontent":true}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"PyTorch","url":"https:\/\/en.wikipedia.org\/wiki\/PyTorch","sameAs":"http:\/\/www.wikidata.org\/entity\/Q47509047","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q47509047","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2017-05-12T00:57:40Z","dateModified":"2020-06-28T11:22:18Z","headline":"open source machine learning library for Python, based on Torch"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":117,"wgHostname":"mw1332"});});</script></body></html>

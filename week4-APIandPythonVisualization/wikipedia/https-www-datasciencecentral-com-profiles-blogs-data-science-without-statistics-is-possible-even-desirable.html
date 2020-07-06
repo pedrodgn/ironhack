@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head data-layout-view="default" class="xj_layout_head">
+
+<script src="/cdn-cgi/apps/head/2KBZVAPwaluoFur126FMAC8gwGI.js"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T5W4WQ');</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Data science without statistics is possible, even desirable - Data Science Central</title>
+<link rel="icon" href="https://www.datasciencecentral.com/favicon.ico" type="image/x-icon" />
+<link rel="SHORTCUT ICON" href="https://www.datasciencecentral.com/favicon.ico" type="image/x-icon" />
+<meta name="description" content="The purpose of this article is to clarify a few misconceptions about data and statistical science.
+I will start with a controversial statement: data science ba…" />
+<meta name="keywords" content="predictive modeling" />
+<meta name="title" content="Data science without statistics is possible, even desirable" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.datasciencecentral.com/profiles/blogs/data-science-without-statistics-is-possible-even-desirable" />
+<meta property="og:title" content="Data science without statistics is possible, even desirable" />
+<meta property="og:image" content="http://storage.ning.com/topology/rest/1.0/file/get/2808294843?profile=original">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Data science without statistics is possible, even desirable" />
+<meta name="twitter:description" content="The purpose of this article is to clarify a few misconceptions about data and statistical science.
+I will start with a controversial statement: data science ba…" />
+<meta name="twitter:image" content="http://storage.ning.com/topology/rest/1.0/file/get/2808294843?profile=original" />
+<link rel="image_src" href="https://storage.ning.com/topology/rest/1.0/file/get/2808294843?profile=original" />
+<script type="text/javascript">
+    djConfig = { preventBackButtonFix: false, isDebug: false }
+ning = {"CurrentApp":{"premium":true,"iconUrl":"https:\/\/storage.ning.com\/topology\/rest\/1.0\/file\/get\/2751248758?profile=UPSCALE_150x150","url":"httpsdatasciencecentral.ning.com","domains":["datasciencecentral.com"],"online":true,"privateSource":true,"id":"datasciencecentral","appId":"6448529","description":"Welcome to Data Science Central. The Community of and for Data Scientist","name":"Data Science Central","owner":"2edcolrgc4o4b","createdDate":"2011-10-05T21:11:40.055Z","runOwnAds":false,"category":{"Visualization":null,"Integration":null,"Science":null,"Modeling":null,"Big":null,"Intelligence":null,"R":null,"Mining":null,"Analytics":null,"Data":null,"Business":null,"Predictive":null},"tags":["Visualization","Integration","Science","Modeling","Big","Intelligence","R","Mining","Analytics","Data","Business","Predictive"]},"CurrentProfile":null,"maxFileUploadSize":7};
+        (function(){
+            if (!window.ning) { return; }
+
+            var age, gender, rand, obfuscated, combined;
+
+            obfuscated = document.cookie.match(/xgdi=([^;]+)/);
+            if (obfuscated) {
+                var offset = 100000;
+                obfuscated = parseInt(obfuscated[1]);
+                rand = obfuscated / offset;
+                combined = (obfuscated % offset) ^ rand;
+                age = combined % 1000;
+                gender = (combined / 1000) & 3;
+                gender = (gender == 1 ? 'm' : gender == 2 ? 'f' : 0);
+                ning.viewer = {"age":age,"gender":gender};
+            }
+        })();
+
+        if (window.location.hash.indexOf('#!/') == 0) {
+        window.location.replace(window.location.hash.substr(2));
+    }
+    window.xg = window.xg || {};
+xg.captcha = {
+    'shouldShow': false,
+    'siteKey': '6Ldf3AoUAAAAALPgNx2gcXc8a_5XEcnNseR6WmsT'
+};
+xg.addOnRequire = function(f) { xg.addOnRequire.functions.push(f); };
+xg.addOnRequire.functions = [];
+xg.addOnFacebookLoad = function (f) { xg.addOnFacebookLoad.functions.push(f); };
+xg.addOnFacebookLoad.functions = [];
+xg._loader = {
+    p: 0,
+    loading: function(set) {  this.p++; },
+    onLoad: function(set) {
+                this.p--;
+        if (this.p == 0 && typeof(xg._loader.onDone) == 'function') {
+            xg._loader.onDone();
+        }
+    }
+};
+xg._loader.loading('xnloader');
+if (window.bzplcm) {
+    window.bzplcm._profileCount = 0;
+    window.bzplcm._profileSend = function() { if (window.bzplcm._profileCount++ == 1) window.bzplcm.send(); };
+}
+xg._loader.onDone = function() {
+            if(window.bzplcm)window.bzplcm.start('ni');
+        xg.shared.util.parseWidgets();    var addOnRequireFunctions = xg.addOnRequire.functions;
+    xg.addOnRequire = function(f) { f(); };
+    try {
+        if (addOnRequireFunctions) { dojo.lang.forEach(addOnRequireFunctions, function(onRequire) { onRequire.apply(); }); }
+    } catch (e) {
+        if(window.bzplcm)window.bzplcm.ts('nx').send();
+        throw e;
+    }
+    if(window.bzplcm) { window.bzplcm.stop('ni'); window.bzplcm._profileSend(); }
+};
+window.xn = { track: { event: function() {}, pageView: function() {}, registerCompletedFlow: function() {}, registerError: function() {}, timer: function() { return { lapTime: function() {} }; } } };</script>
+<meta name="medium" content="blog" /><link rel="alternate" type="application/atom+xml" title="Vincent Granville&#039;s Posts - Data Science Central" href="https://www.datasciencecentral.com/profiles/blog/feed?user=3v6n5b6g08kgn&amp;xn_auth=no" /><link rel="alternate" type="application/atom+xml" title="Comments - Data science without statistics is possible, even desirable - Data Science Central" href="https://www.datasciencecentral.com/profiles/comment/feed?attachedTo=6448529%3ABlogPost%3A231741&amp;xn_auth=no" />
+<style type="text/css" media="screen,projection">
+@import url(https://static.ning.com/socialnetworkmain/widgets/index/css/common-982.min.css?xn_version=1168366271);
+@import url(https://static.ning.com/socialnetworkmain/widgets/profiles/css/component.min.css?xn_version=467783652);
+
+</style>
+<style type="text/css" media="screen,projection">
+@import url(https://storage.ning.com/topology/rest/1.0/file/get/6269075699?profile=original&xn_version=202006240701);
+
+</style>
+<style type="text/css" media="screen,projection">
+@import url(https://storage.ning.com/topology/rest/1.0/file/get/6334676486?profile=original&xn_version=202006240701);
+
+</style>
+<!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="https://static.ning.com/socialnetworkmain/widgets/index/css/common-ie6.min.css?xn_version=463104712" />
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="https://static.ning.com/socialnetworkmain/widgets/index/css/common-ie7.css?xn_version=2712659298" />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.datasciencecentral.com/profiles/blog/rsd" />
+</head>
+<body>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5W4WQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="xj_before_content"><div id='fb-root'></div>
+<script>
+  window.fbAsyncInit = function () {
+    FB.init({
+      appId      : '259683271111061', 
+      status     : true,   
+      cookie     : true,   
+      xfbml      : true, 
+      version    : 'v2.3'  
+    });
+    var n = xg.addOnFacebookLoad.functions.length;
+    for (var i = 0; i < n; i++) {
+      xg.addOnFacebookLoad.functions[i]();
+    }
+    xg.addOnFacebookLoad = function (f) { f(); };
+    xg.addOnFacebookLoad.functions = [];
+  };
+  (function() {
+    var e = document.createElement('script');
+    e.src = document.location.protocol + '//connect.facebook.net/en_US/sdk.js';
+    e.async = true;
+    document.getElementById('fb-root').appendChild(e);
+  })();
+</script> <div id="xn_bar">
+<div id="xn_bar_menu">
+<div id="xn_bar_menu_branding">
+</div>
+<div id="xn_bar_menu_more">
+<form id="xn_bar_menu_search" method="GET" action="https://www.datasciencecentral.com/main/search/search">
+<fieldset>
+<input type="text" name="q" id="xn_bar_menu_search_query" value="Search Data Science Central" _hint="Search Data Science Central" accesskey="4" class="text xj_search_hint" />
+<a id="xn_bar_menu_search_submit" href="#" onclick="document.getElementById('xn_bar_menu_search').submit();return false">Search</a>
+</fieldset>
+</form>
+</div>
+<ul id="xn_bar_menu_tabs">
+<li><a href="https://www.datasciencecentral.com/main/authorization/signUp?target=https%3A%2F%2Fwww.datasciencecentral.com%2Fprofiles%2Fblogs%2Fdata-science-without-statistics-is-possible-even-desirable">Sign Up</a></li>
+<li><a href="https://www.datasciencecentral.com/main/authorization/signIn?target=https%3A%2F%2Fwww.datasciencecentral.com%2Fprofiles%2Fblogs%2Fdata-science-without-statistics-is-possible-even-desirable">Sign In</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="xg_theme" data-layout-pack="brutus">
+<div id="xg_themebody">
+<div id="xg_ad_above_header" class="xg_ad xj_ad_above_header dy-displaynone">
+</div>
+<div id="xg_head">
+<div id="xg_masthead">
+<h1 id="xg_sitename" class="xj_site_name"><a id="application_name_header_link" href="/"><img src="https://storage.ning.com/topology/rest/1.0/file/get/2808682685?profile=original" alt="Data Science Central"></a></h1>
+<p id="xg_sitedesc" class="xj_site_desc"></p>
+</div>
+<div id="xg_navigation" class="xj_navigation"><ul>
+<li dojoType="SubTabHover" id="xg_tab_xn54" class="xg_subtab"><a href="/"><span>Home</span></a><div class="xg_subtab" style="display:none;position:absolute;"><ul class="xg_subtab" style="display:block;"><li style="list-style:none !important;display:block;text-align:left;"><a href="/page/most-popular-content-on-dsc" style="float:none;"><span>Top Content</span></a></li><li style="list-style:none !important;display:block;text-align:left;"><a href="/page/editorial-guidelines" style="float:none;"><span>Editorial Guidelines</span></a></li></ul></div></li><li id="xg_tab_xn22" class="xg_subtab"><a href="/page/search?q=AI"><span>AI</span></a></li><li id="xg_tab_xn52" class="xg_subtab"><a href="/page/search?q=Machine+Learning"><span>ML</span></a></li><li id="xg_tab_xn31" class="xg_subtab"><a href="/page/search?q=Deep+Learning"><span>DL</span></a></li><li id="xg_tab_profile" class="xg_subtab"><a href="https://www.analyticbridge.datasciencecentral.com/" target="_blank"><span>Analytics</span></a></li><li id="xg_tab_xn40" class="xg_subtab"><a href="https://www.bigdatanews.datasciencecentral.com/" target="_blank"><span>Big Data</span></a></li><li id="xg_tab_xn32" class="xg_subtab"><a href="https://www.datavizualization.datasciencecentral.com/" target="_blank"><span>DataViz</span></a></li><li id="xg_tab_xn26" class="xg_subtab"><a href="https://www.hadoop360.datasciencecentral.com/" target="_blank"><span>Hadoop</span></a></li><li id="xg_tab_xn53" class="xg_subtab"><a href="/video/video/listTagged?tag=DSC+Podcast+Series"><span>Podcasts</span></a></li><li id="xg_tab_xn28" class="xg_subtab"><a href="/video/video/listFeatured"><span>Webinars</span></a></li><li id="xg_tab_xn49" class="xg_subtab"><a href="/forum"><span>Forums</span></a></li><li id="xg_tab_xn3" class="xg_subtab"><a href="https://www.analytictalent.datasciencecentral.com/" target="_blank"><span>Jobs</span></a></li><li id="xg_tab_xn57" class="xg_subtab"><a href="https://www.education.datasciencecentral.com/?utm_source=DSC&amp;utm_medium=tab"><span>Education</span></a></li><li dojoType="SubTabHover" id="xg_tab_xn25" class="xg_subtab"><a href="/profiles/blogs/check-out-our-dsc-newsletter"><span>Membership</span></a><div class="xg_subtab" style="display:none;position:absolute;"><ul class="xg_subtab" style="display:block;"><li style="list-style:none !important;display:block;text-align:left;"><a href="/page/most-popular-content-on-dsc" style="float:none;"><span>Top Content</span></a></li><li style="list-style:none !important;display:block;text-align:left;"><a href="/group/resources/forum/topics/selection-of-best-articles-from-our-past-weekly-digests" style="float:none;"><span>Archives</span></a></li></ul></div></li><li id="xg_tab_xn51" class="xg_subtab"><a href="/groups/group/list"><span>Groups</span></a></li><li id="xg_tab_xn35" class="xg_subtab"><a href="/page/search"><span>Search</span></a></li><li id="xg_tab_xn18" class="xg_subtab"><a href="/page/contact-us"><span>Contact</span></a></li></ul>
+</div>
+</div>
+<div id="xg_ad_below_header" class="xg_ad xj_ad_below_header">
+<div class="xg_module module-plain  html_module module_text xg_reset" data-module_name="text">
+<div class="xg_module_body xg_user_generated">
+<center><script async="" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" type="text/javascript">
+</script> <script type="text/javascript">
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {   
+googletag.defineSlot('/2672641/Bottom_Leaderboard', [728, 90], 'div-gpt-ad-1512428902846-0').addService(googletag.pubads());
+    googletag.defineSlot('/2672641/Box_Ad_Blog', [300, 250], 'div-gpt-ad-1512428902846-2').addService(googletag.pubads());
+    googletag.defineSlot('/2672641/Box_Ad_Forum', [300, 250], 'div-gpt-ad-1512428902846-3').addService(googletag.pubads());
+    googletag.defineSlot('/2672641/Skyscraper', [160, 600], 'div-gpt-ad-1512428902846-6').addService(googletag.pubads());
+    googletag.defineSlot('/2672641/Square_Box', [220, 220], 'div-gpt-ad-1512428902846-7').addService(googletag.pubads());
+    googletag.defineSlot('/2672641/Top_Leaderboard', [728, 90], 'div-gpt-ad-1512428902846-8').addService(googletag.pubads());
+    googletag.enableServices();
+  });
+</script>
+<div id='div-gpt-ad-1512428902846-8' style='height:90px; width:728px;'><script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1512428902846-8'); });
+</script></div>
+<br /></center>
+<center><a href="https://www.datasciencecentral.com/profiles/blogs/check-out-our-dsc-newsletter">Subscribe to DSC Newsletter</a></center>
+</div>
+</div>
+</div>
+<div id="xg" class="xg_widget_profiles xg_widget_profiles_blog xg_widget_profiles_blog_show">
+<div id="xg_body">
+<div class="xj_notifications"></div>
+<div class="xg_column xg_span-16" id="column1">
+<div id="xg_canvas" class="xj_canvas">
+<ul class="navigation easyclear"><li><a href="https://www.datasciencecentral.com/profiles/blog/list">All Blog Posts</a></li><li><a href="https://www.datasciencecentral.com/profiles/blog/list?my=1">My Blog</a></li><li class="right  xg_lightborder navbutton"><a href="https://www.datasciencecentral.com/profiles/blog/new" class="xg_sprite xg_sprite-add">Add</a></li></ul>
+<div class="xg_module xg_blog xg_blog_detail xg_blog_mypage xg_module_with_dialog">
+<div class="xg_headline xg_headline-img xg_headline-2l">
+<div class="ib"><span class="xg_avatar"><a class="fn url" href="https://www.datasciencecentral.com/profile/VincentGranville" title="Vincent Granville"><span class="table_img dy-avatar dy-avatar-64 "><img class="photo photo" src="https://storage.ning.com/topology/rest/1.0/file/get/2800211702?profile=RESIZE_64x64&amp;width=64&amp;height=64&amp;crop=1%3A1" alt="" /></span></a></span></div>
+<div class="tb"><h1>Data science without statistics is possible, even desirable</h1>
+<ul class="navigation byline">
+<li><a class="nolink">Posted by </a><a href="/profile/VincentGranville">Vincent Granville</a><a class="nolink"> on December 8, 2014 at 5:00pm</a></li>
+<li><a class="xg_sprite xg_sprite-view" href="https://www.datasciencecentral.com/profiles/blog/list?user=3v6n5b6g08kgn">View Blog</a></li>
+</ul>
+</div>
+</div>
+<div class="xg_module_body">
+<div class="postbody">
+<div class="xg_user_generated">
+<p>The purpose of this article is to clarify a few misconceptions about data and statistical science.</p>
+<p>I will start with a controversial statement: data science barely uses statistical science and techniques. The truth is actually more nuanced, as explained below.</p>
+<p><a href="https://storage.ning.com/topology/rest/1.0/file/get/2808294843?profile=original" target="_self"><img width="342" class="align-center" src="https://storage.ning.com/topology/rest/1.0/file/get/2808294843?profile=original" /></a></p>
+<p><span class="font-size-4"><strong>1. Data science heavily uses <em>new</em> statistical science</strong></span></p>
+<p>But the new statistical science in question is not regarded as statistics, by many statisticians. I don't know how to call it, "new statistical science" is a misnomer, because it is not all that novel. And it is regarded by statisticians as dirty data processing, not elegant statistics.</p>
+<p>It contains topics such as</p>
+<ul>
+<li><a href="https://www.datasciencecentral.com/profiles/blogs/hidden-decision-trees-revisited" target="_blank">Hidden decision trees</a>: blending multiple simple scoring/clustering engines to take advantage of sparsity in big data</li>
+<li><a href="https://www.datasciencecentral.com/profiles/blogs/feature-selection-based-on-predictive-power" target="_blank">Predictive power</a> for data reduction and feature selection</li>
+<li><a href="https://www.datasciencecentral.com/profiles/blogs/feature-selection-based-on-predictive-power" target="_blank">Combinatorial feature selection</a></li>
+<li><a href="https://www.datasciencecentral.com/profiles/blogs/jackknife-logistic-and-linear-regression" target="_blank">Jackknife regression</a>: unites hundreds of confusing regression methods, providing a simple, easy-to-interpret, robust predictive technique based on approximate, low-dimensional solutions, avoiding the curse of dimensionality, avoiding over-fitting, and providing slightly biased estimates (a terrible sin for statisticians!) </li>
+<li>Random numbers: new kind of simulators of high quality, and non-periodic</li>
+<li>Pattern recognition: detection of structures and signal, identifying true signal in an ocean of spurious correlations</li>
+<li><a href="http://www.analyticbridge.com/forum/topics/clustering-idea-for-very-large-datasets" target="_blank">Clustering big data</a> without using n x n matrices, but using hash tables and Map-Reduce</li>
+<li>Real time architectures for predictive modeling</li>
+<li><a href="https://www.datasciencecentral.com/profiles/blogs/black-box-confidence-intervals-excel-and-perl-implementations-det" target="_blank">Model-free confidence intervals</a> based on statistics computed across multiple similar data bins</li>
+<li>Synthetic metrics such as bumpiness coefficient, or <a href="http://www.hadoop360.com/blog/a-synthetic-variance-designed-for-hadoop-and-big-data" target="_blank">scale-independent variance</a> (another big sin for statisticians!)</li>
+<li><a href="https://www.datasciencecentral.com/profiles/blogs/high-level-versus-low-level-data-science" target="_blank">Data bucketization</a>, interpolation and extrapolations at the bucket level</li>
+</ul>
+<p>I have sometimes used the word <a href="https://www.datasciencecentral.com/profiles/blogs/data-science-has-been-using-rebel-statistics-for-a-long-time" target="_blank">rebel statistics</a>  to describe these methods.</p>
+<p>While I consider these topics to be statistical science (I contributed to many of them myself, and <a href="https://www.datasciencecentral.com/profiles/blogs/my-data-science-journey" target="_blank">my background is in computational statistics</a>), most statisticians I talked to do not see it as statistical science. And calling this stuff statistics only creates confusion, especially for hiring managers.</p>
+<p>Some people call it statistical learning. One of the precursors of this type of methods is Trevor Hastie who wrote one of the first data science books, called <a href="http://statweb.stanford.edu/~tibs/ElemStatLearn/" target="_blank">The Elements of Statistical Learning</a>.</p>
+<p><strong><span class="font-size-4">2. Data science uses a bit of <em>old</em> statistical science</span></strong></p>
+<p>Including the following topics, which curiously enough, are not found in standard statistical textbooks:</p>
+<ul>
+<li>Time series, ARMA (auto-regressive) processes, correlograms</li>
+<li>Spatial and cluster processes</li>
+<li>Survival models</li>
+<li>Markov processes</li>
+<li>Goodness-of-fit techniques</li>
+<li>Experimental design 101 (not the advanced techniques used in clinical trials)</li>
+<li>A/B and multivariate testing, but without traditional tests of hypotheses</li>
+<li>Simulation, Markov-Chains Monte-Carlo methods</li>
+<li>Some Bayesian stuff, hierarchical models</li>
+<li>Rank statistics, percentiles, outliers detection (preferably not model-based)</li>
+<li>The concept of statistical significance (but not p-values or power)</li>
+<li>Cross validation</li>
+<li>Imputation techniques (dealing with missing data)</li>
+<li>Exploratory data analysis (to be automated with tools such as <a href="http://www.analyticbridge.com/profiles/blogs/why-and-how-you-should-build-a-data-dictionary-for-big-data-sets" target="_blank">data dictionary</a>, then it won't be old statistics anymore)</li>
+<li>Sampling</li>
+<li>Some statistical distributions</li>
+<li>Random variables </li>
+<li>Some asymptotic results, although I encourage Monte-Carlo simulations to obtain limiting distributions, rather than theoretical principles which may not apply to real, modern data</li>
+</ul>
+<p>These techniques can be summarized in one page, and time permitting, I will write that page and call it "statistics cheat sheet for data scientists". Interestingly, from a typical <a href="https://www.amazon.com/Mathematical-Statistics-Analysis-Available-Enhanced/dp/0534399428" target="_blank">600-pages textbook on statistics</a>, about 20 pages are relevant to data science, and these 20 pages can be compressed in 0.25 page. For instance, I believe that you can explain the concept of random variable and distribution (at least what you need to understand to practice data science) in about 4 lines, rather than 150 pages. The idea is to explain it in plain English with a few examples, and defining distribution as the expected (based on model) or  limit of a frequency distribution (histogram).</p>
+<p>Funny fact: some of these classic stats texbooks still feature tables of statistical distributions in an appendix. Who still use such tables for computations? Not a data scientist, for sure. Most programming languages offer libraries for these computations, and you can even code it yourself in a couple of lines of code. A book such as <a href="http://www.nr.com/" target="_blank">numerical recipes in C++</a> can prove useful, as it provides code for many statistical functions; see also our <a href="http://www.analyticbridge.com/group/codesnippets" target="_blank">source code section on DSC</a>, where I plan to add more modern implementations of statistical techniques, some even available as Excel formulas.</p>
+<p><span class="font-size-4"><strong>3. Data science uses some <em>operations research</em> statistical science</strong></span></p>
+<p>In particular, OLS (ordinary least squares) , Monte-Carlo techniques, mathematical optimization, the simplex algorithm, inventory and pricing management models.</p>
+<p>These techniques are not considered statistical science, they are often referred to as <em>analytics</em> or <em>decision science</em>.</p>
+<p><strong><span class="font-size-4">4. Data science does not use most <em>old</em> statistical science</span></strong></p>
+<p><span class="font-size-2" style="font-family: arial, helvetica, sans-serif;">Some of these techniques have been heavily criticized:</span></p>
+<ul>
+<li><a href="http://www.analyticbridge.com/profiles/blogs/the-8-worst-predictive-modeling-techniques" target="_blank">The 8 worst predictive modeling techniques</a></li>
+<li><a href="https://www.datasciencecentral.com/profiles/blogs/p-values-the-gold-standard-of-statistical-validity-are-not-as" target="_blank">Foundations of classical statistical theory being questioned</a></li>
+<li><a href="https://www.datasciencecentral.com/profiles/blogs/10-types-of-regressions-which-one-to-use" target="_blank">10 types of regressions. Which one to use?</a></li>
+</ul>
+<p>Examples of old statistical techniques that I have never used recently in my data science career:</p>
+<ul>
+<li>Maximum likehood estimation (modern data produces complex likelihood functions with many local optima, or even non continuous likelihood functions)</li>
+<li>Regression</li>
+<li>Naïve bayes</li>
+<li>ANOVA</li>
+<li>Tests of hypotheses</li>
+<li>General linear model</li>
+</ul>
+<p>Now don't get me wrong, there are still plenty of people doing naive Bayes, linear or logistic regression, and it works on many simple data sets, and you'll get a job if you know these techniques, more easily than if you don't know them, because progress is slow. But the future is in uniting these techniques under a single methodology, simple, robust, with easy-to-interpret results, available as black box to non-experts, and easy to automate. This project (I'm working on it, some computer science people at Cambridge University also work on this) is sometimes referred to as the <a href="http://mlg.eng.cam.ac.uk/?p=1578" target="_blank">automated statistician</a>.</p>
+<p>But just to give an example, naive Bayes (old stats, still widely used unfortunately) is terrible at detecting spam and categorizing email because it wrongly assumes that rules are independent, while a modern version called <em>hidden decision trees</em> (new stats) has been very successful (combined with pattern recognition) at identifying massive Botnets. Some modern techniques such as recommendation engines sometimes fail (unable to detect fake reviews) because they still rely on old, poor statistical techniques rather than modern data science. Though the fix to this issue is reworking the business model, rather than improving data science algorithms.</p>
+<p>Finally, old statistics use a top-down approach, from model and theory to data, while new statistics or data science use a bottom-up approach, from data to model or algorithm.</p>
+<p><span class="font-size-4"><strong>Conclusions</strong></span></p>
+<p>Based on what many statisticians think statistical science is, and is not, I am tempted to say that modern data science barely uses statistical science. Instead, it mostly relies on statistical principles that are not considered statistical science by most people who call themselves statisticians, because of their rigid perception of what statistics is, and their inability to adapt to change. </p>
+<p>To the contrary, for non statisticians (computer scientists, engineers and so on), it is clear that data science has a strong statistical component. In my heart, I also believe that <em>new</em> statistics is also a core component of data science. Yet when talking to hiring managers, I tell them that statistics is another animal, because in their mind, statistics is <em>old</em> statistics. And <em>old</em> statistics is barely used anymore in modern data science. Likewise, when talking to statisticians, I tell them that data science is not statistics, to not upset them or waste my time in fruitless argumentation.</p>
+<p><b>DSC Resources</b></p>
+<ul>
+<li>Career: <a href="http://www.analyticbridge.com/group/analyticscourses/forum">Training</a> | <a href="http://www.analyticbridge.com/group/books/forum">Books</a> | <a href="https://www.datasciencecentral.com/profiles/blogs/data-science-cheat-sheet">Cheat Sheet</a> | <a href="https://www.datasciencecentral.com/group/data-science-apprenticeship/forum/topics/our-data-science-apprenticeship-is-now-live">Apprenticeship</a> | <a href="https://www.datasciencecentral.com/group/data-science-certification">Certification</a> | <a href="http://www.analyticbridge.com/group/salary-trends-and-reports/forum">Salary Surveys</a> | <a href="http://careers.analytictalent.com/jobs/search/results">Jobs</a></li>
+<li>Knowledge: <a href="https://www.datasciencecentral.com/group/resources/forum">Pure Data Science</a> | <a href="https://www.datasciencecentral.com/group/resources/forum/topics/best-kept-secret-about-data-science-competitions">Competitions and Challenges</a> | <a href="https://www.datasciencecentral.com/video/video/listFeatured">Webinars</a> | <a href="https://www.datasciencecentral.com/profiles/blogs/my-data-science-book">Our Book</a></li>
+<li>Buzz: <a href="http://www.bigdatanews.com/group/bdn-daily-press-releases">Business News</a> | <a href="https://www.datasciencecentral.com/group/announcements/forum">Announcements</a> | <a href="https://www.datasciencecentral.com/events/">Events</a> | <a href="https://www.datasciencecentral.com/page/news-feeds">RSS Feeds</a></li>
+<li>Misc: <a href="http://www.analyticbridge.com/page/links">Top Links</a> | <a href="http://www.analyticbridge.com/group/codesnippets">Code Snippets</a> | <a href="https://www.datasciencecentral.com/group/resources/forum/topics/comprehensive-list-of-data-science-resources">External Resources</a> | <a href="https://www.datasciencecentral.com/group/resources/forum/topics/the-best-of-our-weekly-digests">Best Blogs</a> | <a href="https://www.datasciencecentral.com/profiles/blogs/check-out-our-dsc-newsletter">Subscribe</a> | <a href="https://www.datasciencecentral.com/group/resources/forum/topics/free-stuff-for-data-science-publishers-authors-bloggers-professor">For Bloggers</a></li>
+</ul>
+<p><b>Additional Reading</b></p>
+<ul>
+<li><a href="https://www.datasciencecentral.com/profiles/blogs/4-easy-steps-to-becoming-a-data-scientist">4 easy steps to becoming a data scientist</a></li>
+<li><a href="https://www.datasciencecentral.com/profiles/blogs/13-new-trends-in-big-data-and-data-science">13 New Trends in Big Data and Data Science</a></li>
+<li><a href="https://www.datasciencecentral.com/profiles/blogs/22-tips-for-better-data-science">22 tips for better data science</a></li>
+<li><a href="https://www.datasciencecentral.com/profiles/blogs/17-analytic-disciplines-compared">Data Science Compared to 16 Analytic Disciplines</a></li>
+<li><a href="https://www.datasciencecentral.com/profiles/blogs/tutorial-how-to-detect-spurious-correlations-and-how-to-find-the-">How to detect spurious correlations, and how to find the real ones</a></li>
+<li><a href="https://www.datasciencecentral.com/profiles/blogs/17-short-tutorials-all-data-scientists-should-read-and-practice">17 short tutorials all data scientists should read (and practice)</a></li>
+<li><a href="https://www.datasciencecentral.com/profiles/blogs/six-categories-of-data-scientists">10 types of data scientists</a></li>
+<li><a href="https://www.datasciencecentral.com/profiles/blogs/66-job-interview-questions-for-data-scientists">66 job interview questions for data scientists</a></li>
+<li><a href="https://www.datasciencecentral.com/profiles/blogs/high-level-versus-low-level-data-science">High versus low-level data science</a></li>
+</ul>
+<p><span>Follow us on Twitter: </span><a href="https://www.twitter.com/datasciencectrl">@DataScienceCtrl</a><span> | </span><a href="https://www.twitter.com/analyticbridge">@AnalyticBridge</a></p> </div>
+</div>
+<div class="left-panel">
+<script>xg.addOnRequire(function () { xg.post('/main/viewcount/update?xn_out=json', {key: '6448529:BlogPost:231741', x: 'eb24d6e'}); });</script> <p class="small dy-clear view-count-container">
+<span class="view-count-label">Views:</span> <span class="view-count">48090</span></p>
+<p class="small object-detail" id="tagsList">
+Tags: <a href="https://www.datasciencecentral.com/profiles/blog/list?tag=predictive+modeling">predictive modeling</a> </p>
+<div class="likebox likebox-ning">
+<div class="ning-like">
+<div class="xg_lightborder like-button like-button-1">
+<a data-content-id="6448529:BlogPost:231741" data-content-type="BlogPost" data-sign-up-url="https://www.datasciencecentral.com/main/authorization/signUp?target=https%3A%2F%2Fwww.datasciencecentral.com%2Fprofiles%2Fblogs%2Fdata-science-without-statistics-is-possible-even-desirable" data-like-url="/main/like/like" data-unlike-url="/main/like/unlike" data-track='{"category":"Likes","action":"Like","label":""}' data-page-type="detail" class="xg_sprite" href="#">
+Like </a>
+</div>
+<div class="like-count">
+<a href="#" class="view-liked" _id="6448529:BlogPost:231741">19 members like this</a>
+</div>
+</div>
+</div>
+<p class="share-links clear"><a class="xg_sprite xg_sprite-share" href="https://www.datasciencecentral.com/main/sharing/share?id=6448529%253ABlogPost%253A231741">Share</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<span class="xg_tweet">
+<a href="https://twitter.com/share" class="post_to_twitter twitter-share-button" target="_blank" data-text="Checking out &quot;Data science without statistics is possible, even desirable&quot; on Data Science Central:" data-url="https://www.datasciencecentral.com/profiles/blogs/data-science-without-statistics-is-possible-even-desirable" data-count="none" data-dnt="true">Tweet</a>
+</span>
+<a class="post_to_facebook xj_post_to_facebook_stream dy-displaynone" href="https://www.facebook.com/share.php?u=https%3A%2F%2Fwww.datasciencecentral.com%2Fprofiles%2Fblogs%2Fdata-science-without-statistics-is-possible-even-desirable%3Fxg_source%3Dfacebook&amp;t=Data%20science%20without%20statistics%20is%20possible%2C%20even%20desirable%20on%20Data%20Science%20Central" _args="{&quot;name&quot;:&quot;Data science without statistics is possible, even desirable on Data Science Central&quot;,&quot;href&quot;:&quot;https:\/\/www.datasciencecentral.com\/profiles\/blogs\/data-science-without-statistics-is-possible-even-desirable?xg_source=facebook&quot;,&quot;media&quot;:[{&quot;type&quot;:&quot;image&quot;,&quot;src&quot;:&quot;http:\/\/storage.ning.com\/topology\/rest\/1.0\/file\/get\/2808294843?profile=original&quot;,&quot;href&quot;:&quot;https:\/\/www.datasciencecentral.com\/profiles\/blogs\/data-science-without-statistics-is-possible-even-desirable?xg_source=facebook&quot;}],&quot;actionLink&quot;:{&quot;text&quot;:&quot;Full Post&quot;,&quot;href&quot;:&quot;https:\/\/www.datasciencecentral.com\/profiles\/blogs\/data-science-without-statistics-is-possible-even-desirable?xg_source=facebook&quot;},&quot;description&quot;:&quot;The purpose of this article is to clarify a few misconceptions about data and statistical science.\nI will start with a controversial statement: data science barely uses statistical science and techniques. The truth is actually more nuanced, as explained below.\n\n1. Data science heavily uses new statistical science\nBut the new statistical science in question is not regarded as statistics, by many statisticians. I don&#039;t know how to call it, \&quot;new statistical science\&quot; is a misnomer, because it is not all that novel. And it is regarded by statisticians as dirty data processing, not elegant statistics.\nIt contains topics such as\n\nHidden decision trees: blending multiple simple scoring\/clustering engines to take advantage of sparsity in big data\nPredictive power\u00a0for data reduction and feature selection\nCombinatorial feature selection\nJackknife regression: unites hundreds of confusing regression methods, providing a simple, easy-to-interpret, robust predictive technique based on approximate, low-dimensional solutions, avoiding the curse of dimensionality, avoiding over-fitting, and providing slightly biased estimates (a terrible sin for statisticians!)\u00a0\nRandom numbers: new kind of simulators of high quality, and non-periodic\nPattern recognition: detection of structures and signal, identifying true signal in an ocean of spurious correlations\nClustering big data\u00a0without using n x n matrices, but using hash tables and Map-Reduce\nReal time architectures for predictive modeling\nModel-free confidence intervals\u00a0based on statistics computed across multiple similar data bins\nSynthetic metrics such as bumpiness coefficient, or scale-independent variance\u00a0(another big sin for statisticians!)\nData bucketization, interpolation and extrapolations at the bucket level\n\nI have sometimes used the word rebel statistics\u00a0 to describe these methods.\nWhile I consider these topics to be statistical science (I contributed to many of them myself, and my background is in computational statistics), most&quot;,&quot;log&quot;:{&quot;module&quot;:&quot;profiles&quot;,&quot;page&quot;:&quot;blog&quot;,&quot;action&quot;:&quot;show&quot;},&quot;private&quot;:false,&quot;user&quot;:null,&quot;contentId&quot;:null,&quot;display&quot;:false,&quot;userMessage&quot;:&quot;&quot;,&quot;pageId&quot;:null,&quot;text&quot;:&quot;Facebook&quot;}">Facebook</a>
+<div class="likebox">
+<div class="facebook-like" data-content-type="BlogPost" data-content-id="6448529:BlogPost:231741" data-page-type="detail">
+<fb:like href="https://www.datasciencecentral.com/xn/detail/6448529:BlogPost:231741" layout="button_count" show_faces="false" width="450"></fb:like>
+</div>
+</div>
+</p> </div>
+<ul class="pagination smallpagination">
+<li class="left"><a href="https://www.datasciencecentral.com/profiles/blogs/5-basic-rules-of-data-organization" title="5 basic rules of data organization">&lt; Previous Post</a></li> <li class="right"><a title="Weekly Digest - December 15" href="https://www.datasciencecentral.com/profiles/blogs/weekly-digest-december-15">Next Post &gt;</a></li>
+</ul>
+</div>
+</div>
+<div class="xg_module">
+<div class="xg_module_body">
+<p id="add-comment">Comment</p>
+<div class="comment-join">
+<h3>You need to be a member of Data Science Central to add comments!</h3>
+<p><a href="https://www.datasciencecentral.com/main/authorization/signUp?target=https%3A%2F%2Fwww.datasciencecentral.com%2Fprofiles%2Fblogs%2Fdata-science-without-statistics-is-possible-even-desirable">Join Data Science Central</a></p>
+</div>
+</div>
+<div class="xg_module_body" id="comments" _numComments="15" _scrollTo="">
+<dl _id="6448529:Comment:383149" id="c_a10" class="comment vcard xg_lightborder">
+<dt>
+<a name="first_comment"></a><a name="comment-6448529_Comment_383149" id="comment-6448529_Comment_383149"></a>
+<span class="xg_avatar"><a class="fn url" href="https://www.datasciencecentral.com/profile/RichardPerry" title="Richard Perry"><span class="table_img dy-avatar dy-avatar-48 "><img class="photo photo" src="https://storage.ning.com/topology/rest/1.0/file/get/2800439844?profile=RESIZE_48X48&amp;width=48&amp;height=48&amp;crop=1%3A1" alt="" /></span></a></span> Comment by <a href="/profile/RichardPerry" class="fn url">Richard Perry</a> on February 4, 2016 at 11:17pm </dt>
+<dd>
+<div class="xg_user_generated">Very silly article. I am a "Data Scientist" but my previous job title was "Statistician". While there are subtle differences, this article a consequence of naivety. The writer sounds a bit like Nassim Nicholas Taleb. I've added comments here: <a rel=nofollow href="https://docs.google.com/document/d/1ZKBvDc487tJ04Cyylwr_QKLCrgfonCk3vgEmOyumv5g/edit" target="_blank">https://docs.google.com/document/d/1ZKBvDc487tJ04Cyylwr_QKLCrgfonCk...</a></div> </dd>
+</dl>
+<dl _id="6448529:Comment:236516" id="c_475" class="comment vcard xg_lightborder">
+<dt>
+<a name="comment-6448529_Comment_236516" id="comment-6448529_Comment_236516"></a>
+<span class="xg_avatar"><a class="fn url" href="https://www.datasciencecentral.com/profile/SioneKPalu" title="Sione  Palu"><span class="table_img dy-avatar dy-avatar-48 "><img class="photo photo" src="https://storage.ning.com/topology/rest/1.0/file/get/2800316377?profile=RESIZE_48X48&amp;width=48&amp;height=48&amp;crop=1%3A1" alt="" /></span></a></span> Comment by <a href="/profile/SioneKPalu" class="fn url">Sione Palu</a> on December 29, 2014 at 10:02am </dt>
+<dd>
+<div class="xg_user_generated"><p>I think we should stop &amp; desist bashing statisticians as somehow we are superior than them. We should bear in mind that the term data-scientist was a recently invented term in the last 2 or 3 years which some may look at it as a fad.</p>
+<p></p>
+<p>I guess that the scientists at CERN who are doing data analytics don't regard or view themselves as data-scientists even though they pretty much breath data analytics from sunrise till sunset. They themselves still use some of the old statistics listed above. We can't dismiss them as non-data-scientists (even they hardly want to call themselves data scientists). One of my data science team member is a Physicist who did her intern at CERN last year (2013). She came with no knowledge of machine learning but now, she's pretty much well verse in machine learning because of her ability to absorb very fast.</p>
+<p></p>
+<p>Old statistics will still be around for a long time and based on what I see in the literature, they evolve into new variants which their performances improved over the old variants.</p></div> </dd>
+</dl>
+<dl _id="6448529:Comment:232879" id="c_277" class="comment vcard xg_lightborder">
+<dt>
+<a name="comment-6448529_Comment_232879" id="comment-6448529_Comment_232879"></a>
+<span class="xg_avatar"><a class="fn url" href="https://www.datasciencecentral.com/profile/VincentGranville" title="Vincent Granville"><span class="table_img dy-avatar dy-avatar-48 "><img class="photo photo" src="https://storage.ning.com/topology/rest/1.0/file/get/2800211702?profile=RESIZE_48X48&amp;width=48&amp;height=48&amp;crop=1%3A1" alt="" /></span></a></span> Comment by <a href="/profile/VincentGranville" class="fn url">Vincent Granville</a> on December 13, 2014 at 12:06pm </dt>
+<dd>
+<div class="xg_user_generated"><p>And my reply to a comment on LinkedIn:</p>
+<p><em>Peter, your last reply illustrates well how the two schools (new versus old statistics) are different. You wrote "finding the best combination of predictors is generally a NP problem". Data science does not care about the best combination, but about a few ones that are good enough and easy to interpret. And you can easily guess how much more predictive power you will gain by running your algorithms for billions of years, after having obtained something decent in a few hours or minutes. Usually, very little.</em></p>
+<p><em>And regarding a proven track record for my techniques, I won't publish in scientific journals or talk at conferences. I have used my methods with success, and it's up to you to decide whether they are worth spending your time or not. And this is part of a new school of doing scientific research: self-funded (thanks to the success of my methods!), posting in highly visited blogs like here (150,000 members) or DSC. It gets published much faster, reaches far more professionals, and I received unbiased feedback from other members. In short, peer-review in real time, and public. And all the time that I saved by not publishing in traditional outlets or attending conferences, I use it to further grow the data science community and disseminate my intellectual property. I do spend time reading what other authors publish.</em></p>
+<p><em>My next book (data science 2.0) will be self-published (so I retain copyrights and other benefits) and most likely priced very competitively (5 times cheaper than competition), and the digital version will be free. I will market it myself via my different communities, reaching out to far more people, and at no cost, than any traditional author or publisher can do.</em></p>
+<p><em>By the way, that's data science that works, because growing these communities involves serious data science. AMSTAT (or anyone else for that matter) with its bunch of statisticians, can't compete with me (a one-man organization) in terms of growing, and they must be paying a lot of money in marketing, despite the fact that I publish many of my growth strategies. Indeed, they even hired a PR firm. Now we are talking about data science that works. Data science that works well enough to beat competitors and generate good revenue with high margins, involving computational marketing and various campaign optimizations techniques.</em></p>
+<p><em><span>Regarding cross-validation, you should also make sure that the test cases have buckets of data not found in the control cases. For instance, data from a different type of clients or different industry. That's the only way you can check how your model will perform when faced with new, unusual data. Proper data bucketization is thus an important step prior to performing cross-validation. You also need to use a feature selection algorithm that is stable in the way it detects the best predictors.  Finally, data science is good at fast development and fast execution of stable algorithms.</span></em></p></div> </dd>
+</dl>
+<dl _id="6448529:Comment:233129" id="c_9f5" class="comment vcard xg_lightborder">
+<dt>
+<a name="comment-6448529_Comment_233129" id="comment-6448529_Comment_233129"></a>
+<span class="xg_avatar"><a class="fn url" href="https://www.datasciencecentral.com/profile/VincentGranville" title="Vincent Granville"><span class="table_img dy-avatar dy-avatar-48 "><img class="photo photo" src="https://storage.ning.com/topology/rest/1.0/file/get/2800211702?profile=RESIZE_48X48&amp;width=48&amp;height=48&amp;crop=1%3A1" alt="" /></span></a></span> Comment by <a href="/profile/VincentGranville" class="fn url">Vincent Granville</a> on December 13, 2014 at 9:40am </dt>
+<dd>
+<div class="xg_user_generated"><p>Another precision:</p>
+<p><span>My hidden decision trees and Jackknife regression contain stuff similar to Lasso (constrained or ridge regression), boosted trees and random forests blended together. But it is not underlined by any statistical models, nor solved with complex mathematical optimization. Instead, it is data-driven with solution arising easily and naturally using a simple, fast algorithm. The data reduction step uses a criterion called predictive power, to find best combinations of predictors. Data bucketization and bucket sizing is an important part of the process, as well as extrapolations at the bucket level. All this stuff is available for free to everyone. It's open patent or open intellectual property.</span></p></div> </dd>
+</dl>
+<dl _id="6448529:Comment:232725" id="c_3fe" class="comment vcard xg_lightborder">
+<dt>
+<a name="comment-6448529_Comment_232725" id="comment-6448529_Comment_232725"></a>
+<span class="xg_avatar"><a class="fn url" href="https://www.datasciencecentral.com/profile/RichardHackathorn" title="Richard Hackathorn"><span class="table_img dy-avatar dy-avatar-48 "><img class="photo photo" src="https://storage.ning.com/topology/rest/1.0/file/get/2800244817?profile=RESIZE_48X48&amp;width=48&amp;height=48&amp;crop=1%3A1" alt="" /></span></a></span> Comment by <a href="/profile/RichardHackathorn" class="fn url">Richard Hackathorn</a> on December 11, 2014 at 8:13pm </dt>
+<dd>
+<div class="xg_user_generated"><p>@Mark Dr. Granville has consistently challenged us to define the boundaries of Data Science, and my comment about Process Mining was in this spirit. Disagree that Process Mining is not Data Science. It appears as a specialization of event sequence analysis, a discipline initiated by Carl Petri in 1939. Petri Nets have unique formalisms of liveness and the like. And, they have evolved into elaborate business process modeling techniques.  The Process Mining paradigm of play-in (event sequence to Petri-like model) or play-out (Petri-like model to event seq) seems analogous to Markov Chains and Markov Processes. Is Process Mining another branch of new statistics, as defined above? I am certainly seeing practical applications in my work, as cited previously.</p></div> </dd>
+</dl>
+<dl _id="6448529:Comment:232809" id="c_7e4" class="comment vcard xg_lightborder">
+<dt>
+<a name="comment-6448529_Comment_232809" id="comment-6448529_Comment_232809"></a>
+<span class="xg_avatar"><a class="fn url" href="https://www.datasciencecentral.com/profile/VincentGranville" title="Vincent Granville"><span class="table_img dy-avatar dy-avatar-48 "><img class="photo photo" src="https://storage.ning.com/topology/rest/1.0/file/get/2800211702?profile=RESIZE_48X48&amp;width=48&amp;height=48&amp;crop=1%3A1" alt="" /></span></a></span> Comment by <a href="/profile/VincentGranville" class="fn url">Vincent Granville</a> on December 11, 2014 at 1:31pm </dt>
+<dd>
+<div class="xg_user_generated"><p>Ralph, new statistics include a modern version of logistic regression, highly constrained, with very few parameters, making it easy to interpret, stable, and solved without using maximum likelihood estimation, indeed without statistical model.  And it's blended with other classifiers. I also take results from scientific studies and research with a grain of salt. Is it replicable, works consistently for my own data, and is there a more robust  methodology 10 times easier to implement, that yields the same results? These are the questions I ask myself before implementing a technique.</p></div> </dd>
+</dl>
+<dl _id="6448529:Comment:232807" id="c_9e9" class="comment vcard xg_lightborder">
+<dt>
+<a name="comment-6448529_Comment_232807" id="comment-6448529_Comment_232807"></a>
+<span class="xg_avatar"><a class="fn url" href="https://www.datasciencecentral.com/profile/RalphWinters" title="Ralph Winters"><span class="table_img dy-avatar dy-avatar-48 "><img class="photo photo" src="https://storage.ning.com/topology/rest/1.0/file/get/3595294165?profile=RESIZE_48X48" alt="" /></span></a></span> Comment by <a href="/profile/RalphWinters" class="fn url">Ralph Winters</a> on December 11, 2014 at 1:12pm </dt>
+<dd>
+<div class="xg_user_generated"><p>Apparently, IBM trusts 'old' logistic regression enough to incorporate it as the basis of Watson for ranking Jeopardy answers. Food for though when considering the stability of a 'new' vs. 'old' technique.</p>
+<p>See: <a rel=nofollow href="https://www.linkedin.com/groups/Statistics-old-friend-logistic-regression-4586163.S.5940827585033310210" target="_blank">https://www.linkedin.com/groups/Statistics-old-friend-logistic-regr...</a></p>
+<p>"Over the course of the project, we have experimented with logistic regression, support vector machines with linear and nonlinear kernels, boosting, single and multilayer neural nets, decision trees, and locally weighted learning; however, we have consistently found better performance using regularized logistic regression, which is the technique used in the final Watson system."</p>
+<p></p></div> </dd>
+</dl>
+<dl _id="6448529:Comment:232715" id="c_30a" class="comment vcard xg_lightborder">
+<dt>
+<a name="comment-6448529_Comment_232715" id="comment-6448529_Comment_232715"></a>
+<span class="xg_avatar"><a class="fn url" href="https://www.datasciencecentral.com/profile/VincentGranville" title="Vincent Granville"><span class="table_img dy-avatar dy-avatar-48 "><img class="photo photo" src="https://storage.ning.com/topology/rest/1.0/file/get/2800211702?profile=RESIZE_48X48&amp;width=48&amp;height=48&amp;crop=1%3A1" alt="" /></span></a></span> Comment by <a href="/profile/VincentGranville" class="fn url">Vincent Granville</a> on December 11, 2014 at 12:36pm </dt>
+<dd>
+<div class="xg_user_generated"><p>One of the things I'd like to accomplish is to democratize science. Traditional stats can be arcane to the non expert, and there's a bit of secrecy or mystery around the recipes used by statisticians. Old statistics seem to be for a small elite of people initiated to the secrets. Outsiders are not welcome (and I made myself an outsider though I was once an insider). Hopefully my new statistics (whatever you call it) are not mysterious, easy to understand and safe to use by professionals such as engineers, programmers, decision makers, business analysts, geographers, economists and many more.</p></div> </dd>
+</dl>
+<dl _id="6448529:Comment:232646" id="c_681" class="comment vcard xg_lightborder">
+<dt>
+<a name="comment-6448529_Comment_232646" id="comment-6448529_Comment_232646"></a>
+<span class="xg_avatar"><a class="fn url" href="https://www.datasciencecentral.com/profile/RichardHackathorn" title="Richard Hackathorn"><span class="table_img dy-avatar dy-avatar-48 "><img class="photo photo" src="https://storage.ning.com/topology/rest/1.0/file/get/2800244817?profile=RESIZE_48X48&amp;width=48&amp;height=48&amp;crop=1%3A1" alt="" /></span></a></span> Comment by <a href="/profile/RichardHackathorn" class="fn url">Richard Hackathorn</a> on December 11, 2014 at 10:58am </dt>
+<dd>
+<div class="xg_user_generated"><p>Maybe off topic for this blog... What about Process Mining? Is it part of Data Science? See <a rel=nofollow href="https://www.coursera.org/course/procmin" target="_blank">https://www.coursera.org/course/procmin</a> taught by Prof Wil can der Aalst at Endhoven Univ. I am casually taking the class. Parts are interesting and difficult. Hot research in Europe. I am starting to see overlapping applications with website behavior analysis of event sequences to predict customer churn potential.</p></div> </dd>
+</dl>
+<dl _id="6448529:Comment:232400" id="c_202" class="comment vcard xg_lightborder last-child">
+<dt>
+<a name="last_comment"></a><a name="comment-6448529_Comment_232400" id="comment-6448529_Comment_232400"></a>
+<span class="xg_avatar"><a class="fn url" href="https://www.datasciencecentral.com/profile/JoseLuisDengra" title="Jose Luis Dengra"><span class="table_img dy-avatar dy-avatar-48 "><img class="photo photo" src="https://storage.ning.com/topology/rest/1.0/file/get/2800269147?profile=RESIZE_48X48&amp;width=48&amp;height=48&amp;crop=1%3A1" alt="" /></span></a></span> Comment by <a href="/profile/JoseLuisDengra" class="fn url">Jose Luis Dengra</a> on December 11, 2014 at 8:52am </dt>
+<dd>
+<div class="xg_user_generated"><p>Anyway I would say that <strong>statistical sense</strong> is critical while learning data science and related to the data scientist future performance as well as number sense is for children while learning math for their future performance in algebra.<br /><br />If you take a look at the following document, written by Dr. Jo Boaler from Stanford University, you will understand what I mean with number sense. Dealing with statistical concepts and inference is essential for a data scientist in order to be able to assert conclusions about any study.</p>
+<p><a rel=nofollow href="https://drive.google.com/viewerng/viewer?url=http://youcubed.org/teachers/wp-content/uploads/2014/10/FluencyWithoutFear.pdf">Fluency Without Fear: Research Evidence on the Best Ways to Learn M...</a></p></div> </dd>
+</dl>
+<ul class="pagination easyclear ">
+<li class="xg_lightfont"><span>‹ Previous</span></li>
+<li><span>1</span></li>
+<li><a href="https://www.datasciencecentral.com/profiles/blogs/data-science-without-statistics-is-possible-even-desirable?id=6448529%3ABlogPost%3A231741&amp;page=2#comments">2</a></li>
+<li><a class="" href="https://www.datasciencecentral.com/profiles/blogs/data-science-without-statistics-is-possible-even-desirable?id=6448529%3ABlogPost%3A231741&amp;page=2#comments">Next ›</a></li>
+<li class="right">
+<span style="display:none" dojoType="Pagination" _maxPage="2" _gotoUrl="https://www.datasciencecentral.com/profiles/blogs/data-science-without-statistics-is-possible-even-desirable?id=6448529%3ABlogPost%3A231741&amp;page=__PAGE___#comments">
+<label>Page</label>
+<input class="textfield pagination_input align-right" value="2" type="text" name="goto_page" size="2" />
+<input class="goto_button button" value="Go" type="button" /></span>
+</li>
+</ul>
+</div>
+<div class="xg_module_foot" id="xj_comments_footer">
+<p class="left">
+<a class="xg_icon xg_icon-rss" href="https://www.datasciencecentral.com/profiles/comment/feed?attachedTo=6448529%3ABlogPost%3A231741&amp;xn_auth=no">RSS</a>
+</p>
+</div>
+</div>
+<input type="hidden" id="incrementViewCountEndpoint" value="https://www.datasciencecentral.com/profiles/blog/incrementViewCount?id=6448529%3ABlogPost%3A231741&amp;xn_out=json" />
+</div>
+</div>
+<div class="xg_column xg_span-5 xg_last" id="column2">
+<div class="xj_user_info"> <div class="xg_module" id="xg_module_account">
+<div class="xg_module_body xg_signup xg_lightborder">
+<p>Welcome to<br />Data Science Central</p>
+<p class="last-child"><big><strong><a href="https://www.datasciencecentral.com/main/authorization/signUp?target=https%3A%2F%2Fwww.datasciencecentral.com%2Fprofiles%2Fblogs%2Fdata-science-without-statistics-is-possible-even-desirable">Sign Up</a></strong></big><br />or <a href="https://www.datasciencecentral.com/main/authorization/signIn?target=https%3A%2F%2Fwww.datasciencecentral.com%2Fprofiles%2Fblogs%2Fdata-science-without-statistics-is-possible-even-desirable" style="white-space:nowrap">Sign In</a></p>
+</div>
+</div>
+</div>
+<div class="xj_sidebar_content"><div class="xg_module html_module module_text xg_reset" data-module_name="text">
+<div class="xg_module_body xg_user_generated">
+<center>
+<div id='div-gpt-ad-1512428902846-6' style='height:600px; width:160px;'><script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1512428902846-6'); });
+</script></div>
+</center>
+</div>
+</div>
+<div class="xg_module html_module module_text xg_reset" data-module_name="text">
+<div class="xg_module_head"><h2>Resources</h2></div>
+<div class="xg_module_body xg_user_generated">
+<ul>
+<li><a href="https://www.datasciencecentral.com/profiles/blogs/check-out-our-dsc-newsletter" target="_self">Subscribe to DSC Newsletter</a></li>
+<li><a href="https://www.datasciencecentral.com/profiles/blogs/new-books-and-resources-for-dsc-members">Free Books</a><br />
+<a href="https://www.datasciencecentral.com/forum"></a></li>
+<li><a href="https://www.datasciencecentral.com/forum">Forum Discussions</a><br />
+<a href="https://www.datasciencecentral.com/page/search?q=cheat+sheets"></a></li>
+<li><a href="https://www.datasciencecentral.com/page/search?q=cheat+sheets">Cheat Sheets</a><br />
+<a href="https://analytictalent.com"></a></li>
+<li><a href="https://www.analytictalent.datasciencecentral.com/">Jobs</a></li>
+<li><a href="https://www.datasciencecentral.com/page/search?q=one+picture" target="_blank" rel="noopener">Search DSC</a></li>
+<li><a href="https://twitter.com/DataScienceCtrl" target="_self">DSC on Twitter</a></li>
+<li><a href="https://www.facebook.com/DataScienceCentralCommunity/" target="_blank" rel="noopener">DSC on Facebook</a></li>
+</ul>
+</div>
+</div>
+<div class="xg_module html_module module_text xg_reset" data-module_name="text">
+<div class="xg_module_body xg_user_generated">
+<center>
+<div id='div-gpt-ad-1512428902846-7' style='height:220px; width:220px;'><script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1512428902846-7'); });
+</script></div>
+</center>
+</div>
+</div>
+<div class="xg_module module_video" data-module_name="video">
+<div class="xg_module_head">
+<h2>Videos</h2>
+</div>
+<div class="xg_module_body body_large">
+<ul class="clist">
+<li>
+<div class="ib">
+<a href="https://www.datasciencecentral.com/video/dsc-webinar-series-ai-bi-fueling-deeper-business-insights-and">
+<img src="https://storage.ning.com/topology/rest/1.0/file/get/6476869060?profile=original&amp;width=136" alt="DSC Webinar Series: AI + BI: Fueling Deeper Business Insights and Edge" width="136" />
+</a>
+</div>
+<div class="tb">
+<h3><a href="https://www.datasciencecentral.com/video/dsc-webinar-series-ai-bi-fueling-deeper-business-insights-and">
+DSC Webinar Series: AI + BI: Fueling Deeper Business Insights and Edge </a></h3>
+<p class="xg_lightfont">
+Added by <a class="xg_lightfont" href="https://www.datasciencecentral.com/profile/2edcolrgc4o4b">Tim Matteson</a> <span class="reactions">
+<a href="https://www.datasciencecentral.com/video/dsc-webinar-series-ai-bi-fueling-deeper-business-insights-and#comments" data-page-type="detail" class="xg_sprite xg_sprite-comment">0 <span class='details'>Comments</span></a>
+<a href="https://www.datasciencecentral.com/video/dsc-webinar-series-ai-bi-fueling-deeper-business-insights-and" data-content-id="6448529:Video:960631" data-content-type="Video" data-sign-up-url="https://www.datasciencecentral.com/main/authorization/signUp?target=https%3A%2F%2Fwww.datasciencecentral.com%2Fprofiles%2Fblogs%2Fdata-science-without-statistics-is-possible-even-desirable" data-page-type="detail" class="xg_sprite like-link-1 like-link">
+0 <span class='details'>Likes</span>
+</a>
+</span>
+</p>
+</div>
+</li>
+</ul><ul class="clist"> <li>
+<div class="ib">
+<a href="https://www.datasciencecentral.com/video/dsc-webinar-series-productive-self-service-data-science">
+<img src="https://storage.ning.com/topology/rest/1.0/file/get/6476888073?profile=original&amp;width=136" alt="DSC Webinar Series: Productive, Self-Service Data Science" width="136" />
+</a>
+</div>
+<div class="tb">
+<h3><a href="https://www.datasciencecentral.com/video/dsc-webinar-series-productive-self-service-data-science">
+DSC Webinar Series: Productive, Self-Service Data Science </a></h3>
+<p class="xg_lightfont">
+Added by <a class="xg_lightfont" href="https://www.datasciencecentral.com/profile/2edcolrgc4o4b">Tim Matteson</a> <span class="reactions">
+<a href="https://www.datasciencecentral.com/video/dsc-webinar-series-productive-self-service-data-science#comments" data-page-type="detail" class="xg_sprite xg_sprite-comment">0 <span class='details'>Comments</span></a>
+<a href="https://www.datasciencecentral.com/video/dsc-webinar-series-productive-self-service-data-science" data-content-id="6448529:Video:960576" data-content-type="Video" data-sign-up-url="https://www.datasciencecentral.com/main/authorization/signUp?target=https%3A%2F%2Fwww.datasciencecentral.com%2Fprofiles%2Fblogs%2Fdata-science-without-statistics-is-possible-even-desirable" data-page-type="detail" class="xg_sprite like-link-1 like-link">
+0 <span class='details'>Likes</span>
+</a>
+</span>
+</p>
+</div>
+</li>
+</ul><ul class="clist"> <li>
+<div class="ib">
+<a href="https://www.datasciencecentral.com/video/dsc-webinar-series-optimization-and-the-nfl-s-toughest-scheduling">
+<img src="https://storage.ning.com/topology/rest/1.0/file/get/6247863064?profile=original&amp;width=136" alt="DSC Webinar Series: Optimization and The NFL&rsquo;s Toughest Scheduling Problem" width="136" />
+</a>
+</div>
+<div class="tb">
+<h3><a href="https://www.datasciencecentral.com/video/dsc-webinar-series-optimization-and-the-nfl-s-toughest-scheduling">
+DSC Webinar Series: Optimization and The NFL&rsquo;s Toughest Scheduling Problem </a></h3>
+<p class="xg_lightfont">
+Added by <a class="xg_lightfont" href="https://www.datasciencecentral.com/profile/2edcolrgc4o4b">Tim Matteson</a> <span class="reactions">
+<a href="https://www.datasciencecentral.com/video/dsc-webinar-series-optimization-and-the-nfl-s-toughest-scheduling#comments" data-page-type="detail" class="xg_sprite xg_sprite-comment">1 <span class='details'>Comment</span></a>
+<a href="https://www.datasciencecentral.com/video/dsc-webinar-series-optimization-and-the-nfl-s-toughest-scheduling" data-content-id="6448529:Video:959590" data-content-type="Video" data-sign-up-url="https://www.datasciencecentral.com/main/authorization/signUp?target=https%3A%2F%2Fwww.datasciencecentral.com%2Fprofiles%2Fblogs%2Fdata-science-without-statistics-is-possible-even-desirable" data-page-type="detail" class="xg_sprite like-link-1 like-link">
+3 <span class='details'>Likes</span>
+</a>
+</span>
+</p>
+</div>
+</li>
+</ul><ul class="clist"> </ul>
+</div>
+<div class="xg_module_foot">
+<ul>
+<li class="left"><a class="xg_sprite xg_sprite-add" href="https://www.datasciencecentral.com/video/video/chooseUploader">Add Videos</a></li>
+<li class="right"><a href="https://www.datasciencecentral.com/video/video">View All</a></li>
+<li class="right video-facebook-share" style="display:none; margin-right:10px;"><a target="_blank" href="https://www.facebook.com/share.php?u=https%3A%2F%2Fwww.datasciencecentral.com%2Fvideo%2Fvideo%3Ffrom%3Dfb"><img src="https://static.ning.com/socialnetworkmain/widgets/index/gfx/icon/facebook.gif?xn_version=2156446720" alt="Facebook" /></a></li>
+<script>
+                        xg.addOnRequire(function () {
+                            x$('.module_video').mouseover(function () { x$(this).find('.video-facebook-share').show(); })
+                                    .mouseout(function () { x$(this).find('.video-facebook-share').hide(); });
+                        });
+                    </script>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="xg_foot">
+<div id="xg_footcontent">
+<div class="xj_foot_content"><p class="left">
+© 2020 &nbsp; Data Science Central&nbsp;® &nbsp;
+Powered by<a class="poweredBy-logo" href="https://www.ning.com/" title="" alt="" rel="dofollow">
+<img class="poweredbylogo" width="87" height="15" src="https://static.ning.com/socialnetworkmain/widgets/index/gfx/Ning_MM_footer_blk@2x.png?xn_version=3605040243" title="Ning Website Builder" alt="Website builder | Create website | Ning.com">
+</a> </p>
+<p class="right xg_lightfont">
+<a href="https://www.datasciencecentral.com/main/embeddable/list">Badges</a> &nbsp;|&nbsp;
+<a href="https://www.datasciencecentral.com/main/authorization/signUp?target=https%3A%2F%2Fwww.datasciencecentral.com%2Fmain%2Findex%2Freport" dojoType="PromptToJoinLink" _joinPromptText="Please sign up or sign in to complete this step." _hasSignUp="true" _signInUrl="https://www.datasciencecentral.com/main/authorization/signIn?target=https%3A%2F%2Fwww.datasciencecentral.com%2Fmain%2Findex%2Freport">Report an Issue</a> &nbsp;|&nbsp;
+<a href="https://www.datasciencecentral.com/main/authorization/privacyPolicy?previousUrl=https%3A%2F%2Fwww.datasciencecentral.com%2Fprofiles%2Fblogs%2Fdata-science-without-statistics-is-possible-even-desirable">Privacy Policy</a> &nbsp;|&nbsp;
+<a href="https://www.datasciencecentral.com/main/authorization/termsOfService?previousUrl=https%3A%2F%2Fwww.datasciencecentral.com%2Fprofiles%2Fblogs%2Fdata-science-without-statistics-is-possible-even-desirable">Terms of Service</a>
+</p>
+</div>
+</div>
+</div>
+<div id="xg_ad_below_footer" class="xg_ad xj_ad_below_footer">
+<div class="xg_module module-plain  html_module module_text xg_reset" data-module_name="text">
+<div class="xg_module_body xg_user_generated">
+<center>
+<div id='div-gpt-ad-1512428902846-0' style='height:90px; width:728px;'><script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1512428902846-0'); });
+</script></div>
+<br /></center>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="xj_after_content"><div id="xj_baz17246" class="xg_theme"></div>
+<div id="xg_overlay" style="display:none;">
+<!--[if lte IE 6.5]><iframe></iframe><![endif]-->
+</div>
+<!--googleoff: all--><noscript>
+	<style type="text/css" media="screen">
+        #xg { position:relative;top:120px; }
+        #xn_bar { top:120px; }
+	</style>
+	<div class="errordesc noscript">
+		<div>
+            <h3><strong>Hello, you need to enable JavaScript to use Data Science Central.</strong></h3>
+            <p>Please check your browser settings or contact your system administrator.</p>
+			<img src="/xn_resources/widgets/index/gfx/jstrk_off.gif" alt="" height="1" width="1" />
+		</div>
+	</div>
+</noscript><!--googleon: all-->
+<script type="text/javascript" src="https://static.ning.com/socialnetworkmain/widgets/lib/core.min.js?xn_version=1651386455"></script> <script>
+            var sources = ["https:\/\/static.ning.com\/socialnetworkmain\/widgets\/lib\/js\/jquery\/jquery.ui.widget.js?xn_version=202006240701","https:\/\/static.ning.com\/socialnetworkmain\/widgets\/lib\/js\/jquery\/jquery.iframe-transport.js?xn_version=202006240701","https:\/\/static.ning.com\/socialnetworkmain\/widgets\/lib\/js\/jquery\/jquery.fileupload.js?xn_version=202006240701","https:\/\/storage.ning.com\/topology\/rest\/1.0\/file\/get\/6269069873?profile=original&r=1593001216","https:\/\/storage.ning.com\/topology\/rest\/1.0\/file\/get\/6268118501?profile=original&r=1593000620","https:\/\/storage.ning.com\/topology\/rest\/1.0\/file\/get\/6268625679?profile=original&r=1593000918"];
+            var numSources = sources.length;
+                        var heads = document.getElementsByTagName('head');
+            var node = heads.length > 0 ? heads[0] : document.body;
+            var onloadFunctionsObj = {};
+
+            var createScriptTagFunc = function(source) {
+                var script = document.createElement('script');
+                
+                script.type = 'text/javascript';
+                                var currentOnLoad = function() {xg._loader.onLoad(source);};
+                if (script.readyState) { //for IE (including IE9)
+                    script.onreadystatechange = function() {
+                        if (script.readyState == 'complete' || script.readyState == 'loaded') {
+                            script.onreadystatechange = null;
+                            currentOnLoad();
+                        }
+                    }
+                } else {
+                   script.onerror = script.onload = currentOnLoad;
+                }
+
+                script.src = source;
+                node.appendChild(script);
+            };
+
+            for (var i = 0; i < numSources; i++) {
+                                xg._loader.loading(sources[i]);
+                createScriptTagFunc(sources[i]);
+            }
+        </script>
+<script type="text/javascript">
+if (!ning._) {ning._ = {}}
+ning._.compat = { encryptedToken: "<empty>" }
+ning._.CurrentServerTime = "2020-07-06T15:47:17+00:00";
+ning._.probableScreenName = "";
+ning._.domains = {
+    base: 'ning.com',
+    ports: { http: '80', ssl: '443' }
+};
+ning.loader.version = '202006240701'; // DEP-200624_1:0 33
+djConfig.parseWidgets = false;
+</script>
+<script type="text/javascript">
+        xg.token = '';
+xg.canTweet = false;
+xg.cdnHost = 'static.ning.com';
+xg.version = '202006240701';
+xg.useMultiCdn = true;
+xg.staticRoot = 'socialnetworkmain';
+xg.xnTrackHost = null;
+    xg.cdnDefaultPolicyHost = 'static';
+    xg.cdnPolicy = [];
+xg.global = xg.global || {};
+xg.global.currentMozzle = 'profiles';
+xg.global.userCanInvite = false;
+xg.global.requestBase = '';
+xg.global.locale = 'en_US';
+xg.num_thousand_sep = ",";
+xg.num_decimal_sep = ".";
+(function() {
+    dojo.addOnLoad(function() {
+        if(window.bzplcm) { window.bzplcm.ts('hr'); window.bzplcm._profileSend(); }
+            });
+            ning.loader.require('xg.profiles.blog.show', 'xg.index.like.likeButton', 'xg.shared.PostToFacebookStreamLink', 'xg.index.facebookLike', 'xg.index.like.desktopLike', function() { xg._loader.onLoad('xnloader'); });
+    })();    </script>
+
+<script type="text/javascript">
+xg.addOnRequire(function() {
+    document.getElementById('xn_bar_menu_search').action = 'https://www.datasciencecentral.com/page/search';
+});
+
+</script>
+
+<script type="text/javascript">
+_atrk_opts = { atrk_acct:"QpAKm1aMp4Z352", domain:"datasciencecentral.com",dynamic: true};
+(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+</script>
+<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=QpAKm1aMp4Z352" style="display:none" height="1" width="1" alt="" /></noscript>
+
+
+<link href="https://cdn.datasciencecentral.com/css/style020170126141034-6-7.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.datasciencecentral.com/js/script020170126141034-17.js"></script>
+
+
+<script src="https://cdn.datasciencecentral.com/search/as.js"></script>
+
+
+<script src="https://cdn.datasciencecentral.com/js/script020171208141034-13-16.js"></script>
+
+
+<style>
+/* hr rounded red border */
+hr.red {
+    height: 1px;
+    color: #FF0000;
+    background-color: #FF0000;
+    border: none;
+}
+</style>
+<div id="tmp_insideblog" style="display:none;">
+<div class='dscAdAppear' zsrc='PGNlbnRlcj48YnIgLz48IS0tIC8yNjcyNjQxL0JveF9BZF9CbG9nIC0tPg0KPGRpdiBpZD0nZGl2LWdwdC1hZC0xNTEyNDI4OTAyODQ2LTInIHN0eWxlPSdoZWlnaHQ6MjUwcHg7IHdpZHRoOjMwMHB4Oyc+DQo8c2NyaXB0Pg0KZ29vZ2xldGFnLmNtZC5wdXNoKGZ1bmN0aW9uKCkgeyBnb29nbGV0YWcuZGlzcGxheSgnZGl2LWdwdC1hZC0xNTEyNDI4OTAyODQ2LTInKTsgfSk7DQo8L3NjcmlwdD4NCjwvZGl2PjxiciAvPg0KPC9jZW50ZXI+'></div>
+<hr class="red" />
+<div style="padding: 5px; margin: 1em 1em; border-collapse: collapse;"><p><strong>Upcoming DSC Webinar</strong></p>
+<ul>
+<li><span><a href="https://dsc.news/3eA0tnC" target="_blank">DataOps: How Bell Canada Powers their Business with Data</a> - July 15</span><br /><br />
+<img src="https://presentations.akamaized.net/FileLibrary/3453/19/1cCSLogo_bk.jpeg" width="100" /><br /><br />
+<img src="https://presentations.akamaized.net/FileLibrary/3453/19/bell-logo.png" width="65" /><br /><br />
+Demand for data outstrips the capacity of IT organizations and data engineering teams to deliver. The enabling technologies exist today and data management practices are moving quickly toward a future of DataOps. DataOps is an automated, process-oriented methodology, used by analytic and data teams, to improve the quality and reduce the cycle time of data analytics. <a href="https://dsc.news/3eA0tnC" target="_blank">Register today</a>.</li>
+</ul></div>
+<hr class="red" />
+<p><span style="font-size: 11pt;"><strong>Most Popular Content on DSC</strong></span></p>
+<p><span style="font-size: 11pt;">To not miss this type of content in the future,&nbsp;<a href="https://www.datasciencecentral.com/profiles/blogs/check-out-our-dsc-newsletter">subscribe</a>&nbsp;to our newsletter.</span></p>
+<ul>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/profiles/blogs/free-book-statistics-new-foundations-toolbox-and-machine-learning " target="_blank">Book: Statistics -- New Foundations, Toolbox, and Machine Learning Recipes</a></span></li>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/profiles/blogs/free-book-classification-and-regression-in-a-weekend" target="_blank">Book: Classification and Regression In a Weekend - With Python</a></span></li>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/profiles/blogs/fee-book-applied-stochastic-processes" target="_blank">Book: Applied Stochastic Processes</a></span></li>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/profiles/blogs/long-range-correlation-in-time-series-tutorial-and-case-study" target="_blank">Long-range Correlations in Time Series: Modeling, Testing, Case Study</a></span></li>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/profiles/blogs/how-to-automatically-determine-the-number-of-clusters-in-your-dat" target="_blank">How to Automatically Determine the Number of Clusters in your Data</a></span></li>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/profiles/blogs/new-data-science-cheat-sheet" target="_blank">New Machine Learning Cheat Sheet</a> | <a href="https://www.datasciencecentral.com/profiles/blogs/data-science-cheat-sheet" target="_blank">Old one</a></span></li>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/profiles/blogs/confidence-intervals-without-pain" target="_blank">Confidence Intervals Without Pain - With Resampling</a></span></li>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/profiles/blogs/advanced-machine-learning-with-basic-excel" target="_blank">Advanced Machine Learning with Basic Excel</a></span></li>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/profiles/blogs/decomposition-of-statistical-distributions-using-mixture-models-a" target="_blank">New Perspectives on Statistical Distributions and Deep Learning</a></span></li>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/profiles/blogs/fascinating-new-results-in-the-theory-of-randomness" target="_blank">Fascinating New Results in the Theory of Randomness</a></span></li>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/profiles/blogs/feature-selection-based-on-predictive-power" target="_blank">Fast Combinatorial Feature Selection</a></span></li>
+</ul>
+<p><span style="font-size: 11pt;"><strong>Other popular resources</strong></span></p>
+<ul>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/profiles/blogs/comprehensive-repository-of-data-science-and-ml-resources" target="_blank">Comprehensive Repository of Data Science and ML Resources</a>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/page/search?q=statistical+concepts" target="_blank">Statistical Concepts Explained in Simple English</a>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/page/search?q=in+one+pictures" target="_blank">Machine Learning Concepts Explained in One Picture</a>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/profiles/blogs/100-data-science-interview-questions-and-answers" target="_blank">100 Data Science Interview Questions and Answers</a>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/page/search?q=cheat+sheets" target="_blank">Cheat Sheets</a> |
+<a href="https://www.datasciencecentral.com/profiles/blogs/21-curated-blogs-about-deep-learning-and-data-science" target="_blank">Curated Articles</a> |
+<a href="https://www.datasciencecentral.com/page/search?q=Python" target="_blank">Search</a> |
+<a href="http://www.analytictalent.com" target="_blank">Jobs</a> |
+<a href="https://www.datasciencecentral.com/page/search?q=courses" target="_blank">Courses</a></span></li>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/profiles/blog/new" target="_blank">Post a Blog</a> |
+<a href="https://www.datasciencecentral.com/forum/topic/new" target="_blank">Forum Questions</a> |
+<a href="https://www.datasciencecentral.com/page/search?q=books" target="_blank">Books</a> |
+<a href="https://www.datasciencecentral.com/page/search?q=salary" target="_blank">Salaries</a> |
+<a href="https://www.bigdatanews.datasciencecentral.com/group/bdn-daily-press-releases/forum" target="_blank">News</a>
+</span></li>
+</ul>
+<p><span style="font-size: 11pt;"><strong>Archives:</strong></span> <span style="font-size: 11pt;"><a href="https://www.analyticbridge.datasciencecentral.com/page/links" target="_blank">2008-2014</a> |
+<a href="https://www.datasciencecentral.com/group/resources/forum/topics/selection-of-best-articles-from-our-past-weekly-digests" target="_blank">2015-2016</a> |
+<a href="https://www.datasciencecentral.com/page/previous-digests" target="_blank">2017-2019</a> |
+<a href="https://www.analyticbridge.datasciencecentral.com/group/data-science/forum/topics/data-science-e-book-first-draft-available-for-download" target="_blank">Book 1</a> |
+<a href="https://www.datasciencecentral.com/profiles/blogs/my-data-science-book" target="_blank">Book 2</a> |
+<a href="https://www.datasciencecentral.com/profiles/blogs/older-data-science-articles-still-of-great-value-today" target="_blank">More</a>
+</span></p>
+<p><span style="font-size: 11pt;"><strong>Follow us</strong></span>:<span style="font-size: 11pt;"><span>&nbsp;</span><a href="https://twitter.com/DataScienceCtrl">Twitter</a><span>&nbsp;</span>|<span>&nbsp;</span><a href="https://www.facebook.com/DataScienceCentralCommunity/">Facebook</a></span></p>
+</div>
+<script type="text/javascript">
+if (typeof(x$) != 'undefined') {
+x$(".xg_widget_profiles_blog_show .xg_blog .postbody").after('<div id="insideblog"></div>');
+var t_insideblogCode = document.getElementById('tmp_insideblog');
+var insideblogCode = document.getElementById('insideblog');
+insideblogCode.innerHTML = t_insideblogCode.innerHTML;
+}
+</script>
+
+
+<div id="tmp_insideforum" style="display:none;">
+<div class='dscAdAppear' zsrc='PGNlbnRlcj48YnIgLz48IS0tIC8yNjcyNjQxL0JveF9BZF9Gb3J1bSAtLT4NCjxkaXYgaWQ9J2Rpdi1ncHQtYWQtMTUxMjQyODkwMjg0Ni0zJyBzdHlsZT0naGVpZ2h0OjI1MHB4OyB3aWR0aDozMDBweDsnPg0KPHNjcmlwdD4NCmdvb2dsZXRhZy5jbWQucHVzaChmdW5jdGlvbigpIHsgZ29vZ2xldGFnLmRpc3BsYXkoJ2Rpdi1ncHQtYWQtMTUxMjQyODkwMjg0Ni0zJyk7IH0pOw0KPC9zY3JpcHQ+DQo8L2Rpdj48YnIgLz4NCjwvY2VudGVyPg=='></div>
+<hr class="red" />
+<div style="padding: 5px; margin: 1em 1em; border-collapse: collapse;"><p><strong>Upcoming DSC Webinar</strong></p>
+<ul>
+<li><span><a href="https://dsc.news/3eA0tnC" target="_blank">DataOps: How Bell Canada Powers their Business with Data</a> - July 15</span><br /><br />
+<img src="https://presentations.akamaized.net/FileLibrary/3453/19/1cCSLogo_bk.jpeg" width="100" /><br /><br />
+<img src="https://presentations.akamaized.net/FileLibrary/3453/19/bell-logo.png" width="65" /><br /><br />
+Demand for data outstrips the capacity of IT organizations and data engineering teams to deliver. The enabling technologies exist today and data management practices are moving quickly toward a future of DataOps. DataOps is an automated, process-oriented methodology, used by analytic and data teams, to improve the quality and reduce the cycle time of data analytics. <a href="https://dsc.news/3eA0tnC" target="_blank">Register today</a>.</li>
+</ul></div>
+<hr class="red" />
+<p><span style="font-size: 12pt;"><strong>Most popular articles</strong></span><p>
+<ul>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/profiles/blogs/new-books-and-resources-for-dsc-members">Free Book and Resources for DSC Members</a></span></li>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/profiles/blogs/decomposition-of-statistical-distributions-using-mixture-models-a">New Perspectives on Statistical Distributions and Deep Learning</a></span></li>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/profiles/blogs/data-science-wizardry">Time series, Growth Modeling and Data Science Wizardy</a></span></li>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/page/search?q=statistical+concepts">Statistical Concepts Explained in Simple English</a></span></li>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/page/search?q=in+one+pictures">Machine Learning Concepts Explained in One Picture</a></span></li>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/profiles/blogs/comprehensive-repository-of-data-science-and-ml-resources">Comprehensive Repository of Data Science and ML Resources</a></span></li>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/profiles/blogs/advanced-machine-learning-with-basic-excel">Advanced Machine Learning with Basic Excel</a></span></li>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/profiles/blogs/difference-between-machine-learning-data-science-ai-deep-learning">Difference between ML, Data Science, AI, Deep Learning, and Statistics</a></span></li>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/profiles/blogs/my-data-science-machine-learning-and-related-articles">Selected Business Analytics, Data Science and ML articles</a></span></li>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/profiles/blogs/how-to-automatically-determine-the-number-of-clusters-in-your-dat">How to Automatically Determine the Number of Clusters in your Data</a></span></li>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/profiles/blogs/fascinating-new-results-in-the-theory-of-randomness">Fascinating New Results in the Theory of Randomness</a></span></li>
+<li><span style="font-size: 11pt;">
+<a href="http://careers.analytictalent.com/jobs/products">Hire a Data Scientist</a> |
+<a href="https://www.datasciencecentral.com/page/search?q=Python">Search DSC</a> |
+<a href="http://www.analytictalent.com">Find a Job</a></span></li>
+<li><span style="font-size: 11pt;"><a href="https://www.datasciencecentral.com/profiles/blog/new">Post a Blog</a> |
+<a href="https://www.datasciencecentral.com/forum/topic/new">Forum Questions</a></span></li>
+</ul>
+</div>
+<script type="text/javascript">
+if (typeof(x$) != 'undefined') {
+x$(".xg_widget_forum_topic_show div.discussion div.description").after('<div id="insideforum"></div>');
+var t_insideforumCode = document.getElementById('tmp_insideforum');
+var insideforumCode = document.getElementById('insideforum');
+insideforumCode.innerHTML = t_insideforumCode.innerHTML;
+}
+</script>
+
+
+<script src="https://cdn.ttgtmedia.com/cmp/ttCmpApi.min.js"></script>
+<script src="https://cdn.ttgtmedia.com/cmp/sourcepoint/sp-config.min.js"></script>
+<script src="https://cdn.ttgtmedia.com/cmp/sourcepoint/ccpa-config.min.js"></script>
+
+
+<script>
+x$('li:contains("Block all emails from")').hide();
+</script>
+
+
+<script>
+x$(document).ready(function(){
+  var dashbrd = x$( "#xj_admin_menu_link" ).length
+  var pathNameLoc = window.location.pathname;
+  var pathNameSplit = pathNameLoc.split('/');
+if (dashbrd == 1) {
+x$('input.radio').removeClass('disabled').removeAttr('disabled'); //allow admins to change privacy
+};
+if (dashbrd == 0  && pathNameSplit[2] == 'blog' && pathNameSplit[3] == 'new'){
+x$('fieldset.nolegend fieldset').hide(); }; //for new blog privacy
+if (dashbrd == 0  && pathNameSplit[2] == 'blogs' && pathNameSplit[4] == 'edit') {
+  x$('#post_delete').hide(); }; //for blog remove
+if (dashbrd == 0  && pathNameSplit[1] == 'video') {
+  x$('li').has('.xg_sprite-close').hide(); }; //for videos remove
+if (dashbrd == 0  && pathNameSplit[1] == 'events') {
+  x$('li').has('.xg_sprite-close').hide(); }; //for events remove
+if (dashbrd == 0  && pathNameSplit[1] == 'profiles' && pathNameSplit[2] == 'blogs') {
+  x$('#deleteBlogPostLink').hide(); }; //for blog remove
+if (dashbrd == 0  && pathNameSplit[1] == 'forum' && pathNameSplit[2] == 'topics') {
+    x$('li').has('.xg_sprite-close').hide(); };  // for forum remove
+if (dashbrd == 0  && pathNameSplit[2] == 'settings' && pathNameSplit[3] == 'editProfileInfo'){
+x$('input#fullname').css('pointer-events','none');
+x$('#post_form input.disabled.radio').removeAttr('disabled').removeClass('disabled');
+x$('a.action-opposite').on('click', function () {
+  setTimeout(function(){
+x$('#dialog_additional_checkbox').removeAttr('checked');
+x$('p').has('#dialog_additional_checkbox').hide(); 
+    }, 100);
+});};}); // for profile edit
+</script>
+
+
+<script>
+document.querySelectorAll('a[href*="http://"]').forEach(item=>{
+let link = item.getAttribute('href');
+if(link.indexOf('https://') > -1) {
+link = link.replace('http://','');
+item.setAttribute('href', link);
+item.innerText = link;
+}
+})
+document.querySelectorAll('small').forEach(item=>{if(item.innerText === 'http://') {item.remove()}})
+document.addEventListener('DOMContentLoaded', _=>{
+const regForm = document.querySelector('.xg_widget_main_authorization_newProfile #profile_form .profile_questions');
+if(regForm !== null)  {
+document.querySelector('.button.left').setAttribute("disabled", "disabled");
+document.querySelector('.tos.right').remove();
+const form = `<div class="lf-input__wrap privacy">
+                        <div class="checking_form ">
+                       <p>
+                         <input class="xg_check__styled" type="checkbox" name="term_accept" id="termAccept" required>
+                         <label for="termAccept">* I agree to TechTarget’s <a href="https://www.techtarget.com/terms-of-use/" target="_blank">Terms of Use</a>, <a href="https://www.techtarget.com/privacy-policy/" target="_blank">Privacy Policy</a>, and the transfer of my information to the United States for processing to provide me with relevant information as described in our Privacy Policy.</label>
+                        </p>
+                      <p>
+                                        <input class="xg_check__styled" type="checkbox" name="privacy_accept" id="privacyAccept" required>
+                                        <label for="privacyAccept">* I agree to my information being processed by TechTarget and its <a href="https://www.techtarget.com/privacy-partners/" target="_blank">Partners</a> to contact me via phone, email, or other means regarding information relevant to my professional interests. I may unsubscribe at any time.</label>
+                                    </p>                                     
+                </div>                        
+               </div>`
+
+regForm.insertAdjacentHTML('afterend', form);
+
+document.querySelector('.checking_form').addEventListener('change', (e)=>{
+
+if(Array.from(document.querySelectorAll('.xg_check__styled')).filter(checkbox => checkbox.checked).length === 2) {
+document.querySelector('.button.left').removeAttribute("disabled")
+}
+else {
+document.querySelector('.button.left').setAttribute("disabled", "disabled")
+}
+}, true)
+}
+})
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', ()=>{
+
+const privacyPolicy = document.querySelector('.xj_foot_content a[href*="/privacyPolicy"]');
+const termsOfService = document.querySelector('.xj_foot_content a[href*="/termsOfService"]');
+if(privacyPolicy!==null && termsOfService!==null) {
+privacyPolicy.setAttribute("href","https://www.techtarget.com/privacy-policy/")
+termsOfService.setAttribute("href","https://www.techtarget.com/terms-of-use/")
+privacyPolicy.style.display = 'inline-block'
+termsOfService.style.display = 'inline-block'
+}
+})
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (!dataLayer) {
+            return;
+        }
+        var handler = function (event) {
+            var element = event.currentTarget;
+            if (element.hasAttribute('data-track-disable')) {
+                return;
+            }
+            var options = JSON.parse(element.getAttribute('data-track'));
+            dataLayer.push({
+                'event'         : 'trackEvent',
+                'eventType'     : 'googleAnalyticsNetwork',
+                'eventCategory' : options && options.category || '',
+                'eventAction'   : options && options.action || '',
+                'eventLabel'    : options && options.label || '',
+                'eventValue'    : options && options.value || ''
+            });
+        };
+        var elements = document.querySelectorAll('[data-track]');
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].addEventListener('click', handler);
+        }
+    });
+</script>
+</div>
+</body>
+</html>

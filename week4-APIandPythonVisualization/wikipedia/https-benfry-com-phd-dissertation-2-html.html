@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" href="styles/style.css" type="text/css" media="screen, mobile" title="main" charset="utf-8">
+	</head>
+  <body>
+    <div class="container">
+      <h3 class="return"><a href="index.html">Computational Information Design</a></h3>
+      <h2>2&emsp;Basic Example</h2>
+        <p>This section describes application of the Computational Information Design process to the understanding of a simple data set—the zip code numbering system used by the United States Postal Service. The application demonstrated here is purposefully not an advanced one, and may even seem foolish, but it provides a skeleton for how the process works.</p>
+      <h3 id="1">
+        <div class="section_number">2.1</div>
+        <div class="section_header">questions &amp; narrative</div>
+      </h3>
+        <p>All data problems begin with a question. The answer to the question is a kind of narrative, a piece that describes a clear answer to the question without extraneous details. Even in the case of less directed questions, the goal is a clear discussion of what was discovered in the data set in a way that highlights key findings. A stern focus on the original intent of the question helps the designer to eliminate extraneous details by providing a metric for what is and is not necessary.</p>
+      <h3 id="2">
+        <div class="section_number">2.2</div>
+        <div class="section_header">background</div>
+      </h3>
+        <p>The project described here began out of an interest in how zip codes relate to geographic area. Living in Boston, I knew that numbers starting with a zero were on the East Coast. Having lived in San Francisco, I knew the West Coast were all nines. Growing up in Michigan, all our codes were 4-prefixed. In addition, what sort of area does the second digit specify? Or the third?</p>
+        <p>The finished application, called <em>zipdecode</em>, was initially constructed in a matter of a few hours as a way to quickly take what might be considered a boring data set (45,000 entries in a long list of zip codes, towns, and their latitudes & longitudes) and turn it into something that explained how the codes related to their geography and, as it turned out, was engaging for its users.</p>
+      <h3 id="3">
+        <div class="section_number">2.3</div>
+        <div class="section_header">process</div>
+      </h3>
+        <p>The Computational Information Design process, as it relates to the data set and question under examination here.</p>
+      <h4 id="3_1">2.3.1&ensp;Acquire</h4>
+        <div class="side-right">
+          <img src="images/zipguy3.jpg"/><aside>www.usps.com/history/</aside>
+        </div>
+        <p>The acquisition step refers to obtaining the data, whether over the network, or from a file on a disk. Like many of the other steps, this can often be extremely complicated (i.e. trying to glean useful data out of a large system) or very simple (simply reading a readily available text file).</p>
+        <p>The acronym <span class="sc">zip</span> stands for Zoning Improvement Plan, and refers to a 1963 initiative to simplify the delivery of mail in the United States. Faced with an ever-increasing amount of mail to be processed, the zip system intended to simplify the process through a more accurate specification of geographic area where the mail was to be delivered. A more lengthy background can be found on the U.S. Postal Service’s web site.</p>
+        <p>Today, the zip code database is primarily available via the U.S. Census Bureau, as they use it heavily as a method for geographic coding of information. The listing is a freely available file with approximately 45,000 lines, one for each of the codes:</p>
+        <p class="mono soft">
+          00210&#160;&#160;&#160;+43.005895&#160;&#160;&#160;&#160;-071.013202&#160;&#160;&#160;&#160;U&#160;&#160;&#160;&#160;PORTSMOUTH&#160;&#160;&#160;&#160;33&#160;&#160;&#160;&#160;015<br>
+          00211&#160;&#160;&#160;+43.005895&#160;&#160;&#160;&#160;-071.013202&#160;&#160;&#160;&#160;U&#160;&#160;&#160;&#160;PORTSMOUTH&#160;&#160;&#160;&#160;33&#160;&#160;&#160;&#160;015<br>
+          00212&#160;&#160;&#160;+43.005895&#160;&#160;&#160;&#160;-071.013202&#160;&#160;&#160;&#160;U&#160;&#160;&#160;&#160;PORTSMOUTH&#160;&#160;&#160;&#160;33&#160;&#160;&#160;&#160;015<br>
+          00213&#160;&#160;&#160;+43.005895&#160;&#160;&#160;&#160;-071.013202&#160;&#160;&#160;&#160;U&#160;&#160;&#160;&#160;PORTSMOUTH&#160;&#160;&#160;&#160;33&#160;&#160;&#160;&#160;015<br>
+          00214&#160;&#160;&#160;+43.005895&#160;&#160;&#160;&#160;-071.013202&#160;&#160;&#160;&#160;U&#160;&#160;&#160;&#160;PORTSMOUTH&#160;&#160;&#160;&#160;33&#160;&#160;&#160;&#160;015<br>
+          00215&#160;&#160;&#160;+43.005895&#160;&#160;&#160;&#160;-071.013202&#160;&#160;&#160;&#160;U&#160;&#160;&#160;&#160;PORTSMOUTH&#160;&#160;&#160;&#160;33&#160;&#160;&#160;&#160;015<br>
+          00501&#160;&#160;&#160;+40.922326&#160;&#160;&#160;&#160;-072.637078&#160;&#160;&#160;&#160;U&#160;&#160;&#160;&#160;HOLTSVILLE&#160;&#160;&#160;&#160;36&#160;&#160;&#160;&#160;103<br>
+          00544&#160;&#160;&#160;+40.922326&#160;&#160;&#160;&#160;-072.637078&#160;&#160;&#160;&#160;U&#160;&#160;&#160;&#160;HOLTSVILLE&#160;&#160;&#160;&#160;36&#160;&#160;&#160;&#160;103<br>
+          00601&#160;&#160;&#160;+18.165273&#160;&#160;&#160;&#160;-066.722583&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ADJUNTAS&#160;&#160;&#160;&#160;&#160;&#160;72&#160;&#160;&#160;&#160;001<br>
+          00602&#160;&#160;&#160;+18.393103&#160;&#160;&#160;&#160;-067.180953&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;AGUADA&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;72&#160;&#160;&#160;&#160;003<br>
+          00603&#160;&#160;&#160;+18.455913&#160;&#160;&#160;&#160;-067.145780&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;AGUADILLA&#160;&#160;&#160;&#160;&#160;72&#160;&#160;&#160;&#160;005<br>
+          00604&#160;&#160;&#160;+18.493520&#160;&#160;&#160;&#160;-067.135883&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;AGUADILLA&#160;&#160;&#160;&#160;&#160;72&#160;&#160;&#160;&#160;005<br>
+          00605&#160;&#160;&#160;+18.465162&#160;&#160;&#160;&#160;-067.141486&#160;&#160;&#160;&#160;P&#160;&#160;&#160;&#160;AGUADILLA&#160;&#160;&#160;&#160;&#160;72&#160;&#160;&#160;&#160;005<br>
+          00606&#160;&#160;&#160;+18.172947&#160;&#160;&#160;&#160;-066.944111&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;MARICAO&#160;&#160;&#160;&#160;&#160;&#160;&#160;72&#160;&#160;&#160;&#160;093<br>
+          00610&#160;&#160;&#160;+18.288685&#160;&#160;&#160;&#160;-067.139696&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ANASCO&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;72&#160;&#160;&#160;&#160;011<br>
+          00611&#160;&#160;&#160;+18.279531&#160;&#160;&#160;&#160;-066.802170&#160;&#160;&#160;&#160;P&#160;&#160;&#160;&#160;ANGELES&#160;&#160;&#160;&#160;&#160;&#160;&#160;72&#160;&#160;&#160;&#160;141<br>
+          00612&#160;&#160;&#160;+18.450674&#160;&#160;&#160;&#160;-066.698262&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ARECIBO&#160;&#160;&#160;&#160;&#160;&#160;&#160;72&#160;&#160;&#160;&#160;013<br>
+          00613&#160;&#160;&#160;+18.458093&#160;&#160;&#160;&#160;-066.732732&#160;&#160;&#160;&#160;P&#160;&#160;&#160;&#160;ARECIBO&#160;&#160;&#160;&#160;&#160;&#160;&#160;72&#160;&#160;&#160;&#160;013<br>
+          00614&#160;&#160;&#160;+18.429675&#160;&#160;&#160;&#160;-066.674506&#160;&#160;&#160;&#160;P&#160;&#160;&#160;&#160;ARECIBO&#160;&#160;&#160;&#160;&#160;&#160;&#160;72&#160;&#160;&#160;&#160;013<br>
+          00616&#160;&#160;&#160;+18.444792&#160;&#160;&#160;&#160;-066.640678&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;BAJADERO&#160;&#160;&#160;&#160;&#160;&#160;72&#160;&#160;&#160;&#160;013
+        </p>
+        <img src="images/screenshots/p19.png" class="hang-left"/>
+      <h4 id="3_2">2.3.2&ensp;Parse</h4>
+        <p>Having acquired the data, it next needs to be parsed—changed into a format that tags the meaning of each part of the data with how it is to be used. For each line of the file, it must be broken along its individual parts, in this case the line of text is separated by tabs. Next, each piece of data is converted to its useful format:</p>
+          <p class="term"><span class="sc">string</span> – a set of characters that forms a word or a sentence 	(used for city/town names), or because the zip codes themselves are not so much numbers as a series of digits (if they were numbers, then the code 02139 would be the same as 2139, which is not the case) they are also considered a string.</p>
+          <p class="term"><span class="sc">float</span> – a number with decimal points (used for the latitudes 	and longitudes of each location). The name is short for “floating point,” from programming nomenclature of how the numbers are stored in the computer’s memory.</p>
+          <p class="term"><span class="sc">char</span> – a single character, in this data set sometimes used as a marker for the designation of special post offices.</p>
+          <p class="term"><span class="sc">integer</span> – any generic number</p>
+          <p class="term"><span class="sc">index</span> – data (commonly it might be an integer or string) that points to another table of data (in this case, mapping numbered “<span class="sc">fips</span>” codes to the names and two digit abbreviations of states)</p>
+        <p>Having completed this step, the data is successfully tagged and more useful to a program that will manipulate or represent it in some way. This is common in the use of databases, where a such a code is used as a lookup into another table, sometimes as a way to compact the data further (i.e. a two digit code is better than listing the full name of the state or territory).</p>
+      <h4 id="3_3">2.3.3&ensp;Filter</h4>
+        <p>The next step involves the filtering of data, in this case the records not part of the contiguous 48 states will be removed. This means Alaska and Hawaii will be removed (as this is only a simple sketch) along with other territories such as Puerto Rico.</p>
+        <img src="images/screenshots/p20.png" class="hang-right"/>
+        <p>Again, while simplistic in this project, this is often a very complicated and can require significant mathematical work to place the data into a mathematical “model” or normalize it (convert it to an acceptable range of numbers). In this example, a basic normalization is used to re-orient the minimum and maximum longitudes and latitudes to range from zero to the width and height of the display. More of the mathematical approaches to filtering are discussed in chapter six.</p>
+        <img src="images/screenshots/p21.png"/>
+      <h4 id="3_4">2.3.4&ensp;Mine</h4>
+        <p>This step involves basic math, statistics and data mining. The data in this case receives only simple treatment: the program must figure out the minimum and maximum values for latitude and longitude, so that the data can be presented on screen at a proper scale.</p>
+      <h4 id="3_5">2.3.5&ensp;Represent</h4>
+        <p>The representation step has to do with the basic form that a set of data will take. Some data are lists, others are structured like trees. In this case, each zip code has a latitude and longitude, so they can be mapped as a two-dimensional plot, with the minimum and maximum values for the latitude and longitude being used for the start and end of the scale in each dimension.</p>
+        <img src="images/screenshots/p22.png" class="hang-right"/>
+      <h4 id="3_6">2.3.6&ensp;Refine</h4>
+        <p>In the refinement step, the graphic design methods are used to more clarify the representation by calling more attention to particular data (establishing hierarchy), or changing attributes like color that have an impact on how well the piece can be read. The coloring becomes a deep gray, and each point a medium yellow signifying that all the points are currently selected.</p>
+        <img src="images/screen-4xxxx.jpg"/>
+        <div class="extend">
+          <img src="images/zipcode-points-600dpi.jpg" class="singleton"/>
+          <aside>u.s. zip codes for the contiguous 48 states, <br>plotted by their latitude and longitude</aside>
+        </div>
+      <h4 id="3_7">2.3.7&ensp;Interact</h4>
+        <p>The next stage of the process adds interaction as a way to give the user a way to control or explore the data. Interaction might cover things like selecting a subset of the data (controlling the filter) or changing the viewpoint. It can also affect the refinement step, as a change in viewpoint might require the data to be designed differently.</p>
+        <p>In the zipdecode piece, typing a number begins the selection of all zip codes that begin with that number. The following images show all the zip codes beginning with zero, four, and nine respectively.</p>
+        <img src="images/screen-0xxxx.jpg"/>
+        <img src="images/screen-4xxxx.jpg"/>
+        <img src="images/screen-9xxxx.jpg"/>
+        <p>As the user will often want to traverse laterally­—running through several of these prefixes, holding down the shift key will allow them to replace the last letter typed, without having to hit the ‘delete’ key to back up.</p>
+        <p>The interaction is primitive, but allows the user to very rapidly gain an understanding of how the layout of the postal system works.</p>
+        <div class="extend"><img src="images/screen-0xxxx.jpg"/><img src="images/screen-02xxx.jpg"/><img src="images/screen-021xx.jpg"/><img src="images/screen-0213x.jpg"/></div>
+        <p>Past the initial number, the viewer can continue to type digits to see the area covered by each subsequent set of prefixes:</p>
+        <p>Prefix ‘0’ is New England, ‘02’ covers Eastern Massachusetts.</p>
+        <p>‘021’ limits down to entries in Middlesex County, and ‘0213’ is a grouping of nearby cities.</p>
+        <p>Finally, ‘02139’ hones in on Cambridge, <span class="sc">ma</span> itself.</p>
+        <img src="images/screen-02139.jpg" class="extend"/>
+        <p>In addition, users can enable a ‘zoom’ feature which draws them closer to each specific choice as they’re made, to reveal more detail around the area. Each level of zoom adds more detail to the features, so that a constant rate of details is seen at each level. In the case of mapping, additional details of state and county boundaries, or other geographic features that help the viewer associate the “data” space of zip code points to what they know about the local environment.</p>
+        <div class="extend"><img src="images/zoom-0xxxx.jpg"/><img src="images/zoom-02xxx.jpg"/><img src="images/zoom-021xx.jpg"/><img src="images/zoom-0213x.jpg"/><img src="images/zoom-02139.jpg" class="singleton"/></div>
+        <p>This notion of re-layering the data as the perspective shifts is a useful aspect of computational design, a unique feature that comes from the combination of several of the steps involved.</p>
+        <p>Not visible in the steps shown so far is the kind of iteration that went into the project. Each step of the process is inextricably linked because of how they affect one another. Because of the need for the representation to fit on the screen in a compact way, the data was re-filtered to exclude territories not part of the contiguous 48 states.</p>
+        <p>The method of interaction by typing successive numbers impacted the visual refinement step, where the colors were modified to show a slow transition as points in the display were added or removed. This prevents the interaction from becoming too jarring and helps the user maintain context.</p>
+        <p>Later, the representation step affected the acquisition step, as the application was modified to show the data as it was downloaded over what might be a slow internet connection. This allows the points to slowly appear as they are first read from the data file as it is streamed over the network—employing the data itself as a “progress bar” to depict completion.</p>
+        <p>The interconnections between the steps of the Computational Information Design process helps illustrate the importance of addressing the fields as a whole.</p>
+      <h4 id="3_8">2.3.8&ensp;Properties</h4>
+        <p>At the intersection between these fields are the more interesting set of properties that demonstrate the strength of their combination.</p>
+        <img src="images/screenshots/p30.png" class="hang-right"/>
+        <p>In terms of acquisition, consideration is given to data that can be changed, whether once a month or on a continuous basis. This opens up the notion of the focus of graphic design on solving a specific problem for a specific data set, and instead considers the meta-problem of how to handle a certain kind of data, that might be updated in the future.</p>
+        <p>In the filtering step, data can be filtered in real time, as it is done in the zipdecode application. In terms of visual refinement, changes to the design can be applied across the entire system. For instance, a color change can be automatically applied to the thousands of elements that require it, rather than requiring the designer to painstakingly make such a tedious modification. This is the strength of a computational approach, where tedious processes are minimized through automation.</p>
+        <p>Moving further ahead, by making these methods available to a wider audience, the field can mature into a point where “craft” is re-introduced into the medium, that the hand of the advanced practitioner can be seen in the work, even in a medium of the computer, which is typically considered algorithmic, unexpressive, and “cold.”</p>
+        <img src="images/screenshots/p31.png" class="hang-left"/>
+      <h4 id="3_9">2.3.9&ensp;Conclusion</h4>
+        <p>The zipdecode project doesn’t quite solve a pressing need in the understanding of data, serves to demonstrate the principles used in a Computational Information Design approach. It received a surprising level of response from the viewing public, where as of the time of this writing it receives nearly a thousand visitors a day. This is perhaps surprising for something that might considered as boring as zip code data, and even several months after the projects initial introduction and spike of early interest.</p>
+      <div class="next">
+        <a href="3.html">
+          <p class="next_label"></p>
+          <p class="next_title">3&emsp;<span>Background</span></p>
+        </a>
+      </div>
+    </div>
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-8853851-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+  </body>
+</html>

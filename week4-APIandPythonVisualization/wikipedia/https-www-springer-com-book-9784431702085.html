@@ -1,0 +1,3566 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang=en class="no-js ie6 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 7]> <html lang=en class="no-js ie7 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html lang=en class="no-js ie8 lt-ie9"> <![endif]-->
+<!--[if IE 9]> <html lang=en class="no-js ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang=en class="no-js"> <!--<![endif]-->
+  <head>
+    
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+
+    <link rel="canonical" href="https://www.springer.com/gp/book/9784431702085">
+
+    <link rel="stylesheet" type="text/css" href='//static.springer.com/app-pp/assets-v/stylesheets_gen/8bba50ffa7bd570b384b13c150552a41-modern_sgw.css'>
+    <!--[if (lt IE 9) & (!IEMobile)]>
+    <link rel="stylesheet" type="text/css" href='//static.springer.com/app-pp/assets-v/stylesheets_gen/097150ae7f589c0d0fa54d2956677329-ielt9_sgw.css' media="screen">
+    <![endif]-->
+    <meta name="description" content="This volume, Data Science, Classification, and Related Methods, contains a selection of papers presented at the Fifth Conference of the International Federation of Oassification Societies (IFCS-96), which was held in Kobe, Japan, from March 27 to 30,1996. The volume covers a wide range of topics"/>
+    <title>Data Science, Classification, and Related Methods - Proceedings of the Fifth Conference of the International Federation of Classification Societies (IFCS-96), Kobe, Japan, March 27–30, 1996 | Chikio Hayashi | Springer</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <meta property="og:title" content="Data Science, Classification, and Related Methods - Proceedings of the Fifth Conference of the International Federation of Classification Societies (IFCS-96), Kobe, Japan, March 27–30, 1996 | Chikio Hayashi | Springer" />
+    <meta property="og:type" content="book" />
+    <meta property="og:url" content="https://www.springer.com/br/book/9784431702085"/>
+    <meta property="og:image:secure_url" content="https://images.springer.com/sgw/books/medium/9784431702085.jpg"/>
+    <meta property="og:description" content="This volume, Data Science, Classification, and Related Methods, contains a selection of papers presented at the Fifth Conference of the International Federation of Oassification Societies (IFCS-96), which was held in Kobe, Japan, from March 27 to 30,1996. The volume covers a wide range of topics..." />
+    <meta property="fb:admins" content='100001154999617'>
+    
+        
+<script type="text/javascript">sharedDataLayer = [{"session":{"authentication":{"loginStatus":"logged out"}},"customEvents":[],"page":{"sharedDataLayer":"present","category":{"pageType":"book-page"}},"user":{"segment":{},"profile":{}}}]
+function sprMerge(current, update) {
+  Object.keys(update).forEach(function(key) {
+    if (current.hasOwnProperty(key)
+            && typeof current[key] === 'object'
+            && !(current[key] instanceof Array)) {
+      sprMerge(current[key], update[key]);
+    } else {
+      current[key] = update[key];
+    }
+  });
+  return current;
+}
+    </script>
+
+<script type="text/javascript">
+  appDataLayer = [
+  {
+  "pageType" : "product",
+  "topLevelCategory" : "Statistics",
+  "productCategory" : "Statistics",
+  "isbn" : "9784431702085",
+  "productId" : "9784431702085",
+  "pPriceGross" : "109.0",
+  "ePriceGross" : "84.99",
+  "eIsbn" : "9784431659501",
+  "pIsbn" : "9784431702085",
+  "fn" : "Data Science, Classification, and",
+  "description" : "Data Science, Classification, and Related Methods",
+  "currency" : "USD",
+  "url" : "https://www.springer.com/978-4-431-70208-5",
+  "photo" : "https://images.springer.com/sgw/books/medium/9784431702085.jpg",
+  "ecommerce" : {
+    "currencyCode" : "USD",
+    "detail" : {
+      "products" : [ {
+        "name" : "Data Science, Classification, and Related Methods",
+        "id" : "978-4-431-65950-1",
+        "price" : "84.99",
+        "brand" : "Springer Japan",
+        "category" : "Statistics",
+        "variant" : "ebo",
+        "dimension21" : "LFB",
+        "dimension22" : "-2429"
+      }, {
+        "name" : "Data Science, Classification, and Related Methods",
+        "id" : "978-4-431-70208-5",
+        "price" : "109.0",
+        "brand" : "Springer Japan",
+        "category" : "Statistics",
+        "variant" : "print",
+        "dimension21" : "LFB",
+        "dimension22" : "-8163"
+      } ]
+    }
+  },
+  "content" : {
+    "authorization" : {
+      "status" : false
+    }
+  }
+}
+  ];
+
+  sharedDataLayer = sharedDataLayer || [];
+  dataLayer = sprMerge(sharedDataLayer, appDataLayer);
+</script>
+
+<!-- Google Tag Manager -->
+<script type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=7-8y6X3v3L_c2MzSmAodFw&gtm_preview=env-29&gtm_cookies_win=x';
+          f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-38BW');</script>
+<!-- End Google Tag Manager -->
+
+    
+    <script>
+/*<![CDATA[*/
+		document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+/*]]>*/
+    </script>
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$$','$$']],
+      displayMath: [],
+    }
+  });
+  </script>
+
+  <script type="text/javascript" defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+  </script>
+
+    <!-- Country(BR) -->
+
+  </head>
+  <body class="cms" itemscope itemtype="http://schema.org/WebPage">
+      
+    
+<script type="text/javascript" src='//static.springer.com/app-pp/assets-v/0b10efe1e6e993e8dd7a1cb856a48538-concatenated.js'></script>
+
+<script type="text/javascript">
+    var jsRoutes = {}; (function(_root){
+var _nS = function(c,f,b){var e=c.split(f||"."),g=b||_root,d,a;for(d=0,a=e.length;d<a;d++){g=g[e[d]]=g[e[d]]||{}}return g}
+var _qS = function(items){var qs = ''; for(var i=0;i<items.length;i++) {if(items[i]) qs += (qs ? '&' : '') + items[i]}; return qs ? ('?' + qs) : ''}
+var _s = function(p,s){return p+((s===true||(s&&s.secure))?'s':'')+':\/\/'}
+var _wA = function(r){return {ajax:function(c){c=c||{};c.url=r.url;c.type=r.method;return jQuery.ajax(c)}, method:r.method,type:r.method,url:r.url,absoluteURL: function(s){return _s('http',s)+'sprcom-product-page.live.cf.private.springer.com'+r.url},webSocketURL: function(s){return _s('ws',s)+'sprcom-product-page.live.cf.private.springer.com'+r.url}}}
+_nS('controllers.edition.BasketController'); _root['controllers']['edition']['BasketController']['addRendition'] = 
+        function() {
+          return _wA({method:"POST", url:"\/" + "app-pp\/basket\/addRendition"})
+        }
+      ;
+_nS('controllers.edition.BasketController'); _root['controllers']['edition']['BasketController']['addChapter'] = 
+        function() {
+          return _wA({method:"POST", url:"\/" + "app-pp\/basket\/addChapter"})
+        }
+      ;
+})(jsRoutes)
+</script>
+
+
+
+    
+
+    
+        
+    
+
+
+
+    
+        <div id="wrapper">
+            <header data-src="/_comp/header/br/default">
+<script type="text/javascript" src="//static.springer.com/spcom/min/SNAPSHOT/header.prod.js" defer="defer"></script>
+<div id="header" role="banner">
+<a id="headerlogo" href="/" aria-label="home page" style="background-image: url(/spcom/sites/sgw/images/logo.png);"></a>
+<div class="panel-search">
+<form id="global-search" class="big-search" action="/br/search" method="get">
+<div id="search-field">
+<div class="search-field">
+<input id="query" class="text focus placeholder" type="text" name="query" placeholder="Search" aria-label="search field"/>
+</div>
+</div>
+<div>
+<input id="search" class="search-submit" type="submit"
+name="submit" aria-label="submit search"/>
+</div>
+</form>
+</div>
+<button class="pillow-btn-header open-search" title="Open search">Search</button>
+<button class="pillow-btn-header open-menu" title="Open menu">Menu</button>
+<div class="panel-menu">
+<div id="cross-nav">
+<div class="empty" id="basket-widget" data-site-prefix="br" data-cart-page-link="https://www.springer.com/?SGWID=0-102-34-0-0">
+<style>
+/*<![CDATA[*/
+
+#basket-widget {
+float: left;
+display: inline-block;
+position: relative;
+}
+#basket-widget .flyout-caption::before {
+display: none;
+}
+#basket-widget .flyout-caption {
+margin-top: 5px;
+margin-right: 11px;
+}
+#basket-widget .headerbasket {
+padding: 2px 0 0 0 !important;
+}
+
+/*]]>*/
+</style>
+<a class="flyout-caption" href="https://checkout.springer.com/checkout/cart">
+<span class="headerbasket"> </span>
+<span class="totalQuantity"> &nbsp; </span>
+</a>
+<div class="flyout-content">
+<div class="loading-cart-msg">
+<div class="spinner"> </div>
+<div class="msg">Loading..</div>
+</div>
+<div class="empty-cart-msg">Your cart is empty.</div>
+<ul class="cart-items">
+</ul>
+<div class="full-cart-msg">...you&#039;ll find more products in the shopping cart.</div>
+<div class="cart-summary">
+<div class="summary-item total">
+<span class="left-column column">Total</span><!--
+--><span class="right-column column">&euro;239.99</span>
+</div>
+<a class="btn btn-primary btn-monster view-cart" href="#">View cart</a>
+</div>
+</div>
+<script id="cart-widget-cart-item" type="text/template">
+
+<li>
+<div class="cart-item">
+<div class="cover">
+{{coverTemplate}}
+</div><!--
+--><div class="title">
+{{titleTemplate}}
+<p class="description">{{description}}</p>
+<p class="quantity">
+{{resources.quantity}}: {{quantity}}
+</p>
+</div><!--
+--><div class="totalPrice">{{price}}</div>
+</div>
+</li>
+</script>
+<script id="cart-widget-cover-with-link" type="text/template">
+<a data-href="{{productLinkFragment}}">
+<img data-src="{{coverUrl}}" width="41" alt="{{title}}"/>
+</a>
+</script>
+<script id="cart-widget-cover-without-link" type="text/template">
+<img data-src="{{coverUrl}}" width="41" alt="{{title}}"/>
+</script>
+</div>
+<div id="auth" class="flyout">
+<button class="flyout-caption">Login</button>
+<div class="flyout-content">
+<ul id="service-links">
+<li>
+<a href="https://www.springer.com/my+springer?SGWID=12-1716000-25-653405-0">Manage Account</a>
+</li><li>
+<a href="https://www.springer.com/public/profile/bookshelf">My Bookshelf</a>
+</li><li>
+<a href="http://www.springer.com/alert?SGWID=12-103-0-0-0">Manage Alerts</a>
+</li><li>
+<a href="https://www.springer.com/my+springer/article+tracking?SGWID=12-1716011-25-653439-0">Article Tracking</a>
+</li><li>
+<a href="https://www.springer.com/br/myspringer/book-publications">Book Tracking</a>
+</li>
+</ul>
+<ul>
+<li>
+<a class="loginButton" href="https://login.springer.com/public/br/login?origin=header">Login</a>
+
+</li>
+</ul>
+</div>
+</div>
+<div id="lang" class="flyout">
+<button class="flyout-caption">Brazil</button>
+<div class="flyout-content">
+<ul>
+<li>
+<a rel="nofollow" href="https://www.springer.com/?SGWID=0-102-2010-0-0" class="returnURL">Change</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="navwrapper">
+<nav>
+<ul id="global-nav">
+
+<li class="mainNavigationMark" id="mainNavigation0">
+<div class="nav-main">
+<a href="https://www.springer.com/br/" class="mainNavigationLinkMark noSubnavigation" id="mainnav.home">Home</a>
+</div>
+
+
+</li>
+
+<li class="mainNavigationMark" id="mainNavigation1">
+<div class="nav-main">
+<a href="#" class="mainNavigationLinkMark" onclick="return false;">Subjects</a>
+</div>
+<div class="nav-sub">
+
+<ul class="firstList">
+
+<li>
+<a href="https://www.springer.com/br/astronomy" id="mainnav.astronomy">Astronomy</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/behavioral-sciences" id="mainnav.behavioral_sciences">Behavioral Sciences</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/biomedical-sciences" id="mainnav.biomedical_sciences">Biomedical Sciences</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/business-management" id="mainnav.business_&amp;_management">Business &amp; Management</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/chemistry" id="mainnav.chemistry">Chemistry</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/climate" id="mainnav.climate">Climate</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/computer-science" id="mainnav.computer_science">Computer Science</a>
+</li>
+
+</ul>
+
+<ul>
+
+<li>
+<a href="https://www.springer.com/br/earth-sciences" id="mainnav.earth_sciences">Earth Sciences</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/economics" id="mainnav.economics">Economics</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/education-language" id="mainnav.education_&amp;_language">Education &amp; Language</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/energy" id="mainnav.energy">Energy</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/engineering" id="mainnav.engineering">Engineering</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/environmental-sciences" id="mainnav.environmental_sciences">Environmental Sciences</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/food-science-nutrition" id="mainnav.food_science_&amp;_nutrition">Food Science &amp; Nutrition</a>
+</li>
+
+</ul>
+
+<ul>
+
+<li>
+<a href="https://www.springer.com/br/geography" id="mainnav.geography">Geography</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/law" id="mainnav.law">Law</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/life-sciences" id="mainnav.life_sciences">Life Sciences</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/materials" id="mainnav.materials">Materials</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/mathematics" id="mainnav.mathematics">Mathematics</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/medicine" id="mainnav.medicine">Medicine</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/philosophy" id="mainnav.philosophy">Philosophy</a>
+</li>
+
+</ul>
+
+<ul class="lastList">
+
+<li>
+<a href="https://www.springer.com/br/physics" id="mainnav.physics">Physics</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/popular-science" id="mainnav.popular_science">Popular Science</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/public-health" id="mainnav.public_health">Public Health</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/social-sciences" id="mainnav.social_sciences">Social Sciences</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/statistics" id="mainnav.statistics">Statistics</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/water" id="mainnav.water">Water</a>
+</li>
+
+</ul>
+
+</div>
+
+</li>
+
+<li class="mainNavigationMark" id="mainNavigation2">
+<div class="nav-main">
+<a href="#" class="mainNavigationLinkMark" onclick="return false;">Services</a>
+</div>
+<div class="nav-sub">
+
+<ul class="firstList">
+
+<li>
+<a href="https://www.springer.com/br/advertisers" id="mainnav.advertisers">Advertisers</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/authors-editors" id="mainnav.authors_&amp;_editors">Authors &amp; Editors</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/booksellers/" id="mainnav.booksellers">Booksellers</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/reviewers" id="mainnav.book_reviewers">Book Reviewers</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/instructors" id="mainnav.instructors">Instructors</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/about-springer/media" id="mainnav.journalists">Journalists</a>
+</li>
+
+<li>
+<a href="https://www.springernature.com/br/bibliotecarios" id="mainnav.librarians_(springer_nature)">Librarians (Springer Nature)</a>
+</li>
+
+</ul>
+
+<ul class="lastList">
+
+<li>
+<a href="https://www.springer.com/br/open-access" id="mainnav.open_access_&amp;_springer">Open Access &amp; Springer</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/editorial-policies" id="mainnav.editorial_policies">Editorial Policies</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/rights-permissions" id="mainnav.rights_&amp;_permissions">Rights &amp; Permissions</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/partners" id="mainnav.societies_&amp;_publishing_partners">Societies &amp; Publishing Partners</a>
+</li>
+
+<li>
+<a href="https://www.springernature.com/gp/librarians/agents" id="mainnav.subscription_agencies_(springer_nature)">Subscription Agencies (Springer Nature)</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/help" id="mainnav.help_&amp;_contact">Help &amp; Contact</a>
+</li>
+
+<li>
+<a href="https://www.springer.com/br/open-access" id="mainnav.open_access_&amp;_springer">Open Access &amp; Springer</a>
+</li>
+
+</ul>
+
+</div>
+
+</li>
+
+<li class="mainNavigationMark" id="mainNavigation3">
+<div class="nav-main">
+<a href="https://www.springer.com/shop" class="mainNavigationLinkMark noSubnavigation" id="mainnav.springer_shop">Springer Shop</a>
+</div>
+
+
+</li>
+
+<li class="mainNavigationMark" id="mainNavigation4">
+<div class="nav-main">
+<a href="https://www.springer.com/br/about-springer" class="mainNavigationLinkMark noSubnavigation" id="mainnav.about_us">About us</a>
+</div>
+
+
+</li>
+
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="/spcom/min/springer.components.js" defer="defer"></script>
+</header>
+
+            
+
+    
+    <div class="marketing-message row">
+        <div class="small-12 columns">
+            <p>
+                Read While You Wait - Get immediate ebook access, if available*, when you order a print book
+            </p>
+        </div>
+    </div>
+
+
+
+    
+
+    <div id="content" class="product-page edition-page" itemscope itemtype="http://schema.org/Book">
+        <div class="layout-8-4 row">
+            <div class="col-main large-8 medium-7 small-12 columns">
+            
+
+    <div class="breadcrumb channels" >
+        
+            
+                <a href="http://www.springer.com/statistics?SGWID=0-10128-0-0-0" onmousedown="wt.sendinfo({linkId:'breadcrumb.Statistics'});">Statistics</a>
+            
+        
+    </div>
+
+
+            </div>
+        </div>
+
+        <div class="layout-8-4 row">
+            <div class="col-main large-8 medium-7 small-12 columns">
+            
+
+    
+<div class="product-title">
+    
+        <a class="series" href="/series/1564">Studies in Classification, Data Analysis, and Knowledge Organization</a>
+    
+    
+
+
+    <div class="main-information row collapse">
+        <div class="product-cover large-3 small-4 columns">
+            
+
+
+
+    <a class="link-image" onmousedown="wt.sendinfo({linkId:'look_inside'});" data-preview-doi="10.1007%2F978-4-431-65950-1_25" href="#">
+        <span class="look-inside-badge">Free Preview</span>
+        
+    
+    
+        <img itemprop="image" src="https://images.springer.com/sgw/books/medium/9784431702085.jpg" alt="cover">
+    
+
+    </a>
+
+
+
+            
+
+
+        </div>
+
+
+        <div class="bibliographic-information large-9 small-8 columns">
+            
+                <div class="copyright">&copy; 1998</div>
+            
+
+            
+            <h1>Data Science, Classification, and Related Methods</h1>
+            
+                <h2>Proceedings of the Fifth Conference of the International Federation of Classification Societies (IFCS-96), Kobe, Japan, March 27–30, 1996</h2>
+            
+
+            
+            
+            <p>
+                Editors:
+                <strong>Hayashi</strong>, C., <strong>Yajima</strong>, K., <strong>Bock</strong>, H.H., <strong>Ohsumi</strong>, N., <strong>Tanaka</strong>, Y., <strong>Baba</strong>, Y. (Eds.)
+            </p>
+            
+
+            
+            
+            
+                <a class="link-image-mobile" onmousedown="wt.sendinfo({linkId:'look_inside'});" data-preview-doi="10.1007%2F978-4-431-65950-1_25" href="#">
+                    <span class="look-inside-badge-mobile">Free Preview</span>
+                </a>
+            
+        </div>
+    </div>
+    
+        
+    
+
+</div>
+
+
+    
+<div class="product-buy">
+    <div class="box-primary">
+        <h3>Buy this book</h3>
+        
+            <dl class="expander">
+                
+                    
+
+
+
+<dt class="buy-rendition-9784431659501  open ">
+    
+            <span class="cover-type">eBook</span>
+        
+    
+
+        <span class="price-box" >
+        
+                
+                    <span class="price">
+                        
+                        $84.99
+                    </span>
+                
+            
+        </span>
+    
+</dt>
+
+
+
+
+
+                    
+
+
+
+
+    <dd>
+        
+            
+            <div class="list-price">
+                 price for Brazil
+                
+                    (gross)
+                
+            </div>
+            
+
+        <div class="actions">
+                
+                    <a class="btn btn-monster btn-primary buy" href="#"
+                       onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Data Science, Classification, and Related Methods","id":"978-4-431-65950-1","price":"84.99","brand":"Springer Japan","category":"Statistics","variant":"ebo","dimension21":"LFB","dimension22":"-2429"}]}}});'>
+                        Buy eBook
+                    </a>
+                    <input type="hidden" name="price" value="$84.99">
+                    <input type="hidden" name="isbn" value="978-4-431-65950-1">
+                    <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+                    
+                
+            </div>
+        
+        <ul>
+            
+
+            
+
+            <li>ISBN 978-4-431-65950-1</li>
+
+            
+
+            
+
+            
+                <li>Digitally watermarked, DRM-free</li>
+            
+                <li>Included format: PDF</li>
+            
+                <li>ebooks can be used on all reading devices</li>
+            
+
+            
+                
+                    <li>Immediate eBook download after purchase</li>
+                
+            
+            
+                
+            
+        </ul>
+    </dd>
+
+
+
+                
+                    
+
+
+
+<dt class="buy-rendition-9784431702085 ">
+    
+            <span class="cover-type">Softcover</span>
+        
+    
+
+        <span class="price-box" >
+        
+                
+                    <span class="price">
+                        
+                        $109.00
+                    </span>
+                
+            
+        </span>
+    
+</dt>
+
+
+
+
+
+                    
+
+
+
+
+    <dd>
+        
+            
+            <div class="list-price">
+                 price for Brazil
+                
+                    
+                
+            </div>
+            
+
+        <div class="actions">
+                
+                    <a class="btn btn-monster btn-primary buy" href="#"
+                       onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Data Science, Classification, and Related Methods","id":"978-4-431-70208-5","price":"109.0","brand":"Springer Japan","category":"Statistics","variant":"print","dimension21":"LFB","dimension22":"-8163"}]}}});'>
+                        Buy Softcover
+                    </a>
+                    <input type="hidden" name="price" value="$109.00">
+                    <input type="hidden" name="isbn" value="978-4-431-70208-5">
+                    <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+                    
+                
+            </div>
+        
+        <ul>
+            
+
+            
+
+            <li>ISBN 978-4-431-70208-5</li>
+
+            
+
+            
+
+            
+                <li>Free shipping for individuals worldwide</li>
+            
+                <li>Immediate ebook access, if available*, with your print order</li>
+            
+
+            
+                
+                    <li>Usually dispatched within 3 to 5 business days. </li>
+                
+            
+            
+                
+            
+        </ul>
+    </dd>
+
+
+
+                
+                
+            </dl>
+        
+        <div class="buy-footer">
+            <p>
+                <i class="cms-icon-shop payment-visa"> </i>
+                <i class="cms-icon-shop payment-mastercard"> </i>
+                <i class="cms-icon-shop payment-amex"> </i>
+                <i class="cms-icon-shop payment-paypal"> </i>
+                <i class="cms-icon-shop payment-invoice"> </i>
+            </p>
+        </div>
+        <div class="buy-footer">
+            <div class="buy-footer-links">
+                <a href="/help/orders?SGWID=0-40026-12-687403-0">FAQ</a>
+                <a href="/generic/terms?SGWID=0-40112-0-0-0">Policy</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+
+    <div class="product-about">
+        <!-- Edition id is: 58414 -->
+        <dl class="cms-tab-panel">
+            
+                <dt id="aboutBook">
+                    <a href="#aboutBook" onmousedown="wt.sendinfo({linkId:'aboutThis'});">About this book</a>
+                </dt>
+                <dd>
+                    <div>
+                        <div class="springer-html">
+                            <p>This volume, Data Science, Classification, and Related Methods, contains a selection of papers presented at the Fifth Conference of the International Federation of Oassification Societies (IFCS-96), which was held in Kobe, Japan, from March 27 to 30,1996. The volume covers a wide range of topics and perspectives in the growing field of data science, including theoretical and methodological advances in domains relating to data gathering, classification and clustering, exploratory and multivariate data analysis, and knowledge discovery and seeking. It gives a broad view of the state of the art and is intended for those in the scientific community who either develop new data analysis methods or gather data and use search tools for analyzing and interpreting large and complex data sets. Presenting a wide field of applications, this book is of interest not only to data analysts, mathematicians, and statisticians but also to scientists from many areas and disciplines concerned with complex data: medicine, biology, space science, geoscience, environmental science, infonnation science, image and pattern analysis, economics, statistics, social sciences, psychology, cognitive science, behavioral science, marketing and survey research, data mining, and knowledge organization.</p>
+                        </div>
+                        <div class="action-footer">
+                            <div class="actions-right">
+                                <a href="#" class="action-show-all" data-track="click" data-track-category="Books" data-track-action="expander" data-track-label="allDescription">Show all</a>
+                            </div>
+                        </div>
+                    </div>
+                </dd>
+            
+            
+            
+            
+        </dl>
+    </div>
+
+
+
+    
+
+    <div class="product-toc">
+        <dl class="cms-tab-panel">
+            <h2>Table of contents <span class="chapter-count">(85 chapters)</span></h2>
+            <dt id="toc">
+                <a href="#toc">
+                    Table of contents (85 chapters)
+                </a>
+            </dt>
+            <dd>
+            <ul class="toc">
+                
+                    
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Probabilistic Aspects in Classification</p>
+        <p class="page-range">Pages 3-21</p>
+        <p class="authors">Bock, Hans H.</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Probabilistic Aspects in Classification","id":"10.1007/978-4-431-65950-1_1","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048525">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_1">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                
+                
+                    
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Cluster Validation</p>
+        <p class="page-range">Pages 22-39</p>
+        <p class="authors">Gordon, A. D.</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Cluster Validation","id":"10.1007/978-4-431-65950-1_2","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048526">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_2">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                
+                    
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">What is Data Science ? Fundamental Concepts and a Heuristic Example</p>
+        <p class="page-range">Pages 40-51</p>
+        <p class="authors">Hayashi, Chikio</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"What is Data Science ? Fundamental Concepts and a Heuristic Example","id":"10.1007/978-4-431-65950-1_3","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048527">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_3">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                
+                    
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Fitting Graphs and Trees with Multidimensional Scaling Methods</p>
+        <p class="page-range">Pages 52-62</p>
+        <p class="authors">Heiser, Willem J.</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Fitting Graphs and Trees with Multidimensional Scaling Methods","id":"10.1007/978-4-431-65950-1_4","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048528">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_4">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                
+                    
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Classification and data analysis in finance</p>
+        <p class="page-range">Pages 63-70</p>
+        <p class="authors">Jajuga, Krzysztof</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Classification and data analysis in finance","id":"10.1007/978-4-431-65950-1_5","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="176441759">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_5">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                
+            </ul>
+            
+                <ul class="toc toc-hidden" style="display:none;">
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">How to validate phylogenetic trees? A stepwise procedure</p>
+        <p class="page-range">Pages 71-88</p>
+        <p class="authors">Lapointe, François-Joseph</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"How to validate phylogenetic trees? A stepwise procedure","id":"10.1007/978-4-431-65950-1_6","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048529">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_6">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Some Trends in the Classification of Variables</p>
+        <p class="page-range">Pages 89-98</p>
+        <p class="authors">Nicolau, F. Costa (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Some Trends in the Classification of Variables","id":"10.1007/978-4-431-65950-1_7","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048530">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_7">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Convexity Methods in Classification</p>
+        <p class="page-range">Pages 99-106</p>
+        <p class="authors">Rasson, Jean-Paul</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Convexity Methods in Classification","id":"10.1007/978-4-431-65950-1_8","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048531">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_8">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">How Many Clusters? An Investigation of Five Procedures for Detecting Nested Cluster Structure</p>
+        <p class="page-range">Pages 109-116</p>
+        <p class="authors">Gordon, A. D.</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"How Many Clusters? An Investigation of Five Procedures for Detecting Nested Cluster Structure","id":"10.1007/978-4-431-65950-1_9","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048547">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_9">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Partitional Cluster Analysis with Genetic Algorithms: Searching for the Number of Clusters</p>
+        <p class="page-range">Pages 117-124</p>
+        <p class="authors">Lozano, J. A. (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Partitional Cluster Analysis with Genetic Algorithms: Searching for the Number of Clusters","id":"10.1007/978-4-431-65950-1_10","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048532">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_10">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Explanatory Variables in Classifications and the Detection of the Optimum Number of Clusters</p>
+        <p class="page-range">Pages 125-132</p>
+        <p class="authors">Podani, János</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Explanatory Variables in Classifications and the Detection of the Optimum Number of Clusters","id":"10.1007/978-4-431-65950-1_11","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048533">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_11">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Random dendrograms for classifiability testing</p>
+        <p class="page-range">Pages 133-144</p>
+        <p class="authors">Cutsem, Bernard (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Random dendrograms for classifiability testing","id":"10.1007/978-4-431-65950-1_12","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048534">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_12">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">The L
+                
+                  p
+                -product of ultrametric spaces and the corresponding product of hierarchies</p>
+        <p class="page-range">Pages 145-153</p>
+        <p class="authors">Fichet, Bernard</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"The L\n                \n                  p\n                -product of ultrametric spaces and the corresponding product of hierarchies","id":"10.1007/978-4-431-65950-1_13","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048535">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_13">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Towards Comparison of Decomposable Systems</p>
+        <p class="page-range">Pages 154-161</p>
+        <p class="authors">Levin, Mark Sh.</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Towards Comparison of Decomposable Systems","id":"10.1007/978-4-431-65950-1_14","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048536">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_14">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Performance of Eight Dissimilarity Coefficients to Cluster a Compositional Data Set</p>
+        <p class="page-range">Pages 162-169</p>
+        <p class="authors">Martín, Maria Cristina</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Performance of Eight Dissimilarity Coefficients to Cluster a Compositional Data Set","id":"10.1007/978-4-431-65950-1_15","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048537">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_15">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Consensus of Hierarchical Classifications</p>
+        <p class="page-range">Pages 170-181</p>
+        <p class="authors">Simeone, Bruno (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Consensus of Hierarchical Classifications","id":"10.1007/978-4-431-65950-1_16","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048538">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_16">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">On the Minimum Description Length (MDL) Principle for Hierarchical Classifications</p>
+        <p class="page-range">Pages 182-186</p>
+        <p class="authors">Bryant, Peter G.</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"On the Minimum Description Length (MDL) Principle for Hierarchical Classifications","id":"10.1007/978-4-431-65950-1_17","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048539">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_17">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Consensus Methods for Pyramids and Other Hypergraphs</p>
+        <p class="page-range">Pages 187-190</p>
+        <p class="authors">Lehel, J. (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Consensus Methods for Pyramids and Other Hypergraphs","id":"10.1007/978-4-431-65950-1_18","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048540">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_18">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">On the Behavior of Splitting Criteria for Classification Trees</p>
+        <p class="page-range">Pages 191-198</p>
+        <p class="authors">Siciliano, Roberta (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"On the Behavior of Splitting Criteria for Classification Trees","id":"10.1007/978-4-431-65950-1_19","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048541">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_19">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Fitting Pre-specified Blockmodels</p>
+        <p class="page-range">Pages 199-206</p>
+        <p class="authors">Batagelj, Vladimir (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Fitting Pre-specified Blockmodels","id":"10.1007/978-4-431-65950-1_20","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048542">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_20">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Robust impurity measures in decision trees</p>
+        <p class="page-range">Pages 207-214</p>
+        <p class="authors">Aluja-Banet, Tomàs (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Robust impurity measures in decision trees","id":"10.1007/978-4-431-65950-1_21","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048543">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_21">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Induction of Decision Trees Based on the Rough Set Theory</p>
+        <p class="page-range">Pages 215-222</p>
+        <p class="authors">Ho, Tu Bao (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Induction of Decision Trees Based on the Rough Set Theory","id":"10.1007/978-4-431-65950-1_22","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048544">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_22">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Visualizing Data in Tree-Structured Classification</p>
+        <p class="page-range">Pages 223-230</p>
+        <p class="authors">Mola, Francesco (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Visualizing Data in Tree-Structured Classification","id":"10.1007/978-4-431-65950-1_23","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048545">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_23">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Adaptive Cluster Analysis Techniques — Software and Applications</p>
+        <p class="page-range">Pages 231-238</p>
+        <p class="authors">Mucha, Hans-Joachim (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Adaptive Cluster Analysis Techniques — Software and Applications","id":"10.1007/978-4-431-65950-1_24","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048546">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_24">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">The Most Random Partition of a Finite Set and its Application to Classification</p>
+        <p class="page-range">Pages 241-246</p>
+        <p class="authors">Sibuya, Masaaki</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"The Most Random Partition of a Finite Set and its Application to Classification","id":"10.1007/978-4-431-65950-1_25","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048548">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_25">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                </ul>
+            
+                <ul class="toc toc-hidden" style="display:none;">
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">A Mixture Model To Classify Individual Profiles Of Repeated Measurements</p>
+        <p class="page-range">Pages 247-254</p>
+        <p class="authors">Tango, Toshiro</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"A Mixture Model To Classify Individual Profiles Of Repeated Measurements","id":"10.1007/978-4-431-65950-1_26","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048549">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_26">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Irregularly Spaced AR (ISAR) Models</p>
+        <p class="page-range">Pages 255-260</p>
+        <p class="authors">Pai, Jeffrey S. C. (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Irregularly Spaced AR (ISAR) Models","id":"10.1007/978-4-431-65950-1_27","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048550">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_27">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Two Types of Partial Least Squares Method in Linear Discriminant Analysis</p>
+        <p class="page-range">Pages 261-267</p>
+        <p class="authors">Kim, Hyun Bin (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Two Types of Partial Least Squares Method in Linear Discriminant Analysis","id":"10.1007/978-4-431-65950-1_28","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048551">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_28">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Resampling Methods for Error Rate Estimation in Discriminant Analysis</p>
+        <p class="page-range">Pages 268-275</p>
+        <p class="authors">Honda, Masayuki (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Resampling Methods for Error Rate Estimation in Discriminant Analysis","id":"10.1007/978-4-431-65950-1_29","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048552">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_29">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">A Short Overview of the Methods for Spatial Data Analysis</p>
+        <p class="page-range">Pages 276-283</p>
+        <p class="authors">Tanemura, Masaharu</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"A Short Overview of the Methods for Spatial Data Analysis","id":"10.1007/978-4-431-65950-1_30","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048553">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_30">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Choice of Multiple Representative Signatures for On-line Signature Verification Using a Clustering Procedure</p>
+        <p class="page-range">Pages 284-291</p>
+        <p class="authors">Yoshimura, Isao (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Choice of Multiple Representative Signatures for On-line Signature Verification Using a Clustering Procedure","id":"10.1007/978-4-431-65950-1_31","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048554">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_31">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Algorithms for L
+                1 and L
+                
+                  p
+                 Fuzzy c-Means and Their Convergence</p>
+        <p class="page-range">Pages 295-302</p>
+        <p class="authors">Miyamoto, Sadaaki (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Algorithms for L\n                1 and L\n                \n                  p\n                 Fuzzy c-Means and Their Convergence","id":"10.1007/978-4-431-65950-1_32","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="177316779">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_32">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">General Approach to the Construction of Measures of Fuzziness of Fuzzy K-Partitions</p>
+        <p class="page-range">Pages 303-311</p>
+        <p class="authors">Bodjanova, Slavka</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"General Approach to the Construction of Measures of Fuzziness of Fuzzy K-Partitions","id":"10.1007/978-4-431-65950-1_33","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048555">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_33">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Additive Clustering Model and Its Generalization</p>
+        <p class="page-range">Pages 312-319</p>
+        <p class="authors">Sato, Mika (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Additive Clustering Model and Its Generalization","id":"10.1007/978-4-431-65950-1_34","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048556">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_34">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">A Proposal of an Extended Model of ADCLUS Model</p>
+        <p class="page-range">Pages 320-327</p>
+        <p class="authors">Imaizumi, Tadashi</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"A Proposal of an Extended Model of ADCLUS Model","id":"10.1007/978-4-431-65950-1_35","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048557">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_35">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Comparison of Pruning Algorithms in Neural Networks</p>
+        <p class="page-range">Pages 328-333</p>
+        <p class="authors">Hamamoto, Yoshihiko (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Comparison of Pruning Algorithms in Neural Networks","id":"10.1007/978-4-431-65950-1_36","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048558">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_36">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Classification Method by Using the Associative Memories in Cellular Neural Networks</p>
+        <p class="page-range">Pages 334-340</p>
+        <p class="authors">Kanagawa, Akihiro (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Classification Method by Using the Associative Memories in Cellular Neural Networks","id":"10.1007/978-4-431-65950-1_37","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="176771077">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_37">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Application of Kohonen maps to the GPS Stochastic Tomography of the Ionosphere</p>
+        <p class="page-range">Pages 341-352</p>
+        <p class="authors">Hernández-Pajares, M. (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Application of Kohonen maps to the GPS Stochastic Tomography of the Ionosphere","id":"10.1007/978-4-431-65950-1_38","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048559">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_38">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Capacities, Credibilities in Analysis of Probabilistic Objects by Histograms and Lattices</p>
+        <p class="page-range">Pages 353-357</p>
+        <p class="authors">Diday, Edwin (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Capacities, Credibilities in Analysis of Probabilistic Objects by Histograms and Lattices","id":"10.1007/978-4-431-65950-1_39","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048560">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_39">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Symbolic Pattern Classifiers Based on the Cartesian System Model</p>
+        <p class="page-range">Pages 358-369</p>
+        <p class="authors">Ichino, Manabu (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Symbolic Pattern Classifiers Based on the Cartesian System Model","id":"10.1007/978-4-431-65950-1_40","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048561">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_40">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Extension based proximities between constrained Boolean symbolic objects</p>
+        <p class="page-range">Pages 370-378</p>
+        <p class="authors">Carvalho, Francisco T.</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Extension based proximities between constrained Boolean symbolic objects","id":"10.1007/978-4-431-65950-1_41","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048562">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_41">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Towards A Normal Symbolic Form</p>
+        <p class="page-range">Pages 379-386</p>
+        <p class="authors">Csernel, Marc (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Towards A Normal Symbolic Form","id":"10.1007/978-4-431-65950-1_42","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048563">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_42">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">The SODAS Project: a Software for Symbolic Data Analysis</p>
+        <p class="page-range">Pages 387-393</p>
+        <p class="authors">Hébrail, Georges</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"The SODAS Project: a Software for Symbolic Data Analysis","id":"10.1007/978-4-431-65950-1_43","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048564">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_43">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Classification Structures for Cognitive Maps</p>
+        <p class="page-range">Pages 394-403</p>
+        <p class="authors">Hirtle, Stephen C. (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Classification Structures for Cognitive Maps","id":"10.1007/978-4-431-65950-1_44","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048565">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_44">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Unsupervised Concept Learning Using Rough Concept Analysis</p>
+        <p class="page-range">Pages 404-411</p>
+        <p class="authors">Ho, Tu Bao</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Unsupervised Concept Learning Using Rough Concept Analysis","id":"10.1007/978-4-431-65950-1_45","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048566">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_45">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                </ul>
+            
+                <ul class="toc toc-hidden" style="display:none;">
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Implicative statistical analysis</p>
+        <p class="page-range">Pages 412-419</p>
+        <p class="authors">Gras, R. (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Implicative statistical analysis","id":"10.1007/978-4-431-65950-1_46","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048567">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_46">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Correspondence Analysis, Discrimination, and Neural Networks</p>
+        <p class="page-range">Pages 423-430</p>
+        <p class="authors">Lebart, Ludovic</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Correspondence Analysis, Discrimination, and Neural Networks","id":"10.1007/978-4-431-65950-1_47","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048568">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_47">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Exploratory data analysis for Hayashi’s quantification method III by graphics</p>
+        <p class="page-range">Pages 431-440</p>
+        <p class="authors">Komazawa, Tsutomu (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Exploratory data analysis for Hayashi’s quantification method III by graphics","id":"10.1007/978-4-431-65950-1_48","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048569">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_48">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Exploring Multidimensional Quantification Space</p>
+        <p class="page-range">Pages 441-451</p>
+        <p class="authors">Nishisato, Shizuhiko</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Exploring Multidimensional Quantification Space","id":"10.1007/978-4-431-65950-1_49","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048570">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_49">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Homogeneity Analysis for Partitioning Qualitative Variables</p>
+        <p class="page-range">Pages 452-459</p>
+        <p class="authors">Tsuchiya, Takahiro</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Homogeneity Analysis for Partitioning Qualitative Variables","id":"10.1007/978-4-431-65950-1_50","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048571">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_50">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Determining the Distance Index, II</p>
+        <p class="page-range">Pages 460-467</p>
+        <p class="authors">Bren, Matevž (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Determining the Distance Index, II","id":"10.1007/978-4-431-65950-1_51","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048572">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_51">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Meta-data and Strategies of Textual Data Analysis: Problems and Instruments</p>
+        <p class="page-range">Pages 468-479</p>
+        <p class="authors">Bolasco, Sergio</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Meta-data and Strategies of Textual Data Analysis: Problems and Instruments","id":"10.1007/978-4-431-65950-1_52","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048573">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_52">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Clustering of Texts using Semantic Graphs. Application to Open-ended Questions in Surveys</p>
+        <p class="page-range">Pages 480-487</p>
+        <p class="authors">Bertaut, Monica Bécue (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Clustering of Texts using Semantic Graphs. Application to Open-ended Questions in Surveys","id":"10.1007/978-4-431-65950-1_53","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048574">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_53">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">How to find the nearest by evaluating only few? Clustering techniques used to improve the efficiency of an Information Retrieval system based on Distributional Semantics</p>
+        <p class="page-range">Pages 488-495</p>
+        <p class="authors">Rajman, Martin (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"How to find the nearest by evaluating only few? Clustering techniques used to improve the efficiency of an Information Retrieval system based on Distributional Semantics","id":"10.1007/978-4-431-65950-1_54","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048575">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_54">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Fitting the CANDCLUS/MUMCLUS Models with Partitioning and Other Constraints</p>
+        <p class="page-range">Pages 496-505</p>
+        <p class="authors">Carroll, J. Douglas (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Fitting the CANDCLUS/MUMCLUS Models with Partitioning and Other Constraints","id":"10.1007/978-4-431-65950-1_55","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048576">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_55">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">A Distance-Based Biplot for Multidimensional Scaling of Multivariate Data</p>
+        <p class="page-range">Pages 506-517</p>
+        <p class="authors">Meulman, Jacqueline J.</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"A Distance-Based Biplot for Multidimensional Scaling of Multivariate Data","id":"10.1007/978-4-431-65950-1_56","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048577">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_56">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Latent-class scaling models for the analysis of longitudinal choice data</p>
+        <p class="page-range">Pages 518-524</p>
+        <p class="authors">Böckenholt, Ulf</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Latent-class scaling models for the analysis of longitudinal choice data","id":"10.1007/978-4-431-65950-1_57","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="176669863">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_57">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Nonlinear Multivariate Analysis by Neural Network Models</p>
+        <p class="page-range">Pages 527-538</p>
+        <p class="authors">Takane, Yoshio</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Nonlinear Multivariate Analysis by Neural Network Models","id":"10.1007/978-4-431-65950-1_58","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048578">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_58">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Generalized Canonical Correlation Analysis with Linear Constraints</p>
+        <p class="page-range">Pages 539-546</p>
+        <p class="authors">Yanai, Haruo</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Generalized Canonical Correlation Analysis with Linear Constraints","id":"10.1007/978-4-431-65950-1_59","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="177119409">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_59">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Principal Component Analysis Based on a Subset of Variables for Qualitative Data</p>
+        <p class="page-range">Pages 547-554</p>
+        <p class="authors">Mori, Yuichi (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Principal Component Analysis Based on a Subset of Variables for Qualitative Data","id":"10.1007/978-4-431-65950-1_60","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048579">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_60">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Missing Data Imputation in Multivariate Analysis</p>
+        <p class="page-range">Pages 555-562</p>
+        <p class="authors">Romanazzi, Mario</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Missing Data Imputation in Multivariate Analysis","id":"10.1007/978-4-431-65950-1_61","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048580">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_61">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Recent Developments in Three-Mode Factor Analysis: Constrained Three-Mode Factor Analysis and Core Rotations</p>
+        <p class="page-range">Pages 563-574</p>
+        <p class="authors">Kiers, Henk A. L.</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Recent Developments in Three-Mode Factor Analysis: Constrained Three-Mode Factor Analysis and Core Rotations","id":"10.1007/978-4-431-65950-1_62","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048581">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_62">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Tucker2 as a Second-order Principal Component Analysis</p>
+        <p class="page-range">Pages 575-586</p>
+        <p class="authors">Murakami, Takashi</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Tucker2 as a Second-order Principal Component Analysis","id":"10.1007/978-4-431-65950-1_63","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048582">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_63">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Parallel Factor Analysis with Constraints on the Configurations: An overview</p>
+        <p class="page-range">Pages 587-597</p>
+        <p class="authors">Kroonenberg, Pieter M. (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Parallel Factor Analysis with Constraints on the Configurations: An overview","id":"10.1007/978-4-431-65950-1_64","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048583">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_64">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Regression Splines for Multivariate Additive Modeling</p>
+        <p class="page-range">Pages 598-609</p>
+        <p class="authors">Durand, Jean-François</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Regression Splines for Multivariate Additive Modeling","id":"10.1007/978-4-431-65950-1_65","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048584">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_65">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                </ul>
+            
+                <ul class="toc toc-hidden" style="display:none;">
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Bounded Algebraic Curve Fitting for Multidimensional Data Using the Least-Squares Distance</p>
+        <p class="page-range">Pages 610-616</p>
+        <p class="authors">Mizuta, Masahiro</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Bounded Algebraic Curve Fitting for Multidimensional Data Using the Least-Squares Distance","id":"10.1007/978-4-431-65950-1_66","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048585">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_66">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Using the Wavelet Transform for Multivariate Data Analysis and Time Series Analysis</p>
+        <p class="page-range">Pages 617-624</p>
+        <p class="authors">Murtagh, Fionn (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Using the Wavelet Transform for Multivariate Data Analysis and Time Series Analysis","id":"10.1007/978-4-431-65950-1_67","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048586">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_67">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Visual Manipulation Environment for Data Analysis System</p>
+        <p class="page-range">Pages 625-631</p>
+        <p class="authors">Mizuta, Masahiro (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Visual Manipulation Environment for Data Analysis System","id":"10.1007/978-4-431-65950-1_68","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048587">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_68">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Human Interface for Multimedia Database with Visual Interaction Facilities</p>
+        <p class="page-range">Pages 632-643</p>
+        <p class="authors">Kato, Toshikazu</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Human Interface for Multimedia Database with Visual Interaction Facilities","id":"10.1007/978-4-431-65950-1_69","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048588">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_69">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Proposition of a new Paradigm for a scientific Classification for Leadership Behavior Research Perspective</p>
+        <p class="page-range">Pages 647-652</p>
+        <p class="authors">Misumi, Jyuji</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Proposition of a new Paradigm for a scientific Classification for Leadership Behavior Research Perspective","id":"10.1007/978-4-431-65950-1_70","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048589">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_70">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Structure of Attitude toward Nuclear Power Generation</p>
+        <p class="page-range">Pages 653-660</p>
+        <p class="authors">Karube, Kiyoshi (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Structure of Attitude toward Nuclear Power Generation","id":"10.1007/978-4-431-65950-1_71","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048590">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_71">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Research Concerning the Consciousness of Women’s Attitude toward Independence</p>
+        <p class="page-range">Pages 661-668</p>
+        <p class="authors">Takakura, Setsuko</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Research Concerning the Consciousness of Women’s Attitude toward Independence","id":"10.1007/978-4-431-65950-1_72","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048591">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_72">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">A Cross-National Analysis of the Relationship between Genderedness in the Legal Naming of Same-Sex Sexual/Intimate Relationships and the Gender System</p>
+        <p class="page-range">Pages 669-675</p>
+        <p class="authors">Kamano, Saori</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"A Cross-National Analysis of the Relationship between Genderedness in the Legal Naming of Same-Sex Sexual/Intimate Relationships and the Gender System","id":"10.1007/978-4-431-65950-1_73","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048592">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_73">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">A Constrained Clusterwise Regression Procedure for Benefit Segmentation</p>
+        <p class="page-range">Pages 676-683</p>
+        <p class="authors">Baier, Daniel</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"A Constrained Clusterwise Regression Procedure for Benefit Segmentation","id":"10.1007/978-4-431-65950-1_74","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048593">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_74">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Application of Classification and Related Methods to SQC Renaissance in Toyota Motor</p>
+        <p class="page-range">Pages 684-695</p>
+        <p class="authors">Amasaka, Kakuro</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Application of Classification and Related Methods to SQC Renaissance in Toyota Motor","id":"10.1007/978-4-431-65950-1_75","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048594">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_75">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Application of Statistical Binary Tree Analysis to Quality Control</p>
+        <p class="page-range">Pages 696-707</p>
+        <p class="authors">Ootaki, Atsushi</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Application of Statistical Binary Tree Analysis to Quality Control","id":"10.1007/978-4-431-65950-1_76","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048595">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_76">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Analysis of Preferences for Telecommunication Services in Each Area</p>
+        <p class="page-range">Pages 708-715</p>
+        <p class="authors">Ueda, Tohru (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Analysis of Preferences for Telecommunication Services in Each Area","id":"10.1007/978-4-431-65950-1_77","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048596">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_77">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Effects of End-Aisle Display and Flier on the Brand-Switching of Instant Coffee</p>
+        <p class="page-range">Pages 716-727</p>
+        <p class="authors">Okada, Akinori</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Effects of End-Aisle Display and Flier on the Brand-Switching of Instant Coffee","id":"10.1007/978-4-431-65950-1_78","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048597">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_78">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">On the classification of environmental data in the Bavarian Environment Information System using an object-oriented approach</p>
+        <p class="page-range">Pages 728-735</p>
+        <p class="authors">Weihs, Erich</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"On the classification of environmental data in the Bavarian Environment Information System using an object-oriented approach","id":"10.1007/978-4-431-65950-1_79","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048598">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_79">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Cluster Analysis of Associated Words Obtained from a Free Response Test on Tokyo Bay</p>
+        <p class="page-range">Pages 736-745</p>
+        <p class="authors">Suga, Shinsuke (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Cluster Analysis of Associated Words Obtained from a Free Response Test on Tokyo Bay","id":"10.1007/978-4-431-65950-1_80","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048599">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_80">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Data Analysis of Deer-Train Collisions in Eastern Hokkaido, Japan</p>
+        <p class="page-range">Pages 746-751</p>
+        <p class="authors">Onoyama, Keiichi (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Data Analysis of Deer-Train Collisions in Eastern Hokkaido, Japan","id":"10.1007/978-4-431-65950-1_81","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="177080394">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_81">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Comparison of some numerical data between the belisama group of the genus Delias Hübner (Insecta: Lepidoptera) from Bali Island, Indonesia</p>
+        <p class="page-range">Pages 752-757</p>
+        <p class="authors">Morinaka, Sadaharu</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Comparison of some numerical data between the belisama group of the genus Delias Hübner (Insecta: Lepidoptera) from Bali Island, Indonesia","id":"10.1007/978-4-431-65950-1_82","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048600">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_82">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">A method for classifying unaligned biological sequences</p>
+        <p class="page-range">Pages 758-765</p>
+        <p class="authors">Tallur, B. (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"A method for classifying unaligned biological sequences","id":"10.1007/978-4-431-65950-1_83","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048601">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_83">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">An Approach to Determine the Necessity of Orthognathic Osteotomy or Orthodontic Treatment in a Cleft Individual</p>
+        <p class="page-range">Pages 766-773</p>
+        <p class="authors">Ohtsuka, Sumimasa (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"An Approach to Determine the Necessity of Orthognathic Osteotomy or Orthodontic Treatment in a Cleft Individual","id":"10.1007/978-4-431-65950-1_84","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048602">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_84">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                        
+<li class="toc-item chapter-item open">
+    <div class="main">
+        <p class="title">Data Analysis for Quality of Life and Personality</p>
+        <p class="page-range">Pages 774-778</p>
+        <p class="authors">Yamaoka, Kazue (et al.)</p>
+
+    </div>
+    <div class="detail">
+        <a class="btn preview" href="#" onmousedown="wt.sendinfo({linkId:'look_inside_chapter'});">Preview</a>
+        
+        <a class="btn btn-primary buy btn-chapter"
+           onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Data Analysis for Quality of Life and Personality","id":"10.1007/978-4-431-65950-1_85","price":"29.95","dimension5":"ppv-chapter","variant":"ppv-chapter","quantity":1}]}}});'
+           href="#">Buy Chapter <span class="price">$29.95</span></a>
+        
+        <input type="hidden" name="price" value="$29.95">
+        <input type="hidden" name="chapterId" value="179048603">
+        <input type="hidden" name="doi" value="10.1007/978-4-431-65950-1_85">
+        <input type="hidden" name="isbn" value="978-4-431-70208-5">
+        <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+    </div>
+</li>
+
+                    
+                </ul>
+            
+            
+                <div class="action-footer">
+                    <div class="actions-right">
+                    <a class="action-show-all" href="#" onmousedown="wt.sendinfo({linkId:'showMore.toc'});">Show next <span>xx</span></a>
+                    </div>
+                </div>
+            
+            </dd>
+        </dl>
+    </div>
+
+
+
+
+
+    
+
+    <div class="extra-materials">
+
+        
+            <a class="btn btn-secondary" href="http://link.springer.com/978-4-431-65950-1" data-track="click" data-track-category="Books" data-track-action="access" data-track-label="button" onmousedown="wt.sendinfo({linkId:'read_online'});">
+            Read this book on SpringerLink
+            </a>
+        
+
+        
+    </div>
+
+
+
+
+            </div>
+            <div class="col-aside large-4 medium-5 small-12 columns">
+            
+
+    
+<div class="product-buy">
+    <div class="box-primary">
+        <h3>Buy this book</h3>
+        
+            <dl class="expander">
+                
+                    
+
+
+
+<dt class="buy-rendition-9784431659501  open ">
+    
+            <span class="cover-type">eBook</span>
+        
+    
+
+        <span class="price-box" >
+        
+                
+                    <span class="price">
+                        
+                        $84.99
+                    </span>
+                
+            
+        </span>
+    
+</dt>
+
+
+
+
+
+                    
+
+
+
+
+    <dd>
+        
+            
+            <div class="list-price">
+                 price for Brazil
+                
+                    (gross)
+                
+            </div>
+            
+
+        <div class="actions">
+                
+                    <a class="btn btn-monster btn-primary buy" href="#"
+                       onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Data Science, Classification, and Related Methods","id":"978-4-431-65950-1","price":"84.99","brand":"Springer Japan","category":"Statistics","variant":"ebo","dimension21":"LFB","dimension22":"-2429"}]}}});'>
+                        Buy eBook
+                    </a>
+                    <input type="hidden" name="price" value="$84.99">
+                    <input type="hidden" name="isbn" value="978-4-431-65950-1">
+                    <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+                    
+                
+            </div>
+        
+        <ul>
+            
+
+            
+
+            <li>ISBN 978-4-431-65950-1</li>
+
+            
+
+            
+
+            
+                <li>Digitally watermarked, DRM-free</li>
+            
+                <li>Included format: PDF</li>
+            
+                <li>ebooks can be used on all reading devices</li>
+            
+
+            
+                
+                    <li>Immediate eBook download after purchase</li>
+                
+            
+            
+                
+            
+        </ul>
+    </dd>
+
+
+
+                
+                    
+
+
+
+<dt class="buy-rendition-9784431702085 ">
+    
+            <span class="cover-type">Softcover</span>
+        
+    
+
+        <span class="price-box" >
+        
+                
+                    <span class="price">
+                        
+                        $109.00
+                    </span>
+                
+            
+        </span>
+    
+</dt>
+
+
+
+
+
+                    
+
+
+
+
+    <dd>
+        
+            
+            <div class="list-price">
+                 price for Brazil
+                
+                    
+                
+            </div>
+            
+
+        <div class="actions">
+                
+                    <a class="btn btn-monster btn-primary buy" href="#"
+                       onclick='dataLayer.push({"event":"addToCart","ecommerce":{"currencyCode":"USD","add":{"products":[{"name":"Data Science, Classification, and Related Methods","id":"978-4-431-70208-5","price":"109.0","brand":"Springer Japan","category":"Statistics","variant":"print","dimension21":"LFB","dimension22":"-8163"}]}}});'>
+                        Buy Softcover
+                    </a>
+                    <input type="hidden" name="price" value="$109.00">
+                    <input type="hidden" name="isbn" value="978-4-431-70208-5">
+                    <input type="hidden" name="title" value="Data Science, Classification, and Related Methods">
+                    
+                
+            </div>
+        
+        <ul>
+            
+
+            
+
+            <li>ISBN 978-4-431-70208-5</li>
+
+            
+
+            
+
+            
+                <li>Free shipping for individuals worldwide</li>
+            
+                <li>Immediate ebook access, if available*, with your print order</li>
+            
+
+            
+                
+                    <li>Usually dispatched within 3 to 5 business days. </li>
+                
+            
+            
+                
+            
+        </ul>
+    </dd>
+
+
+
+                
+                
+            </dl>
+        
+        <div class="buy-footer">
+            <p>
+                <i class="cms-icon-shop payment-visa"> </i>
+                <i class="cms-icon-shop payment-mastercard"> </i>
+                <i class="cms-icon-shop payment-amex"> </i>
+                <i class="cms-icon-shop payment-paypal"> </i>
+                <i class="cms-icon-shop payment-invoice"> </i>
+            </p>
+        </div>
+        <div class="buy-footer">
+            <div class="buy-footer-links">
+                <a href="/help/orders?SGWID=0-40026-12-687403-0">FAQ</a>
+                <a href="/generic/terms?SGWID=0-40112-0-0-0">Policy</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+
+    
+<div class="book-metrics" data-bookmetrix-ajax-url="/app-pp/bookmetrix?doi=10.1007%2F978-4-431-65950-1">
+    <img src='//static.springer.com/app-pp/assets-v/images/4fa48143767ef3bef326660dab576c75-loading.gif' alt="Loading...">
+</div>
+
+
+    
+    <div class="product-services">
+        <h3>Services for this Book</h3>
+        <div>
+            
+                <a href="//www.springer.com/br/product-marketing-tool/flyer/9784431702085" data-track="click" data-track-category="Books" data-track-action="download" data-track-label="DownloadProductFlyer">Download Product Flyer</a>
+            
+            
+            
+
+
+
+
+
+            
+                
+            
+            
+                <a href="https://images.springer.com/sgw/books/raw/9784431702085.tif">Download High-Resolution Cover</a>
+            
+        </div>
+    </div>
+
+
+
+    
+<div class="product-share">
+    <div class="cms-social">
+        <div class="cms-social-buttons">
+            <div class="cms-social-left">
+            
+                <a href="#" id="tool-facebook" rel="nofollow" alt="Share on Facebook" data-track="click" data-track-category="Books" data-track-action="social" data-track-label="facebook" onmousedown="wt.sendinfo({linkId: 'social media button', customClickParameter : { 550 : 'facebook - share'}});"> <span class="icon">Facebook</span></a>
+                <a href="#" id="tool-twitter"  rel="nofollow" alt="Share on Twitter+" data-track="click" data-track-category="Books" data-track-action="social" data-track-label="twitter" onmousedown="wt.sendinfo({linkId: 'social media button', customClickParameter : { 550 : 'twitter - share'}});"> <span class="icon">Twitter</span></a>
+                <a href="#" id="tool-linkedin" rel="nofollow" alt="Share on Linkedin" data-track="click" data-track-category="Books" data-track-action="social" data-track-label="linkedin" onmousedown="wt.sendinfo({linkId: 'social media button', customClickParameter : { 550 : 'linkedin - share'}});"> <span class="icon">LinkedIn</span></a>
+                <a href="#" id="tool-gplus" rel="nofollow" alt="Share on Google+" data-track="click" data-track-category="Books" data-track-action="social" data-track-label="google+" onmousedown="wt.sendinfo({linkId: 'social media button', customClickParameter : { 550 : 'google - share'}});"> <span class="icon">Google++</span></a>
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+            </div>
+        </div>
+
+        <div class="layout-12 row">
+            <div class="col-main small-12 columns">
+                
+<div class="product-recommendation" data-baynote-service-url="/app-pp/recommendation/br/978-4-431-70208-5">
+    <h2>Recommended for you</h2>
+    <div class="product-recommendation-data">
+    <img src='//static.springer.com/app-pp/assets-v/images/4fa48143767ef3bef326660dab576c75-loading.gif' alt="Loading...">
+    </div>
+</div>
+
+
+                
+<div class="product-bibliographic">
+    <h2>Bibliographic Information</h2>
+    <dl class="cms-tab-panel">
+        <dt id="bibliographic">
+            <a href="#bibliographic">Bibliographic Information</a>
+        </dt>
+        <dd>
+            <div>
+                <div class="cms-row-3-tablet summary row">
+                    <dl class="cms-col small-6 medium-4 columns">
+                        <dt>Book Title</dt>
+                        <dd itemprop="name">Data Science, Classification, and Related Methods</dd>
+                        
+                            <dt>Book Subtitle</dt>
+                            <dd>Proceedings of the Fifth Conference of the International Federation of Classification Societies (IFCS-96), Kobe, Japan, March 27–30, 1996</dd>
+                        
+
+                        
+                        
+                        <dt>Editors</dt>
+                        <dd>
+                            <ul>
+                                
+                                <li itemprop="editor" itemscope itemtype="http://schema.org/Person">
+                                    <span itemprop="name">Chikio Hayashi</span>
+                                </li>
+                                
+                                <li itemprop="editor" itemscope itemtype="http://schema.org/Person">
+                                    <span itemprop="name">Keiji Yajima</span>
+                                </li>
+                                
+                                <li itemprop="editor" itemscope itemtype="http://schema.org/Person">
+                                    <span itemprop="name">Hans H. Bock</span>
+                                </li>
+                                
+                                <li itemprop="editor" itemscope itemtype="http://schema.org/Person">
+                                    <span itemprop="name">Noboru Ohsumi</span>
+                                </li>
+                                
+                                <li itemprop="editor" itemscope itemtype="http://schema.org/Person">
+                                    <span itemprop="name">Yutaka Tanaka</span>
+                                </li>
+                                
+                                <li itemprop="editor" itemscope itemtype="http://schema.org/Person">
+                                    <span itemprop="name">Yasumasa Baba</span>
+                                </li>
+                                
+                            </ul>
+                        </dd>
+                        
+                        
+                            
+                        
+                        
+                            <dt>Series Title</dt>
+                            <dd><a href="/series/1564">Studies in Classification, Data Analysis, and Knowledge Organization</a></dd>
+                        
+                        
+                        <dt>Copyright</dt>
+                        <dd>1998</dd>
+                        <dt>Publisher</dt>
+                        <dd itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><span itemprop="name">Springer Japan</span></dd>
+                        <dt>Copyright Holder</dt>
+                        <dd>Springer Japan</dd>
+                        
+                    </dl>
+                    <dl class="cms-col small-6 medium-4 columns">
+                        
+                            <dt>eBook ISBN</dt>
+                            
+                                <dd>978-4-431-65950-1</dd>
+                            
+                            
+                                <dt>DOI</dt>
+                                <dd>10.1007/978-4-431-65950-1</dd>
+                            
+                        
+                            <dt>Softcover ISBN</dt>
+                            
+                                <dd itemprop="isbn">978-4-431-70208-5</dd>
+                            
+                            
+                        
+                        
+                            <dt>Series ISSN</dt>
+                            <dd>1431-8814</dd>
+                        
+                        <dt>Edition Number</dt>
+                        <dd>1</dd>
+                    </dl>
+                    <dl class="cms-col small-6 medium-4 columns">
+                        
+                            <dt>Number of Pages</dt>
+                            <dd itemprop="numberOfPages">XV, 780</dd>
+                        
+
+                        
+                            <dt>Number of Illustrations</dt>
+                            <dd>98 b/w illustrations</dd>
+                        
+
+                        
+
+                        <dt>Topics</dt>
+                        <dd>
+                            <ul>
+                                
+                                    <li><a href="/br/search/discipline?topic=S0000X" itemprop="genre">Statistics (general)</a></li>
+                                
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </dd>
+    </dl>
+</div>
+
+
+                
+
+    <div class="product-footnote">
+        <p>*immediately available upon purchase as print book shipments may be delayed due to the COVID-19 crisis. ebook access is temporary and does not include ownership of the ebook. Only valid for books with an ebook version. Springer Reference Works are not included. </p>
+    </div>
+
+
+            </div>
+        </div>
+        
+
+
+    <span itemscope itemtype="http://schema.org/Product" id="9784431702085">
+    <meta itemprop="name" content="Data Science, Classification, and Related Methods" />
+    <meta itemprop="gtin13" content="9784431702085" />
+    <meta itemprop="sku" content="9784431702085" />
+    <meta itemprop="brand"  content="Springer Japan" />
+    <meta itemprop="url"  content="https://www.springer.com/br/book/9784431702085" />
+    <meta itemprop="image"  content="https://images.springer.com/sgw/books/medium/9784431702085.jpg" />
+
+    
+        
+        <span itemprop="offers" itemscope itemtype="http://schema.org/Offer" id="offer0" itemref="9784431702085">
+            <meta itemprop="name" content="ebook" />
+            <meta itemprop="priceCurrency" content="USD" />
+            <meta itemprop="price" content="84.99" />
+            <meta itemprop="itemCondition" itemtype="http://schema.org/OfferItemCondition" content="http://schema.org/NewCondition"/>
+            <meta itemprop="availability" content="http://schema.org/InStock"/>
+            <meta itemprop="url" content="https://www.springer.com/br/book/9784431659501"/>
+        </span>
+        
+    
+        
+        <span itemprop="offers" itemscope itemtype="http://schema.org/Offer" id="offer1" itemref="9784431702085">
+            <meta itemprop="name" content="softcover" />
+            <meta itemprop="priceCurrency" content="USD" />
+            <meta itemprop="price" content="109.0" />
+            <meta itemprop="itemCondition" itemtype="http://schema.org/OfferItemCondition" content="http://schema.org/NewCondition"/>
+            <meta itemprop="availability" content="http://schema.org/InStock"/>
+            <meta itemprop="url" content="https://www.springer.com/br/book/9784431702085"/>
+        </span>
+        
+    
+    </span>
+
+
+
+        
+<!-- BEGIN READER OVERLAY -->
+<div id="reader-overlay" style="display: none">
+    <div class="reader-position">
+        <div id="reader">
+            <div id="reader-buttons">
+                <a class="btn btn-close right" onclick="window.readerOverlay.close();">CLOSE</a>
+            </div>
+            <div id="viewer" class="show-pdf">
+                <div id="scroller">
+                    <div id="page-1">
+                        <div class="page-number">PAGE 1</div>
+                        <div class="pdf-page" id="page-img-container-0">
+                            <img class="pdf-image" alt="" width="738" style="width: 738px; display: inline;" src="//static.springer.com/app-pp/assets-v/images/pdf-preview/fdd01bd460bbc253d82d029c377c993b-preview-not-available.png">
+                        </div>
+                    </div>
+                    <div id="page-2">
+                        <div class="page-number">PAGE 2</div>
+                        <div class="pdf-page" id="page-img-container-1">
+                            <img class="pdf-image" alt="" width="738" style="width: 738px; display: inline;" src="//static.springer.com/app-pp/assets-v/images/pdf-preview/fdd01bd460bbc253d82d029c377c993b-preview-not-available.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-shadow" style="width: 795px;"></div>
+            <div class="bottom-shadow" style="width: 795px;"></div>
+        </div>
+    </div>
+</div>
+<!-- END READER OVERLAY -->
+
+    </div>
+
+            <footer>
+<div class="page-wrapper">
+<div id="footer">
+<div id="footer-nav" class="section">
+<div id="footer-nav-misc">
+<div class="block" role="navigation">
+<h3>My Account</h3>
+<ul>
+<li><a href="https://checkout.springer.com/checkout">Shopping Cart</a></li><li><a href="https://www.springer.com/myspringer">MySpringer</a></li><li><a href="https://www.springer.com/myspringer">Login</a></li><li><a href="http://www.springer.com/alert">SpringerAlerts</a></li>
+</ul>
+</div><div class="block" role="navigation">
+<h3>About Springer</h3>
+<ul>
+<li><a href="http://www.springer.com/br/about-springer/history">History</a></li><li><a href="http://www.springer.com/about+springer/media/pressreleases">Media</a></li><li><a href="http://www.springer.com/br/about-springer/compliance">Compliance</a></li><li><a href="http://www.springer.com/br/about-springer/careers">Careers</a></li><li><a href="https://www.springer.com/br/shop/promo/affiliate/springer-nature">Affiliate Program</a></li>
+</ul>
+</div><div class="block" role="navigation">
+<h3>Help &amp; Contact</h3>
+<ul>
+<li><a href="http://www.springer.com/br/help">Help Overview</a></li><li><a href="http://www.springer.com/br/help/buying-in-the-springer-shop/16712">Order FAQ</a></li><li><a href="http://www.springer.com/br/help/contact">Contact Us</a></li><li><a href="http://www.springer.com/br/imprint/610056">Imprint</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="footer-legal" class="section" role="contentinfo">
+<div id="mobile-nav">
+<span class="pillow-btn open-legal" title="Show Legal Information">Legal</span>
+</div>
+<div role="contentinfo" id="legal">
+<div><img src="/spcom/sites/sgw/images/logo-springernature_dark.png" alt="Springer Nature logo"></div>
+<span id="footer-copyright">&copy; 2020 Springer Nature Switzerland AG. Springer is part of <a href="https://www.springernature.com" target="_blank">Springer Nature</a></span>
+<span class="footer-links"><a href="/br/privacy-policy">Privacy Policy</a><a href="https://www.springer.com/terms-conditions">General Terms &amp; Conditions</a></span>
+<div id="diagnostic-info"></div>
+</div>
+</div>
+<div id="footer-branding" class="section">
+<div class="block">
+<span id="branding-logo">Springer</span>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+        </div>
+    
+
+
+    
+<script type="text/javascript">
+/*<![CDATA[*/
+
+wt = $.extend(new webtrekkV3({
+  "trackId" : "196033507532344",
+  "domain" : "www.springer.com;checkout.springer.com;secure.worldpay.com",
+  "form" : "0",
+  "contentGroup" : {
+    "1" : "Statistics"
+  },
+  "heatmap" : "0",
+  "linkTrack" : "link",
+  "contentId" : "Statistics.9784431702085_Data Science, Classification, and Related Methods"
+}), {
+  "product" : "9784431659501_Data Science, Classification, and Related Methods;9784431702085_Data Science, Classification, and Related Methods",
+  "productStatus" : "view",
+  "productCategory" : {
+    "1" : "ebook;print",
+    "2" : "EN;EN",
+    "3" : "Statistics;Statistics",
+    "4" : "1998;1998",
+    "5" : "Springer Japan;Springer Japan"
+  },
+  "mediaCode" : "wt_mc;cm_mmc",
+  "linkTrackDownloads" : "avi;bmp;csv;doc;docx;dotx;eps;exe;gif;gz;jpeg;jpg;m4v;mov;mp3;mp4;mpg;pdf;png;ppt;pptx;ps;rss;rtf;swf;tar;tar.gz;tgz;tif;txt;wmv;xls;xlsx;zip"
+});
+
+wt.customParameter = {};
+
+if (window.isEntitled) {
+    wt.customParameter[6] = "access";
+} else {
+    wt.customParameter[6] = "noaccess";
+}
+
+wt.sendinfo();
+
+/*]]>*/
+</script>
+
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-38BW&gtm_auth=7-8y6X3v3L_c2MzSmAodFw&gtm_preview=env-29&gtm_cookies_win=x"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <noscript>
+        <div id="jsnotice" class="prompt-bar">
+            <p>JavaScript is currently disabled, this site works much better if you
+                <a href="http://enable-javascript.com/"> enable JavaScript in your browser</a>.
+            </p>
+        </div>
+    </noscript>
+    </body>
+</html>
+
+
+
+
